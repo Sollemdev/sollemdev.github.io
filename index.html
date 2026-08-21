@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO & Metadata -->
+  <title>Sollemdev | Developer & UI Architect</title>
+  <meta name="description" content="Portfolio of Sollemdev - Building open-source web tools, modular design systems, and high-performance user interfaces with editorial minimalism." />
+  <meta name="keywords" content="Sollemdev, Web Developer, Design Systems, Open Source, React, TypeScript, CSS Architecture, JavaScript, Portfolio" />
+  <meta name="author" content="Sollemdev" />
+  
+  <!-- OpenGraph Metadata -->
+  <meta property="og:title" content="Sollemdev | Developer & UI Architect" />
+  <meta property="og:description" content="Building open-source tools, modular design systems, and high-performance interfaces." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sollemdev.github.io/" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  
+  <!-- Google Fonts: EB Garamond (Editorial Serif) & Inter (UI Sans-serif) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header" id="header">
+    <div class="container header-content">
+      <a href="#" class="brand-logo" id="brand-link">
+        SOLLEM<span class="dot">.</span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#work" class="nav-link active">Work</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle Dark/Light Mode" title="Toggle theme">
+          <svg id="theme-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-status-badge">
+          <span class="status-dot"></span>
+          <span>Available for new projects &amp; Open Source</span>
+        </div>
+
+        <h1 class="hero-title">
+          I build open-source web tools, modular design systems, and high-performance interfaces.
+        </h1>
+
+        <p class="hero-description">
+          Engineered with precision, editorial minimalism, and modern web standards. Bringing clarity and structural elegance to complex web applications.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#work" class="btn-primary">
+            Explore Selected Work &rarr;
+          </a>
+          <a href="#contact" class="btn-secondary">
+            Get in Touch
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio-section" id="work">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-title-row">
+            <h2 class="section-title">Selected Projects</h2>
+
+            <div class="controls-group">
+              <!-- Live Search Box -->
+              <div class="search-box">
+                <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" id="search-input" class="search-input" placeholder="Search projects..." aria-label="Search projects" />
+              </div>
+
+              <!-- View Switcher (List vs Grid) -->
+              <div class="view-mode-toggle" role="group" aria-label="View Mode">
+                <button class="view-btn active" data-mode="list" aria-label="List View" title="List View">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="8" y1="6" x2="21" y2="6"></line>
+                    <line x1="8" y1="12" x2="21" y2="12"></line>
+                    <line x1="8" y1="18" x2="21" y2="18"></line>
+                    <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                    <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                    <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                  </svg>
+                  List
+                </button>
+                <button class="view-btn" data-mode="grid" aria-label="Grid View" title="Grid View">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="14" width="7" height="7"></rect>
+                    <rect x="3" y="14" width="7" height="7"></rect>
+                  </svg>
+                  Grid
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tag Filters -->
+          <div class="filter-bar" id="filter-bar">
+            <!-- Filter buttons dynamically rendered via app.js -->
+          </div>
+
+          <div class="results-stats" id="results-stats">
+            Loading projects...
+          </div>
+        </div>
+
+        <!-- Projects List/Grid Container -->
+        <div id="projects-container" class="projects-container list-view">
+          <!-- Dynamically populated via app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <h2 class="section-title" style="margin-bottom: 40px;">About &amp; Experience</h2>
+
+        <div class="about-grid">
+          <div class="about-bio">
+            <p>
+              I am a Frontend Developer and UI Architect focused on creating scalable design systems, developer tooling, and modern web applications.
+            </p>
+            <p>
+              My engineering philosophy revolves around <strong>performance, semantic HTML, modular CSS, and clear architecture</strong>. I believe that web interfaces should be exceptionally fast, accessible to all users, and visually compelling through editorial minimalism.
+            </p>
+            <p>
+              Over the past several years, I've built open-source projects and worked with teams across the globe to build web applications that handle high traffic while maintaining crisp visual standards.
+            </p>
+          </div>
+
+          <!-- Timeline -->
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-year">2024 &mdash; PRESENT</div>
+              <div class="timeline-role">Lead UI Architect &amp; Open Source Author</div>
+              <div class="timeline-company">Sollem Studio &amp; GitHub</div>
+              <div class="timeline-desc">Designing modular CSS frameworks, TypeScript design token tools, and developer utilities.</div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-year">2022 &mdash; 2024</div>
+              <div class="timeline-role">Senior Frontend Engineer</div>
+              <div class="timeline-company">Global Web Platform</div>
+              <div class="timeline-desc">Architected high-throughput React &amp; TypeScript applications, improving web vitals and component reusability.</div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-year">2020 &mdash; 2022</div>
+              <div class="timeline-role">Web Developer &amp; UI Specialist</div>
+              <div class="timeline-company">Digital Product Agency</div>
+              <div class="timeline-desc">Built custom web interfaces, interactive canvas dashboards, and responsive e-commerce web applications.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section" id="skills">
+      <div class="container">
+        <h2 class="section-title" style="margin-bottom: 40px;">Technical Stack</h2>
+
+        <div class="skills-grid">
+          <div class="skill-card">
+            <h3 class="skill-card-title">Frontend Core</h3>
+            <ul class="skill-list">
+              <li><span class="mini-tag">HTML5 / Semantic</span></li>
+              <li><span class="mini-tag">CSS3 / SCSS</span></li>
+              <li><span class="mini-tag">JavaScript (ES6+)</span></li>
+              <li><span class="mini-tag">TypeScript</span></li>
+              <li><span class="mini-tag">React</span></li>
+              <li><span class="mini-tag">Next.js / Vite</span></li>
+            </ul>
+          </div>
+
+          <div class="skill-card">
+            <h3 class="skill-card-title">Design &amp; Architecture</h3>
+            <ul class="skill-list">
+              <li><span class="mini-tag">Design Systems</span></li>
+              <li><span class="mini-tag">Stitch &amp; Figma</span></li>
+              <li><span class="mini-tag">CSS Architecture</span></li>
+              <li><span class="mini-tag">WCAG Accessibility</span></li>
+              <li><span class="mini-tag">Responsive Design</span></li>
+              <li><span class="mini-tag">Web Vitals</span></li>
+            </ul>
+          </div>
+
+          <div class="skill-card">
+            <h3 class="skill-card-title">Tooling &amp; Workflow</h3>
+            <ul class="skill-list">
+              <li><span class="mini-tag">Git &amp; GitHub</span></li>
+              <li><span class="mini-tag">Node.js</span></li>
+              <li><span class="mini-tag">Web Audio API</span></li>
+              <li><span class="mini-tag">Jest / Vitest</span></li>
+              <li><span class="mini-tag">GitHub Actions</span></li>
+              <li><span class="mini-tag">Docker</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="contact-card">
+          <h2 class="contact-title">Let's work together.</h2>
+          <p class="contact-subtitle">
+            Have a project in mind, an open-source collaboration, or just want to chat about CSS architecture? Reach out anytime!
+          </p>
+
+          <div class="email-copy-wrapper">
+            <span class="email-address">sollemdev@gmail.com</span>
+            <button onclick="copyEmail()" class="btn-primary" style="padding: 6px 14px; font-size: 13px;" id="copy-btn">
+              Copy Email
+            </button>
+          </div>
+
+          <div class="social-links-row">
+            <a href="https://github.com/Sollemdev" target="_blank" rel="noopener" class="social-link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path>
+              </svg>
+              GitHub
+            </a>
+            <a href="https://x.com/sollemdev" target="_blank" rel="noopener" class="social-link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+              X / Twitter
+            </a>
+            <a href="https://linkedin.com/in/sollemdev" target="_blank" rel="noopener" class="social-link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+              </svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div>
+        &copy; 2026 Sollemdev. Built with Editorial Precision &amp; HTML5.
+      </div>
+      <div>
+        Hosted on <a href="https://pages.github.com/" target="_blank" rel="noopener" style="text-decoration: underline;">GitHub Pages</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Details Popup -->
+  <div class="modal-backdrop" id="modal-backdrop" role="dialog" aria-modal="true">
+    <div class="modal-content">
+      <button class="icon-btn modal-close" id="modal-close" aria-label="Close modal">
+        &times;
+      </button>
+      <div id="modal-body">
+        <!-- Dynamically rendered via app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast"></div>
+
+  <!-- Main JavaScript App -->
+  <script src="js/app.js"></script>
+</body>
+</html>
