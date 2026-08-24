@@ -3,129 +3,8 @@
  * High-Performance Interactive Portfolio System
  */
 
-// Portfolio Data: Inspired by jgthms.com & Stitch Editorial Minimalist Repo
-const PROJECTS_DATA = [
-  {
-    id: "bulma-css-next",
-    title: "Bulma CSS Framework",
-    subtitle: "A modern CSS framework based on Flexbox",
-    description: "A comprehensive open-source frontend framework that provides ready-to-use UI components. Built with zero JavaScript dependencies, high customizability through CSS custom properties, and full responsive grid system.",
-    year: "2026",
-    tags: ["CSS", "Open Source", "SCSS", "Design"],
-    github: "https://github.com/Sollemdev",
-    demo: "https://bulma.io/",
-    featured: true,
-    highlights: ["200k+ monthly npm downloads", "100% Flexbox & CSS Grid based", "Modular SCSS / CSS Architecture"]
-  },
-  {
-    id: "chordscrush",
-    title: "ChordsCrush",
-    subtitle: "A musical chord training game and Web Audio synth",
-    description: "An interactive ear-training application for musicians. Built with React and TypeScript, leveraging the Web Audio API for real-time sound generation, chord recognition exercises, and progress tracking.",
-    year: "2026",
-    tags: ["React", "TypeScript", "Game", "JavaScript"],
-    github: "https://github.com/Sollemdev",
-    demo: "https://chordscrush.com/",
-    featured: true,
-    highlights: ["Web Audio API integration", "Custom MIDI controller support", "Interactive ear-training algorithms"]
-  },
-  {
-    id: "picknplace-js",
-    title: "picknplace.js",
-    subtitle: "A viable drag and drop alternative for modern web apps",
-    description: "A ultra-lightweight drag and drop micro-library designed as an accessible, performant alternative to heavy DND frameworks. Features touch gesture support, smooth drop physics, and zero dependencies.",
-    year: "2025",
-    tags: ["JavaScript", "UX", "Open Source"],
-    github: "https://github.com/Sollemdev",
-    demo: "https://sollemdev.github.io/",
-    featured: true,
-    highlights: ["< 2KB gzipped footprint", "Full keyboard ARIA accessibility", "Custom touch event listeners"]
-  },
-  {
-    id: "equatile-puzzle",
-    title: "Equatile Math Puzzle",
-    subtitle: "A math-based mobile & web tile puzzle game",
-    description: "A minimalist puzzle game where players arrange tile equations to clear the board. Built with React, TypeScript, and Canvas for smooth 60fps animations across mobile and desktop devices.",
-    year: "2025",
-    tags: ["TypeScript", "React", "Game", "UX"],
-    github: "https://github.com/Sollemdev",
-    demo: "https://sollemdev.github.io/",
-    featured: false,
-    highlights: ["Procedural math puzzle generation", "Canvas-based particle effects", "Offline PWA support"]
-  },
-  {
-    id: "stitch-tokens-cli",
-    title: "Stitch Tokens Bridge",
-    subtitle: "CLI tool to translate Stitch design mockups to CSS tokens",
-    description: "Node.js command-line interface that parses Stitch UI exports and generates standardized CSS variables, Tailwind configurations, and TypeScript theme definitions for automated design system sync.",
-    year: "2025",
-    tags: ["TypeScript", "Node.js", "Tooling", "Open Source"],
-    github: "https://github.com/Sollemdev",
-    demo: "https://github.com/Sollemdev",
-    featured: true,
-    highlights: ["AST CSS parsing", "Automatic light/dark mode mapping", "Tailwind CSS plugin export"]
-  },
-  {
-    id: "css-masterclass-io",
-    title: "CSS Masterclass.io",
-    subtitle: "Interactive visual tutorials and educational guide",
-    description: "An educational platform teaching modern web layout techniques, Subgrid, CSS Container Queries, and fluid typography through hands-on code playgrounds and interactive visual diagrams.",
-    year: "2024",
-    tags: ["CSS", "Teaching", "HTML", "JavaScript"],
-    github: "https://github.com/Sollemdev",
-    demo: "https://sollemdev.github.io/",
-    featured: true,
-    highlights: ["30+ interactive CSS modules", "Real-time CSS preview sandbox", "Comprehensive flex/grid playground"]
-  },
-  {
-    id: "minireset-css",
-    title: "minireset.css",
-    subtitle: "A tiny modern CSS reset for clean browser baselines",
-    description: "A minimalist 1KB CSS reset stylesheet updated for modern HTML5 defaults, CSS box-sizing, fluid media containers, and color-scheme properties across all browser engines.",
-    year: "2024",
-    tags: ["CSS", "Open Source"],
-    github: "https://github.com/Sollemdev",
-    demo: "https://sollemdev.github.io/",
-    featured: false,
-    highlights: ["Under 100 lines of CSS", "Native light/dark mode support", "No aggressive element overrides"]
-  },
-  {
-    id: "html-reference-io",
-    title: "HTML Reference Guide",
-    subtitle: "A free visual guide to all HTML elements and ARIA roles",
-    description: "An open-source reference for web developers, listing every HTML5 element with semantic usage examples, browser compatibility notes, and accessibility guidelines.",
-    year: "2023",
-    tags: ["HTML", "Teaching", "Open Source"],
-    github: "https://github.com/Sollemdev",
-    demo: "https://htmlreference.io/",
-    featured: false,
-    highlights: ["110+ HTML elements documented", "Interactive live code previews", "Strict WCAG accessibility checks"]
-  },
-  {
-    id: "fastform-builder",
-    title: "FastForm React Builder",
-    subtitle: "Schema-driven form engine with zero external dependencies",
-    description: "A high-performance React form state manager and validator. Built to eliminate unnecessary rerenders in complex multi-step enterprise forms.",
-    year: "2023",
-    tags: ["React", "TypeScript", "UX"],
-    github: "https://github.com/Sollemdev",
-    demo: "https://sollemdev.github.io/",
-    featured: false,
-    highlights: ["Zero dependency footprint", "Sub-millisecond form field re-renders", "Zod & Yup schema adapters"]
-  },
-  {
-    id: "wysiwyg-css",
-    title: "wysiwyg.css",
-    subtitle: "Style generated HTML content with a single CSS class",
-    description: "A lightweight utility stylesheet that formats user-generated Markdown, CMS output, and rich text content with elegant typography, code block styling, and responsive images.",
-    year: "2023",
-    tags: ["CSS", "Open Source", "Design"],
-    github: "https://github.com/Sollemdev",
-    demo: "https://sollemdev.github.io/",
-    featured: false,
-    highlights: ["Single `.wysiwyg` wrapper class", "Automatic syntax highlighting layout", "Responsive table wrappers"]
-  }
-];
+// Portfolio Data
+const PROJECTS_DATA = [];
 
 // App State
 let currentTag = "All";
@@ -178,6 +57,16 @@ function setTheme(theme) {
 function initTagFilters() {
   const filterContainer = document.getElementById("filter-bar");
   if (!filterContainer) return;
+
+  if (PROJECTS_DATA.length === 0) {
+    filterContainer.innerHTML = `
+      <span class="filter-label">Filter:</span>
+      <button class="tag-btn active" data-tag="All">
+        All <span class="tag-count">(0)</span>
+      </button>
+    `;
+    return;
+  }
 
   // Extract all unique tags
   const tagsSet = new Set();
@@ -269,9 +158,7 @@ function renderProjects() {
   if (filtered.length === 0) {
     container.innerHTML = `
       <div class="empty-state">
-        <h3>No projects found</h3>
-        <p>Try resetting search or selecting a different tag filter.</p>
-        <button onclick="resetFilters()" class="btn-secondary" style="margin-top: 16px;">Reset Filters</button>
+        <p style="color: var(--text-muted); font-size: 15px;">No projects to display.</p>
       </div>
     `;
     return;
