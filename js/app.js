@@ -4,7 +4,28 @@
  */
 
 // Portfolio Data
-const PROJECTS_DATA = [];
+const PROJECTS_DATA = [
+  {
+    id: "babel-translator",
+    title: "Babel",
+    subtitle: "Instant in-place AI translation and prompt engineering browser extension",
+    description: "A high-performance Chrome extension (Manifest V3) that translates thoughts into natural conversational English or fine-tuned AI prompts directly inside any input field with a single keystroke (Alt+T). Built with a 4-tier DOM replacement engine compatible with React, Vue, Slate.js, and ProseMirror.",
+    year: "2026",
+    tags: ["AI & LLM", "Chrome Extension", "JavaScript", "UX"],
+    icon: "assets/icons/babel/icon48.png",
+    banner: "assets/images/babel-banner.jpg",
+    github: "https://github.com/Sollemdev",
+    demo: "projects/babel.html",
+    featured: true,
+    highlights: [
+      "Sub-300ms in-place DOM text replacement via Alt+T",
+      "6 dynamic style tones (Natural, Friendly, Slang, Business, Brief, Vivid)",
+      "AI Prompt Engineering Mode for Midjourney, Higgsfield, and Google Flow",
+      "Client-side Data Loss Prevention (DLP) for secret leak blocking",
+      "23 localized UI language dictionaries"
+    ]
+  }
+];
 
 // App State
 let currentTag = "All";
@@ -165,39 +186,57 @@ function renderProjects() {
   }
 
   if (viewMode === "list") {
-    // Render jgthms.com Minimalist List Layout
+    // Render jgthms.com Minimalist List Layout with Cursor-Following Mosaic Preview
     container.innerHTML = filtered.map(p => `
-      <article class="project-item" data-id="${p.id}">
-        <div class="project-header">
-          <h3 class="project-title" onclick="openProjectModal('${p.id}')" style="cursor: pointer;">
-            ${p.title}
-          </h3>
-          <span class="project-meta-top">/ ${p.tags.slice(0, 3).join(" / ")} / ${p.year}</span>
-        </div>
-        <p class="project-description">${p.subtitle}</p>
-        <div class="project-footer">
-          <div class="project-tags">
-            ${p.tags.map(t => `<span class="mini-tag">${t}</span>`).join("")}
-          </div>
-          <div class="project-links">
-            <button onclick="openProjectModal('${p.id}')" class="link-btn">
-              Details &rarr;
-            </button>
-            ${p.demo ? `<a href="${p.demo}" target="_blank" rel="noopener" class="link-btn">Visit &nearr;</a>` : ''}
+      <article class="project-item" data-id="${p.id}" data-share="${p.banner || ''}" onclick="window.location.href='${p.demo || '#'}'">
+        <div class="project-row-main">
+          ${p.icon ? `
+            <div class="project-icon-thumb" aria-label="${p.title}">
+              <img src="${p.icon}" alt="${p.title} icon" />
+            </div>
+          ` : ''}
+          <div class="project-content-body">
+            <div class="project-header">
+              <h3 class="project-title">
+                ${p.title}
+              </h3>
+              <span class="project-meta-top">/ ${p.tags.slice(0, 3).join(" / ")} / ${p.year}</span>
+            </div>
+            <p class="project-description">${p.subtitle}</p>
+            <div class="project-footer">
+              <div class="project-tags">
+                ${p.tags.map(t => `<span class="mini-tag">${t}</span>`).join("")}
+              </div>
+              <div class="project-links">
+                <span class="link-btn">
+                  Case Study &rarr;
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </article>
     `).join("");
+
+    initProjectPreviews();
   } else {
-    // Render Grid Card Layout
+    // Render Grid Card Layout with Top Banner
     container.innerHTML = filtered.map(p => `
-      <article class="project-item" data-id="${p.id}">
-        <div>
-          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px;">
-            <span class="project-meta-top">${p.year}</span>
-            <span class="project-meta-top">${p.tags[0]}</span>
+      <article class="project-item" data-id="${p.id}" onclick="window.location.href='${p.demo || '#'}'">
+        ${p.banner ? `
+          <div class="project-card-banner">
+            <img src="${p.banner}" alt="${p.title} banner" loading="lazy" />
           </div>
-          <h3 class="project-title" onclick="openProjectModal('${p.id}')" style="cursor: pointer;">
+        ` : ''}
+        <div>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              ${p.icon ? `<img src="${p.icon}" alt="${p.title}" style="width: 18px; height: 18px; border-radius: 4px;" />` : ''}
+              <span class="project-meta-top">${p.tags[0]}</span>
+            </div>
+            <span class="project-meta-top">${p.year}</span>
+          </div>
+          <h3 class="project-title">
             ${p.title}
           </h3>
           <p class="project-description">${p.subtitle}</p>
@@ -206,16 +245,139 @@ function renderProjects() {
           <div class="project-tags" style="margin-bottom: 16px;">
             ${p.tags.map(t => `<span class="mini-tag">${t}</span>`).join("")}
           </div>
-          <div class="project-links" style="justify-content: space-between;">
-            <button onclick="openProjectModal('${p.id}')" class="btn-secondary" style="padding: 6px 14px; font-size: 12px;">
-              Details &rarr;
-            </button>
-            ${p.demo ? `<a href="${p.demo}" target="_blank" rel="noopener" class="link-btn">Visit &nearr;</a>` : ''}
+          <div class="project-links" style="justify-content: flex-end;">
+            <span class="btn-primary" style="padding: 6px 14px; font-size: 12px;">
+              Case Study &rarr;
+            </span>
           </div>
         </div>
       </article>
     `).join("");
   }
+}
+
+// Cursor-Following Mosaic Preview Banner (Authentic jgthms.com implementation)
+let previewInitialized = false;
+let previewTiles = [];
+const tileCols = 6;
+const tileRows = 4;
+const tileDelayStep = 18;
+const loadedPreviews = new Set();
+
+function preloadProjectBanners() {
+  PROJECTS_DATA.forEach(p => {
+    if (p.banner && !loadedPreviews.has(p.banner)) {
+      const img = new Image();
+      img.onload = () => loadedPreviews.add(p.banner);
+      img.src = p.banner;
+    }
+  });
+}
+
+function initProjectPreviews() {
+  const preview = document.getElementById("hover-preview");
+  const previewGrid = document.getElementById("preview-grid");
+  if (!preview || !previewGrid) return;
+
+  preloadProjectBanners();
+
+  // Initialize 6x4 tiles in the grid once
+  if (!previewInitialized) {
+    previewGrid.innerHTML = "";
+    previewTiles = [];
+    for (let i = 0; i < tileCols * tileRows; i++) {
+      const tile = document.createElement("span");
+      tile.className = "preview-tile";
+      tile.style.setProperty("--col", i % tileCols);
+      tile.style.setProperty("--row", Math.floor(i / tileCols));
+      previewGrid.appendChild(tile);
+      previewTiles.push(tile);
+    }
+    previewInitialized = true;
+  }
+
+  function shuffledTileOrder() {
+    const order = Array.from(previewTiles, (_, i) => i);
+    for (let i = order.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [order[i], order[j]] = [order[j], order[i]];
+    }
+    return order;
+  }
+
+  function getFollowX(event, elWidth, offsetX) {
+    const rightThreshold = elWidth + 40;
+    const isRightSide = window.innerWidth - event.clientX < rightThreshold;
+    return isRightSide ? -elWidth - offsetX : offsetX;
+  }
+
+  function positionFollower(el, project, event, offsetX, offsetY) {
+    const rect = project.getBoundingClientRect();
+    const x = event.clientX - rect.left + getFollowX(event, el.offsetWidth, offsetX);
+    const y = event.clientY - rect.top + offsetY;
+    el.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+  }
+
+  const offsetX = 24;
+  const offsetY = -50;
+
+  document.querySelectorAll(".projects-container.list-view .project-item").forEach((project) => {
+    const previewSrc = project.dataset.share;
+    if (!previewSrc) return;
+
+    project.addEventListener("mouseenter", (event) => {
+      const reveal = () => {
+        project.appendChild(preview);
+        preview.style.setProperty("--preview-bg", `url("${previewSrc}")`);
+        
+        const tileOrder = shuffledTileOrder();
+        
+        // Reset tile states
+        previewTiles.forEach((tile) => {
+          tile.style.backgroundImage = `url("${previewSrc}")`;
+          tile.style.transition = "none";
+          tile.style.opacity = "0";
+          tile.style.transform = "scale(0.2) rotate(-8deg)";
+        });
+
+        positionFollower(preview, project, event, offsetX, offsetY);
+        preview.classList.add("is-visible");
+
+        // Trigger staggered mosaic reveal animation
+        requestAnimationFrame(() => {
+          previewTiles.forEach((tile, i) => {
+            tile.style.transition = "transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.22s ease";
+            tile.style.transitionDelay = `${tileOrder[i] * tileDelayStep}ms`;
+            tile.style.opacity = "1";
+            tile.style.transform = "scale(1) rotate(0deg)";
+          });
+        });
+      };
+
+      if (loadedPreviews.has(previewSrc)) {
+        reveal();
+      } else {
+        const img = new Image();
+        img.onload = () => {
+          loadedPreviews.add(previewSrc);
+          reveal();
+        };
+        img.src = previewSrc;
+      }
+    });
+
+    project.addEventListener("mousemove", (event) => {
+      positionFollower(preview, project, event, offsetX, offsetY);
+    });
+
+    project.addEventListener("mouseleave", () => {
+      preview.classList.remove("is-visible");
+      previewTiles.forEach((tile) => {
+        tile.style.transition = "none";
+        tile.style.opacity = "0";
+      });
+    });
+  });
 }
 
 function resetFilters() {
