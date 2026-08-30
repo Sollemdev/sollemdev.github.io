@@ -1,53 +1,148 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Babel - Refund &amp; Cancellation Policy | Sollemdev</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Babel — Refund &amp; Cancellation Policy | @SolLem_Dev</title>
+  <meta name="description" content="Refund and Cancellation Policy for the Babel Chrome extension." />
+  <meta name="author" content="Sollemdev" />
+
+  <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
-  <style>
-    :root { --bg:#f5f7fa; --card:#ffffff; --text:#1f2933; --muted:#6b7280; --border:#d9dee5; --h2:#374151; --soft:#4b5563; --foot:#9ca3af; --hr:#e5e7eb; --link:#2563eb; color-scheme:light; }
-    [data-theme="dark"] { --bg:#121417; --card:#1b1e24; --text:#e6e9ee; --muted:#98a0ab; --border:#2b3038; --h2:#cbd3dc; --soft:#b6bec8; --foot:#7d8794; --hr:#2b3038; --link:#7bb0ff; color-scheme:dark; }
-    body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; line-height:1.6; color:var(--text); background:var(--bg); margin:0; padding:32px 16px; }
-    .wrap { max-width:720px; margin:0 auto; background:var(--card); padding:36px; border-radius:12px; border:1px solid var(--border); box-shadow:0 4px 12px rgba(0,0,0,0.05); }
-    h1 { font-size:24px; margin-top:0; }
-    h2 { font-size:16px; margin-top:24px; color:var(--h2); border-bottom:1px solid var(--hr); padding-bottom:6px; }
-    p, li { font-size:14.5px; color:var(--soft); }
-    ul { padding-left:22px; }
-    a { color:var(--link); }
-    .meta { color:var(--muted); font-size:13px; }
-    .footer { margin-top:32px; font-size:13px; color:var(--foot); }
-  </style>
+
+  <!-- Google Fonts: EB Garamond, Inter, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
-  <div class="wrap">
-    <h1>Babel - Refund &amp; Cancellation Policy</h1>
-    <p class="meta">Last updated: August 30, 2026 &middot; <a href="privacy.html">Privacy Policy</a> &middot; <a href="terms.html">Terms &amp; Conditions</a> &middot; <a href="babel.html">&larr; Back to Babel</a></p>
 
-    <h2>1. Cancellation</h2>
-    <p>You can cancel a subscription at any time from your Paddle customer portal. Cancellation stops future recurring charges. Access to the paid features you already paid for continues until the end of the current billing period, and no partial refund is issued for the remainder of that period.</p>
+  <!-- Site Header -->
+  <header class="site-header" id="header">
+    <div class="container header-content">
+      <a href="../index.html" class="brand-logo" id="brand-link">
+        @SolLem_Dev
+      </a>
 
-    <h2>2. Digital goods and service access</h2>
-    <p>Babel subscriptions and boost packs are digital services that provide immediate access to the product. Because the service is consumed as it is used, purchases are generally treated as final once access is granted.</p>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="../index.html#work" class="nav-link">Projects</a></li>
+          <li><a href="../index.html#skills" class="nav-link">Skills</a></li>
+          <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
 
-    <h2>3. Refund window (satisfaction guarantee)</h2>
-    <p>If you are not satisfied with the paid plan, you may request a refund within 14 days of the original purchase (the "refund window"). To be eligible:</p>
-    <ul>
-      <li>The request is made within 14 days of purchase; and</li>
-      <li>No significant usage of the paid allotment has been consumed, or the product is not working as described.</li>
-    </ul>
-    <p>Refund requests outside the 14-day window are evaluated on a case-by-case basis.</p>
+      <div class="header-actions">
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle Dark/Light Mode" title="Toggle theme">
+          <svg id="theme-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
 
-    <h2>4. How to request a refund</h2>
-    <p>Email <a href="mailto:sollemdev@gmail.com">sollemdev@gmail.com</a> with your order (transaction) ID and the reason for your request. Include the transaction ID; without it we may not be able to locate your purchase, as we keep no password-based accounts.</p>
+  <main>
+    <section class="project-hero" style="padding-bottom: 60px;">
+      <div class="container">
+        <!-- Breadcrumb Navigation -->
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+          <a href="../index.html" class="breadcrumb-link">Home</a>
+          <span class="breadcrumb-separator">/</span>
+          <a href="babel.html" class="breadcrumb-link">Babel</a>
+          <span class="breadcrumb-separator">/</span>
+          <span class="breadcrumb-current">Refund Policy</span>
+        </nav>
 
-    <h2>5. EU statutory rights</h2>
-    <p>Nothing in this policy limits your statutory rights. Where you have a legal right of withdrawal (for example under EU consumer law for an online purchase of services before substantial use), that right is not affected.</p>
+        <h1 class="project-title" style="margin-top: 16px;">Babel — Refund &amp; Cancellation Policy</h1>
+        
+        <!-- Policy Navigation Pills -->
+        <div class="policy-nav-pills">
+          <a href="terms.html" class="policy-pill">Terms &amp; Conditions</a>
+          <a href="privacy.html" class="policy-pill">Privacy Policy</a>
+          <a href="refund.html" class="policy-pill active">Refund Policy</a>
+          <a href="babel.html" class="policy-pill" style="margin-left: auto;">&larr; Back to Babel</a>
+        </div>
 
-    <h2>6. Other orders</h2>
-    <p>For any other billing issues, contact us at <a href="mailto:sollemdev@gmail.com">sollemdev@gmail.com</a> and we will work to resolve them.</p>
+        <div class="policy-document-card">
+          <div class="policy-meta-bar">
+            Last updated: August 30, 2026 &middot; <a href="privacy.html">Privacy Policy</a> &middot; <a href="terms.html">Terms &amp; Conditions</a> &middot; <a href="babel.html">&larr; Back to Babel</a>
+          </div>
 
-    <div class="footer">Babel Chrome Extension - Sollemdev. Hosted on GitHub Pages.</div>
-  </div>
+          <div class="policy-document-body">
+            <h2>1. Cancellation</h2>
+            <p>You can cancel a subscription at any time from your Paddle customer portal. Cancellation stops future recurring charges. Access to the paid features you already paid for continues until the end of the current billing period, and no partial refund is issued for the remainder of that period.</p>
+
+            <h2>2. Digital goods and service access</h2>
+            <p>Babel subscriptions and boost packs are digital services that provide immediate access to the product. Because the service is consumed as it is used, purchases are generally treated as final once access is granted.</p>
+
+            <h2>3. Refund window (satisfaction guarantee)</h2>
+            <p>If you are not satisfied with the paid plan, you may request a refund within 14 days of the original purchase (the "refund window"). To be eligible:</p>
+            <ul>
+              <li>The request is made within 14 days of purchase; and</li>
+              <li>No significant usage of the paid allotment has been consumed, or the product is not working as described.</li>
+            </ul>
+            <p>Refund requests outside the 14-day window are evaluated on a case-by-case basis.</p>
+
+            <h2>4. How to request a refund</h2>
+            <p>Email <a href="mailto:sollemdev@gmail.com">sollemdev@gmail.com</a> with your order (transaction) ID and the reason for your request. Include the transaction ID; without it we may not be able to locate your purchase, as we keep no password-based accounts.</p>
+
+            <h2>5. EU statutory rights</h2>
+            <p>Nothing in this policy limits your statutory rights. Where you have a legal right of withdrawal (for example under EU consumer law for an online purchase of services before substantial use), that right is not affected.</p>
+
+            <h2>6. Other orders</h2>
+            <p>For any other billing issues, contact us at <a href="mailto:sollemdev@gmail.com">sollemdev@gmail.com</a> and we will work to resolve them.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+      <div>
+        <span>Babel Chrome Extension &mdash; Sollemdev. Hosted on GitHub Pages.</span>
+      </div>
+      <div>
+        <a href="terms.html" style="text-decoration: underline;">Terms</a> &middot;
+        <a href="privacy.html" style="text-decoration: underline;">Privacy</a> &middot;
+        <a href="refund.html" style="text-decoration: underline;">Refund</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Theme Management
+    const themeToggleBtn = document.getElementById("theme-toggle");
+    const storedTheme = localStorage.getItem("theme");
+    const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const initialTheme = storedTheme || (systemPrefersDark ? "dark" : "light");
+    setTheme(initialTheme);
+
+    if (themeToggleBtn) {
+      themeToggleBtn.addEventListener("click", () => {
+        const currentTheme = document.documentElement.getAttribute("data-theme");
+        setTheme(currentTheme === "dark" ? "light" : "dark");
+      });
+    }
+
+    function setTheme(theme) {
+      document.documentElement.setAttribute("data-theme", theme);
+      localStorage.setItem("theme", theme);
+      const themeIcon = document.getElementById("theme-icon");
+      if (themeIcon) {
+        if (theme === "dark") {
+          themeIcon.innerHTML = '<path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>';
+        } else {
+          themeIcon.innerHTML = '<path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>';
+        }
+      }
+    }
+  </script>
 </body>
 </html>

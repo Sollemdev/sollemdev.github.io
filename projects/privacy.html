@@ -1,82 +1,176 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Babel - Privacy Policy | Sollemdev</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Babel — Privacy Policy | @SolLem_Dev</title>
+  <meta name="description" content="Privacy Policy for the Babel Chrome extension." />
+  <meta name="author" content="Sollemdev" />
+
+  <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
-  <style>
-    :root { --bg:#f5f7fa; --card:#ffffff; --text:#1f2933; --muted:#6b7280; --border:#d9dee5; --h2:#374151; --soft:#4b5563; --foot:#9ca3af; --hr:#e5e7eb; --link:#2563eb; color-scheme:light; }
-    [data-theme="dark"] { --bg:#121417; --card:#1b1e24; --text:#e6e9ee; --muted:#98a0ab; --border:#2b3038; --h2:#cbd3dc; --soft:#b6bec8; --foot:#7d8794; --hr:#2b3038; --link:#7bb0ff; color-scheme:dark; }
-    body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; line-height:1.6; color:var(--text); background:var(--bg); margin:0; padding:32px 16px; }
-    .wrap { max-width:720px; margin:0 auto; background:var(--card); padding:36px; border-radius:12px; border:1px solid var(--border); box-shadow:0 4px 12px rgba(0,0,0,0.05); }
-    h1 { font-size:24px; margin-top:0; }
-    h2 { font-size:16px; margin-top:24px; color:var(--h2); border-bottom:1px solid var(--hr); padding-bottom:6px; }
-    p, li { font-size:14.5px; color:var(--soft); }
-    ul, ol { padding-left:22px; }
-    code { background:var(--bg); border:1px solid var(--border); border-radius:4px; padding:1px 5px; font-size:13px; }
-    a { color:var(--link); }
-    .meta { color:var(--muted); font-size:13px; }
-    .footer { margin-top:32px; font-size:13px; color:var(--foot); }
-  </style>
+
+  <!-- Google Fonts: EB Garamond, Inter, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
-  <div class="wrap">
-    <h1>Babel - Privacy Policy</h1>
-    <p class="meta">Last updated: August 28, 2026 &middot; <a href="terms.html">Terms &amp; Conditions</a> &middot; <a href="refund.html">Refund Policy</a> &middot; <a href="babel.html">&larr; Back to Babel</a></p>
 
-    <h2>1. What this policy covers</h2>
-    <p>This policy describes how the Babel Chrome extension and its backend handle your data. Babel is local-first where possible: your settings, device identifier, and usage counters stay on your device, and your text is processed only to produce a translation or an AI-prompt result.</p>
+  <!-- Site Header -->
+  <header class="site-header" id="header">
+    <div class="container header-content">
+      <a href="../index.html" class="brand-logo" id="brand-link">
+        @SolLem_Dev
+      </a>
 
-    <h2>2. What we store on your device</h2>
-    <p>The extension keeps the following in <code>chrome.storage.local</code> on your device:</p>
-    <ul>
-      <li><strong>Settings</strong>: hotkey, default mode (translation or prompt), target language, translation style, the optional site whitelist, and the DLP (data-loss prevention) mode.</li>
-      <li><strong>An anonymous device identifier</strong> (a randomly generated ID) and a short-lived session token used to authenticate requests to the Babel backend.</li>
-      <li><strong>Local usage statistics</strong> (counts of translations and generated prompts), shown on the Settings page. You can clear them at any time with "Reset stats".</li>
-    </ul>
-    <p>We do not collect your name, email, or card details inside the extension. No API key is stored in the browser - the AI provider credentials live on the Babel backend.</p>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="../index.html#work" class="nav-link">Projects</a></li>
+          <li><a href="../index.html#skills" class="nav-link">Skills</a></li>
+          <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
 
-    <h2>3. How translation works (data in transit)</h2>
-    <p>When you press the hotkey:</p>
-    <ol>
-      <li>The text in your focused input field is sent from your browser to the Babel backend (<code>babel-backend.fly.dev</code>) over an authenticated request.</li>
-      <li>The backend forwards it to the AI provider using server-side credentials and returns the result.</li>
-      <li>The translation or generated prompt is inserted back into your field on your device.</li>
-    </ol>
-    <p>Your text is used solely to produce the result. We do not log, sell, or share its content. The extension sends only minimal, anonymous usage statistics that never include your text.</p>
+      <div class="header-actions">
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle Dark/Light Mode" title="Toggle theme">
+          <svg id="theme-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
 
-    <h2>4. Prompt Mode</h2>
-    <p>Prompt Mode uses the same flow: your text is turned into an optimized English prompt for AI generation platforms. The prompt is sent to the AI provider and returned to you; it is not retained or shared beyond producing the result.</p>
+  <main>
+    <section class="project-hero" style="padding-bottom: 60px;">
+      <div class="container">
+        <!-- Breadcrumb Navigation -->
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+          <a href="../index.html" class="breadcrumb-link">Home</a>
+          <span class="breadcrumb-separator">/</span>
+          <a href="babel.html" class="breadcrumb-link">Babel</a>
+          <span class="breadcrumb-separator">/</span>
+          <span class="breadcrumb-current">Privacy Policy</span>
+        </nav>
 
-    <h2>5. Data Loss Prevention (DLP)</h2>
-    <p>Before a request leaves your device, Babel detects secrets locally (passwords, API keys, credit-card numbers, and passport-like personal data):</p>
-    <ul>
-      <li><strong>Block</strong> - the request is not sent at all;</li>
-      <li><strong>Mask</strong> - the detected secret is replaced with <code>[REDACTED]</code> before sending;</li>
-      <li><strong>Disabled</strong> - no check is performed (only use this if you understand the risk).</li>
-    </ul>
-    <p>All detection runs entirely on your device before anything is transmitted. Detection is best-effort pattern matching, not a guarantee. You are responsible for the text you send: make sure you do not transmit sensitive, confidential, or personal data, on any plan, in any mode, over any network.</p>
+        <h1 class="project-title" style="margin-top: 16px;">Babel — Privacy Policy</h1>
+        
+        <!-- Policy Navigation Pills -->
+        <div class="policy-nav-pills">
+          <a href="terms.html" class="policy-pill">Terms &amp; Conditions</a>
+          <a href="privacy.html" class="policy-pill active">Privacy Policy</a>
+          <a href="refund.html" class="policy-pill">Refund Policy</a>
+          <a href="babel.html" class="policy-pill" style="margin-left: auto;">&larr; Back to Babel</a>
+        </div>
 
-    <h2>6. Usage limits and accounts</h2>
-    <p>An anonymous device identifier enforces daily usage limits on the backend. Paid plans, subscriptions, and boosts are processed by our payment provider (Paddle) through a separate hosted checkout. The extension itself never handles or stores your payment card details; Paddle's privacy policy governs the payment data you provide during checkout.</p>
-    <p>Babel does not require or use your email for sign-in or recovery. Your paid plan is tied to your device and to the order (transaction) ID issued when you pay. That order ID is the key that lets you move your subscription to another device (up to three devices). Safekeeping that ID is your responsibility; if you lose it, we cannot restore your paid plan because we keep no password-based accounts.</p>
+        <div class="policy-document-card">
+          <div class="policy-meta-bar">
+            Last updated: August 28, 2026 &middot; <a href="terms.html">Terms &amp; Conditions</a> &middot; <a href="refund.html">Refund Policy</a> &middot; <a href="babel.html">&larr; Back to Babel</a>
+          </div>
 
-    <h2>7. Third parties</h2>
-    <p>Your text is shared only with the AI provider your request is routed to, and only to fulfill the request. Payment data is handled solely by Paddle. We do not sell personal data or transfer it to advertisers.</p>
+          <div class="policy-document-body">
+            <h2>1. What this policy covers</h2>
+            <p>This policy describes how the Babel Chrome extension and its backend handle your data. Babel is local-first where possible: your settings, device identifier, and usage counters stay on your device, and your text is processed only to produce a translation or an AI-prompt result.</p>
 
-    <h2>8. Usage statistics</h2>
-    <p>To keep the product healthy and reliable, we collect minimal, aggregated, anonymous usage statistics (for example, counts of translations and checkouts). These statistics never include your text, your device identifier, or any personally identifiable content.</p>
+            <h2>2. What we store on your device</h2>
+            <p>The extension keeps the following in <code>chrome.storage.local</code> on your device:</p>
+            <ul>
+              <li><strong>Settings</strong>: hotkey, default mode (translation or prompt), target language, translation style, the optional site whitelist, and the DLP (data-loss prevention) mode.</li>
+              <li><strong>An anonymous device identifier</strong> (a randomly generated ID) and a short-lived session token used to authenticate requests to the Babel backend.</li>
+              <li><strong>Local usage statistics</strong> (counts of translations and generated prompts), shown on the Settings page. You can clear them at any time with "Reset stats".</li>
+            </ul>
+            <p>We do not collect your name, email, or card details inside the extension. No API key is stored in the browser - the AI provider credentials live on the Babel backend.</p>
 
-    <h2>9. AI training and data retention</h2>
-    <p>We do not use your text to train our own models, improve unrelated services, or build profiles of you. The AI provider that processes your requests is contractually prohibited from using your inputs or outputs to train or fine-tune its models, and by default it does not retain inference data beyond what is needed for reliability and abuse prevention.</p>
+            <h2>3. How translation works (data in transit)</h2>
+            <p>When you press the hotkey:</p>
+            <ol>
+              <li>The text in your focused input field is sent from your browser to the Babel backend (<code>babel-backend.fly.dev</code>) over an authenticated request.</li>
+              <li>The backend forwards it to the AI provider using server-side credentials and returns the result.</li>
+              <li>The translation or generated prompt is inserted back into your field on your device.</li>
+            </ol>
+            <p>Your text is used solely to produce the result. We do not log, sell, or share its content. The extension sends only minimal, anonymous usage statistics that never include your text.</p>
 
-    <h2>10. Your control</h2>
-    <p>You can change or reset all settings and clear usage statistics from the Settings page. Uninstalling the extension removes locally stored data. You may also ask us to forget a device identifier on the backend by contacting us at <a href="mailto:sollemdev@gmail.com">sollemdev@gmail.com</a>.</p>
+            <h2>4. Prompt Mode</h2>
+            <p>Prompt Mode uses the same flow: your text is turned into an optimized English prompt for AI generation platforms. The prompt is sent to the AI provider and returned to you; it is not retained or shared beyond producing the result.</p>
 
-    <p><strong>Contact:</strong> Sollemdev &middot; <a href="mailto:sollemdev@gmail.com">sollemdev@gmail.com</a></p>
+            <h2>5. Data Loss Prevention (DLP)</h2>
+            <p>Before a request leaves your device, Babel detects secrets locally (passwords, API keys, credit-card numbers, and passport-like personal data):</p>
+            <ul>
+              <li><strong>Block</strong> - the request is not sent at all;</li>
+              <li><strong>Mask</strong> - the detected secret is replaced with <code>[REDACTED]</code> before sending;</li>
+              <li><strong>Disabled</strong> - no check is performed (only use this if you understand the risk).</li>
+            </ul>
+            <p>All detection runs entirely on your device before anything is transmitted. Detection is best-effort pattern matching, not a guarantee. You are responsible for the text you send: make sure you do not transmit sensitive, confidential, or personal data, on any plan, in any mode, over any network.</p>
 
-    <div class="footer">Babel Chrome Extension - local-first by design. Hosted on GitHub Pages.</div>
-  </div>
+            <h2>6. Usage limits and accounts</h2>
+            <p>An anonymous device identifier enforces daily usage limits on the backend. Paid plans, subscriptions, and boosts are processed by our payment provider (Paddle) through a separate hosted checkout. The extension itself never handles or stores your payment card details; Paddle's privacy policy governs the payment data you provide during checkout.</p>
+            <p>Babel does not require or use your email for sign-in or recovery. Your paid plan is tied to your device and to the order (transaction) ID issued when you pay. That order ID is the key that lets you move your subscription to another device (up to three devices). Safekeeping that ID is your responsibility; if you lose it, we cannot restore your paid plan because we keep no password-based accounts.</p>
+
+            <h2>7. Third parties</h2>
+            <p>Your text is shared only with the AI provider your request is routed to, and only to fulfill the request. Payment data is handled solely by Paddle. We do not sell personal data or transfer it to advertisers.</p>
+
+            <h2>8. Usage statistics</h2>
+            <p>To keep the product healthy and reliable, we collect minimal, aggregated, anonymous usage statistics (for example, counts of translations and checkouts). These statistics never include your text, your device identifier, or any personally identifiable content.</p>
+
+            <h2>9. AI training and data retention</h2>
+            <p>We do not use your text to train our own models, improve unrelated services, or build profiles of you. The AI provider that processes your requests is contractually prohibited from using your inputs or outputs to train or fine-tune its models, and by default it does not retain inference data beyond what is needed for reliability and abuse prevention.</p>
+
+            <h2>10. Your control</h2>
+            <p>You can change or reset all settings and clear usage statistics from the Settings page. Uninstalling the extension removes locally stored data. You may also ask us to forget a device identifier on the backend by contacting us at <a href="mailto:sollemdev@gmail.com">sollemdev@gmail.com</a>.</p>
+
+            <p><strong>Contact:</strong> Sollemdev &middot; <a href="mailto:sollemdev@gmail.com">sollemdev@gmail.com</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+      <div>
+        <span>Babel Chrome Extension &mdash; Sollemdev. Hosted on GitHub Pages.</span>
+      </div>
+      <div>
+        <a href="terms.html" style="text-decoration: underline;">Terms</a> &middot;
+        <a href="privacy.html" style="text-decoration: underline;">Privacy</a> &middot;
+        <a href="refund.html" style="text-decoration: underline;">Refund</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Theme Management
+    const themeToggleBtn = document.getElementById("theme-toggle");
+    const storedTheme = localStorage.getItem("theme");
+    const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const initialTheme = storedTheme || (systemPrefersDark ? "dark" : "light");
+    setTheme(initialTheme);
+
+    if (themeToggleBtn) {
+      themeToggleBtn.addEventListener("click", () => {
+        const currentTheme = document.documentElement.getAttribute("data-theme");
+        setTheme(currentTheme === "dark" ? "light" : "dark");
+      });
+    }
+
+    function setTheme(theme) {
+      document.documentElement.setAttribute("data-theme", theme);
+      localStorage.setItem("theme", theme);
+      const themeIcon = document.getElementById("theme-icon");
+      if (themeIcon) {
+        if (theme === "dark") {
+          themeIcon.innerHTML = '<path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>';
+        } else {
+          themeIcon.innerHTML = '<path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>';
+        }
+      }
+    }
+  </script>
 </body>
 </html>
