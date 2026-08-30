@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initViewMode();
   initSearch();
   initModal();
+  initContactForm();
   renderProjects();
 });
 
@@ -487,4 +488,87 @@ function showToast(message) {
   setTimeout(() => {
     toast.classList.remove("show");
   }, 3000);
+}
+
+// Contact Form AJAX Handler (Web3Forms API with graceful fallback)
+function initContactForm() {
+  const form = document.getElementById("contact-form");
+  if (!form) return;
+
+  const submitBtn = document.getElementById("form-submit-btn");
+  const btnText = submitBtn ? submitBtn.querySelector(".btn-submit-text") : null;
+  const btnLoading = submitBtn ? submitBtn.querySelector(".btn-submit-loading") : null;
+  const statusEl = document.getElementById("form-status");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    const formData = new FormData(form);
+    const accessKey = formData.get("access_key");
+
+    // UI: Set loading state
+    if (btnText) btnText.style.display = "none";
+    if (btnLoading) btnLoading.style.display = "inline-flex";
+    if (submitBtn) submitBtn.disabled = true;
+    if (statusEl) {
+      statusEl.className = "form-status";
+      statusEl.textContent = "";
+    }
+
+    try {
+      // If access key is placeholder or default
+      if (!accessKey || accessKey === "YOUR_ACCESS_KEY_HERE") {
+        // Fallback: simulate submission and provide mailto link
+        await new Promise(resolve => setTimeout(resolve, 600));
+        
+        const name = formData.get("name");
+        const email = formData.get("email");
+        const topic = formData.get("topic");
+        const message = formData.get("message");
+        
+        // Open default mail client as reliable fallback
+        const mailtoUri = `mailto:sollemdev@gmail.com?subject=${encodeURIComponent(`[Portfolio] ${topic} from ${name}`)}&body=${encodeURIComponent(`From: ${name} (${email})\nTopic: ${topic}\n\nMessage:\n${message}`)}`;
+        
+        if (statusEl) {
+          statusEl.className = "form-status success";
+          statusEl.innerHTML = `✓ Form ready! Opening email client or send directly to <strong>sollemdev@gmail.com</strong>.`;
+        }
+        window.location.href = mailtoUri;
+        form.reset();
+        return;
+      }
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        if (statusEl) {
+          statusEl.className = "form-status success";
+          statusEl.textContent = "✓ Thank you! Your message has been sent successfully. I will get back to you shortly.";
+        }
+        form.reset();
+        showToast("Message sent successfully!");
+      } else {
+        throw new Error(data.message || "Failed to send message.");
+      }
+    } catch (err) {
+      if (statusEl) {
+        statusEl.className = "form-status error";
+        statusEl.textContent = "Could not send message automatically. Please reach out directly to sollemdev@gmail.com.";
+      }
+    } finally {
+      if (btnText) btnText.style.display = "inline";
+      if (btnLoading) btnLoading.style.display = "none";
+      if (submitBtn) submitBtn.disabled = false;
+    }
+  });
 }

@@ -206,8 +206,60 @@
         <div class="contact-card">
           <h2 class="contact-title">Let's work together.</h2>
           <p class="contact-subtitle">
-            Have a project in mind, collaboration, or just want to chat about architecture? Reach out anytime!
+            Have a project in mind, collaboration, or question about architecture? Send a message directly or reach out via email.
           </p>
+
+          <!-- Interactive Contact Form -->
+          <form id="contact-form" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <!-- Web3Forms Config -->
+            <input type="hidden" name="access_key" id="web3forms-key" value="YOUR_ACCESS_KEY_HERE" />
+            <input type="hidden" name="subject" value="New Contact Form Submission from SollemDev Portfolio" />
+            <input type="hidden" name="from_name" value="SollemDev Portfolio" />
+            <!-- Honeypot for spam protection -->
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="form-name" class="form-label">Name</label>
+                <input type="text" id="form-name" name="name" class="form-input" placeholder="Your Name" required />
+              </div>
+              <div class="form-group">
+                <label for="form-email" class="form-label">Email</label>
+                <input type="email" id="form-email" name="email" class="form-input" placeholder="your.email@example.com" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="form-subject" class="form-label">Topic / Project Type</label>
+              <select id="form-subject" name="topic" class="form-select">
+                <option value="New Project / Collaboration">New Project / Collaboration</option>
+                <option value="AI Agents &amp; Tooling">AI Agents &amp; Tooling</option>
+                <option value="High-Voltage / Hardware Engineering">High-Voltage / Hardware Engineering</option>
+                <option value="Consulting / Advisory">Consulting / Advisory</option>
+                <option value="General Inquiry">General Inquiry</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="form-message" class="form-label">Message</label>
+              <textarea id="form-message" name="message" class="form-textarea" rows="4" placeholder="Tell me about your project, timeline, or question..." required></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" id="form-submit-btn" class="btn-primary form-submit-btn">
+                <span class="btn-submit-text">Send Message &rarr;</span>
+                <span class="btn-submit-loading" style="display: none;">
+                  <svg class="spinner-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
+                  Sending...
+                </span>
+              </button>
+              <div id="form-status" class="form-status" aria-live="polite"></div>
+            </div>
+          </form>
+
+          <div class="contact-divider">
+            <span>Or reach out directly</span>
+          </div>
 
           <div class="email-copy-wrapper">
             <span class="email-address">sollemdev@gmail.com</span>
