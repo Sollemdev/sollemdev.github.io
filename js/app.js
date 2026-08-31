@@ -224,8 +224,10 @@ function getFilteredProjects() {
     const matchesTag = currentTag === "All" || project.tags.includes(currentTag);
     const matchesSearch = !searchQuery || 
       project.title.toLowerCase().includes(searchQuery) ||
+      (project.subLabel && project.subLabel.toLowerCase().includes(searchQuery)) ||
       project.subtitle.toLowerCase().includes(searchQuery) ||
       project.description.toLowerCase().includes(searchQuery) ||
+      (project.statusLabel && project.statusLabel.toLowerCase().includes(searchQuery)) ||
       project.tags.some(t => t.toLowerCase().includes(searchQuery));
     
     return matchesTag && matchesSearch;

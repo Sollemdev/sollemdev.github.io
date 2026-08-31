@@ -1327,6 +1327,10 @@ input, textarea {
   .hero-section {
     padding: 50px 0 40px;
   }
+
+  .hero-title {
+    font-size: 32px;
+  }
   
   .about-grid {
     grid-template-columns: 1fr;
@@ -1344,6 +1348,66 @@ input, textarea {
   .section-title-row {
     flex-direction: column;
     align-items: flex-start;
+    gap: 16px;
+  }
+
+  .modal-content {
+    padding: 28px 20px;
+    max-height: 92vh;
+  }
+
+  .modal-title {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-row-main {
+    gap: 12px;
+  }
+
+  .project-icon-thumb {
+    width: 40px;
+    height: 40px;
+    padding: 6px;
+  }
+
+  .projects-container.list-view .project-title {
+    font-size: 20px;
+  }
+
+  .projects-container.list-view .project-meta-top {
+    font-size: 11px;
+  }
+
+  .project-status-pill {
+    font-size: 10px;
+    padding: 1px 6px;
+  }
+
+  .modal-content {
+    padding: 24px 16px;
+  }
+
+  .modal-meta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .modal-meta .btn-primary,
+  .modal-meta .btn-secondary {
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .filter-bar {
+    gap: 6px;
+  }
+
+  .tag-btn {
+    font-size: 12px;
+    padding: 4px 10px;
   }
 }
 
