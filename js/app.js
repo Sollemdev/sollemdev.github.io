@@ -15,7 +15,7 @@ const PROJECTS_DATA = [
     icon: "assets/icons/babel/icon48.png",
     banner: "assets/images/banners/Babel_Keyboard_Magic_1.jpg",
     github: "https://github.com/Sollemdev",
-    demo: "projects/babel/",
+    demo: "projects/babel.html",
     featured: true,
     highlights: [
       "Sub-300ms in-place DOM text replacement via Alt+T",

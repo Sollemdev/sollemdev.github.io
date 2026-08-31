@@ -4,7 +4,7 @@
 
 ## Projects
 
-- [Babel — AI In-Place Translation Extension](https://sollemdev.github.io/projects/babel/): High-speed Manifest V3 Chromium browser extension for instant in-place text translation and AI prompt engineering directly inside any input field via hotkeys.
+- [Babel — AI In-Place Translation Extension](https://sollemdev.github.io/projects/babel.html): High-speed Manifest V3 Chromium browser extension for instant in-place text translation and AI prompt engineering directly inside any input field via hotkeys.
   - **Architecture**: Manifest V3, Service Workers, Content Script injection, DOM Text Mutation Observer, Zero-Data Retention (Client-Side Only).
   - **Multi-Model Support**: OpenAI (GPT-4o / GPT-4o-mini), Anthropic (Claude 3.5 Sonnet / Haiku), DeepSeek, Google Gemini 2.0 Flash / Pro, Groq, OpenRouter, and Local Ollama instances.
   - **Ecosystem**: Google Chrome, Microsoft Edge, Brave, Arc, Opera, Opera GX, Vivaldi (with future native Windows/macOS/iOS/Android roadmap).
