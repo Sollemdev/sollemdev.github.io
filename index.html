@@ -48,9 +48,9 @@
 
       <nav>
         <ul class="nav-menu">
-          <li><a href="#work" class="nav-link active">Software &amp; Tools</a></li>
-          <li><a href="#skills" class="nav-link">Stack</a></li>
-          <li><a href="#contact" class="nav-link">Support</a></li>
+          <li><a href="#work" class="nav-link active">Work</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
       </nav>
 
@@ -68,30 +68,31 @@
     <!-- Hero Section -->
     <section class="hero-section" id="hero">
       <div class="container">
-        <div class="hero-status-badge">
-          <span class="status-dot"></span>
-          <span>Independent Software Studio &bull; Software &amp; AI Tools</span>
-        </div>
-
         <h1 class="hero-title">
-          Engineering intelligent AI software, browser extensions, and modular developer tools.
+          Works at the intersection of software, AI agents, and hardware engineering.
         </h1>
 
         <div class="hero-bio">
           <p>
-            Sollemdev is an independent software development studio dedicated to building high-performance developer tools, browser extensions, and AI-assisted productivity software. Every digital product is engineered from first principles with structural rigor, privacy-first offline capability, and editorial precision.
+            Sollemdev is an independent software and engineering studio operating across modular web architectures, AI productivity software, and pulse power electronics. Not from being scattered, but because the boxes were never big enough &mdash; one rigorous mind applied to different materials.
           </p>
           <p>
-            Our flagship commercial software product, <strong>Babel</strong>, delivers instant in-place AI translation and platform-specific prompt engineering directly inside browser input fields across 23 languages. We also develop modular open-source architectures, design systems, and specialized engineering tooling.
+            Everything starts from first principles. Nothing gets taken at &ldquo;it just works&rdquo; &mdash; there's always a dig down to the actual physics or logic underneath. Slower to start, relentless once the foundation clicks. Modular web systems with editorial discipline. AI-agent orchestration and software products that do real work. High-voltage pulse electronics where the gap defines whether the pulse shapes right. Licensed software products, not weekend toys. Same structural rigor underneath.
+          </p>
+          <p>
+            The core engineering philosophy is simple: designing a high-performance user interface, an AI translation pipeline, and a pulse-forming network are the same discipline &mdash; structure, precision, and knowing exactly what to remove.
+          </p>
+          <p class="hero-bio-meta">
+            Studio Profile &bull; Software &amp; Engineering Systems &bull; 2026
           </p>
         </div>
 
         <div class="hero-cta">
-          <a href="projects/babel.html" class="btn-primary">
-            Explore Babel (Flagship Software) &rarr;
+          <a href="#work" class="btn-primary">
+            Explore Work &rarr;
           </a>
-          <a href="#work" class="btn-secondary">
-            View All Software &rarr;
+          <a href="#contact" class="btn-secondary">
+            Get in Touch
           </a>
         </div>
       </div>
@@ -100,30 +101,9 @@
     <!-- Portfolio Section -->
     <section class="portfolio-section" id="work">
       <div class="container">
-        <!-- Flagship Software Showcase Banner -->
-        <div style="margin-bottom: 36px; background: var(--bg-surface-elevated); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 26px 30px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; box-shadow: var(--shadow-sm);">
-          <div style="max-width: 680px;">
-            <div style="display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent-primary); margin-bottom: 8px;">
-              <span style="width: 7px; height: 7px; border-radius: 50%; background: var(--accent-primary);"></span>
-              Featured Software Product &bull; Commercial SaaS Extension
-            </div>
-            <h3 style="font-family: var(--font-serif); font-size: 24px; font-weight: 600; color: var(--text-primary); margin-bottom: 6px;">
-              Babel — Instant AI Translation &amp; Prompt Engineering
-            </h3>
-            <p style="font-size: 14.5px; color: var(--text-secondary); line-height: 1.5; margin: 0;">
-              Manifest V3 browser extension for Chrome, Edge, and Chromium. 23 languages, 6 tone styles, zero copy-pasting. Subscriptions starting from $3.99/mo with a 14-day refund guarantee.
-            </p>
-          </div>
-          <div>
-            <a href="projects/babel.html" class="btn-primary" style="white-space: nowrap;">
-              Product Specs &amp; Pricing &rarr;
-            </a>
-          </div>
-        </div>
-
         <div class="section-header">
           <div class="section-title-row">
-            <h2 class="section-title">Software Products &amp; Tools</h2>
+            <h2 class="section-title">Selected Projects</h2>
 
             <div class="controls-group">
               <!-- Live Search Box -->
@@ -234,17 +214,17 @@
     <section class="contact-section" id="contact">
       <div class="container">
         <div class="contact-card">
-          <h2 class="contact-title">Software Support &amp; Inquiries</h2>
+          <h2 class="contact-title">Let's work together.</h2>
           <p class="contact-subtitle">
-            Have questions about our software products, licensing, technical support, or bug reports? Send a message directly or reach out via email.
+            Have a project in mind, software inquiry, or question about architecture? Send a message directly or reach out via email.
           </p>
 
           <!-- Interactive Contact Form -->
           <form id="contact-form" class="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
             <!-- Web3Forms Config -->
             <input type="hidden" name="access_key" id="web3forms-key" value="ff207e85-aed5-480d-afad-60a57c7d9857" />
-            <input type="hidden" name="subject" value="New Software Support Inquiry from Sollemdev Studio" />
-            <input type="hidden" name="from_name" value="Sollemdev Software Studio" />
+            <input type="hidden" name="subject" value="New Contact Form Submission from Sollemdev Studio" />
+            <input type="hidden" name="from_name" value="Sollemdev Studio" />
             <!-- Honeypot for spam protection -->
             <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
 
@@ -260,13 +240,13 @@
             </div>
 
             <div class="form-group">
-              <label for="form-subject" class="form-label">Inquiry Subject</label>
+              <label for="form-subject" class="form-label">Topic / Subject</label>
               <select id="form-subject" name="topic" class="form-select">
-                <option value="Babel Extension &amp; Licensing">Babel Extension &amp; Licensing</option>
-                <option value="Software Technical Support">Software Technical Support</option>
-                <option value="Feature Request &amp; Feedback">Feature Request &amp; Feedback</option>
-                <option value="Partnership &amp; Integration">Partnership &amp; Integration</option>
-                <option value="General Software Inquiry">General Software Inquiry</option>
+                <option value="Software Products &amp; Licensing">Software Products &amp; Licensing</option>
+                <option value="AI Tooling &amp; Browser Extensions">AI Tooling &amp; Browser Extensions</option>
+                <option value="Engineering &amp; Architecture">Engineering &amp; Architecture</option>
+                <option value="Collaboration &amp; Partnerships">Collaboration &amp; Partnerships</option>
+                <option value="General Inquiry">General Inquiry</option>
               </select>
             </div>
 
