@@ -28,24 +28,26 @@ const PROJECTS_DATA = [
     ]
   },
   {
-    id: "agent-chat",
-    title: "AgentChat",
-    subtitle: "Multimodal real-time messaging platform for hybrid human-agent collaboration and MCP integration",
-    description: "A scalable, microservice-based multimodal messaging system where humans and autonomous AI agents collaborate in real-time as first-class peers. Features native Model Context Protocol (MCP) bridges, low-latency WebSocket streaming, NATS event bus, and distributed media storage.",
+    id: "humanagi",
+    title: "Humanagi",
+    subLabel: "bubble chat",
+    subtitle: "Floating multimodal bubble messenger for hybrid human-agent collaboration & MCP integration",
+    description: "A physics-driven floating bubble messenger where humans and autonomous AI agents collaborate in real-time as first-class peers. Features native Model Context Protocol (MCP) bridges, interactive orbital unread indicators, WebSocket streaming, NATS event bus, and distributed media storage.",
     year: "2026",
     status: "R&D",
     statusLabel: "In Active R&D",
     tags: ["AI Agents", "MCP Protocol", "TypeScript", "Microservices", "WebSockets"],
-    icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f59e0b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z'/%3E%3Ccircle cx='9' cy='10' r='1' fill='%23f59e0b'/%3E%3Ccircle cx='12' cy='10' r='1' fill='%23f59e0b'/%3E%3Ccircle cx='15' cy='10' r='1' fill='%23f59e0b'/%3E%3C/svg%3E",
+    icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f59e0b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Ccircle cx='12' cy='12' r='4' fill='%23f59e0b'/%3E%3Ccircle cx='19' cy='5' r='2' fill='%2322c55e'/%3E%3C/svg%3E",
+    banner: "assets/images/banners/humanagi_preview.png",
     github: "https://github.com/Sollemdev/AgyChat",
     demo: "",
     featured: true,
     highlights: [
-      "Hybrid interaction: AI agents and humans communicate seamlessly as first-class peers",
+      "Physics-based floating bubble interface with orbital unread message counters",
+      "Hybrid peer-to-peer interaction between humans and autonomous AI agents",
       "Native Model Context Protocol (MCP) bridges for Claude, Gemini, and Antigravity tooling",
-      "High-throughput microservices architecture (Gateway, Auth, Chat, Message, Media)",
-      "Real-time event streaming and pub/sub powered by NATS and WebSockets",
-      "Self-hosted & privacy-first data persistence (PostgreSQL 16, Redis 7, MinIO S3)"
+      "High-throughput microservices mesh (Gateway, Auth, Chat, Message, Media)",
+      "Real-time event streaming via NATS, WebSockets, and self-hosted S3 (MinIO)"
     ]
   }
 ];
@@ -225,8 +227,9 @@ function renderProjects() {
             ` : ''}
             <div class="project-content-body">
               <div class="project-header">
-                <div style="display: inline-flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+                <div style="display: inline-flex; align-items: baseline; gap: 8px; flex-wrap: wrap;">
                   <h3 class="project-title">${p.title}</h3>
+                  ${p.subLabel ? `<span class="project-sub-label" style="font-family: var(--font-mono); font-size: 13px; font-weight: 500; color: var(--text-muted); font-style: italic;">${p.subLabel}</span>` : ''}
                   <span class="project-status-pill ${statusClass}">
                     <span class="status-dot"></span>
                     ${p.statusLabel || p.status || 'Active'}
@@ -276,9 +279,10 @@ function renderProjects() {
               </div>
               <span class="project-meta-top">${p.year}</span>
             </div>
-            <h3 class="project-title" style="margin-top: 4px;">
-              ${p.title}
-            </h3>
+            <div style="display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap; margin-top: 4px;">
+              <h3 class="project-title">${p.title}</h3>
+              ${p.subLabel ? `<span style="font-family: var(--font-mono); font-size: 12px; font-weight: 500; color: var(--text-muted); font-style: italic;">${p.subLabel}</span>` : ''}
+            </div>
             <p class="project-description">${p.subtitle}</p>
           </div>
           <div>
@@ -487,10 +491,19 @@ function openProjectModal(id) {
           ${project.year} &bull; ${project.tags.join(" / ")}
         </span>
       </div>
-      <h2 class="modal-title" style="margin-bottom: 8px;">${project.title}</h2>
+      <div style="display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 8px;">
+        <h2 class="modal-title" style="margin: 0;">${project.title}</h2>
+        ${project.subLabel ? `<span style="font-family: var(--font-mono); font-size: 16px; font-weight: 500; color: var(--text-muted); font-style: italic;">${project.subLabel}</span>` : ''}
+      </div>
       <p style="font-size: 16px; color: var(--text-secondary); margin-bottom: 20px; font-style: italic; line-height: 1.5;">
         ${project.subtitle}
       </p>
+      
+      ${project.banner ? `
+        <div style="margin-bottom: 24px; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
+          <img src="${project.banner}" alt="${project.title} UI Preview" style="width: 100%; height: auto; display: block; object-fit: cover;" />
+        </div>
+      ` : ''}
       
       <div class="modal-description" style="margin-bottom: 24px; font-size: 15px; line-height: 1.6; color: var(--text-primary);">
         <p>${project.description}</p>
