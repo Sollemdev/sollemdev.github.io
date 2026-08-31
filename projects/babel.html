@@ -848,6 +848,8 @@
                   name="transaction_or_device_id" 
                   class="form-input" 
                   placeholder="txn_01m... or a1b2c3d4-3d74..." 
+                  pattern="^(txn_[a-zA-Z0-9_]{15,40}|[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})$"
+                  title="Transaction ID (txn_...) or Device ID (UUID: a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d)"
                   style="font-family: var(--font-mono); font-size: 13px;"
                   required 
                 />
@@ -1165,7 +1167,7 @@
       });
     }
 
-    // Babel Support Form Handler
+    // Babel Support Form Handler with Native HTML5 Auto-Detected Validation
     function initBabelSupportForm() {
       const form = document.getElementById("babel-support-form");
       if (!form) return;
@@ -1178,6 +1180,7 @@
       form.addEventListener("submit", async (e) => {
         e.preventDefault();
 
+        // Native browser validation (automatically localized to user's OS/device language)
         if (!form.checkValidity()) {
           form.reportValidity();
           return;
@@ -1204,7 +1207,7 @@
           if (data.success) {
             if (statusEl) {
               statusEl.className = "form-status success";
-              statusEl.textContent = "✓ Thank you! Your feedback has been sent to the developer. We will review it shortly.";
+              statusEl.textContent = "✓ Thank you! Your feedback has been verified and sent to the developer.";
             }
             form.reset();
             showToast("Feedback submitted successfully!");
