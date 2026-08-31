@@ -49,6 +49,29 @@ const PROJECTS_DATA = [
       "High-throughput microservices mesh (Gateway, Auth, Chat, Message, Media)",
       "Real-time event streaming via NATS, WebSockets, and self-hosted S3 (MinIO)"
     ]
+  },
+  {
+    id: "marina-gardener",
+    title: "Marina Gardener",
+    subLabel: "ai plant care & e-commerce",
+    subtitle: "Full-stack AI-driven e-commerce platform & automated plant diagnostic ecosystem for gardeners",
+    description: "A comprehensive gardening e-commerce platform featuring AI-assisted plant disease diagnostics, automated seasonal care calendars, automated supplier price matching, and dynamic content generation. Powered by a reactive React frontend and 23 Supabase Edge Functions orchestrated by autonomous AI agents.",
+    year: "2026",
+    status: "MVP",
+    statusLabel: "Active MVP",
+    tags: ["React", "TypeScript", "Supabase", "Edge Functions", "AI Vision"],
+    icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2322c55e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 2a10 10 0 0 1 10 10c0 5.5-4.5 10-10 10S2 17.5 2 12A10 10 0 0 1 12 2z'/%3E%3Cpath d='M12 6v12'/%3E%3Cpath d='M8 10c2-2 4-2 4 0s2 2 4 0'/%3E%3C/svg%3E",
+    banner: "assets/images/banners/marina_gardener_banner.jpg",
+    github: "https://github.com/Sollemdev/MarinaGardener",
+    demo: "https://marina-gardener.vercel.app/",
+    featured: true,
+    highlights: [
+      "Interactive 'My Garden' personal hub with AI plant disease diagnostics and care logs",
+      "23 Supabase Edge Functions powering autonomous supplier price parsing and catalog sync",
+      "Automated seasonal calendar generator with local microclimate and weather integration",
+      "Multi-agent automation workflow for blog content, SMM, and catalog intelligence",
+      "Production architecture on React 18, Vite, Tailwind CSS, PostgreSQL RLS & pg_cron"
+    ]
   }
 ];
 
@@ -186,6 +209,12 @@ function getFilteredProjects() {
   });
 }
 
+function getStatusClass(status) {
+  if (status === "Production" || status === "Live") return "project-status-live";
+  if (status === "MVP") return "project-status-mvp";
+  return "project-status-rnd";
+}
+
 // Render Projects List / Grid
 function renderProjects() {
   const container = document.getElementById("projects-container");
@@ -214,8 +243,8 @@ function renderProjects() {
   if (viewMode === "list") {
     // Render jgthms.com Minimalist List Layout with Cursor-Following Mosaic Preview
     container.innerHTML = filtered.map(p => {
-      const statusClass = p.status === "Production" ? "project-status-live" : "project-status-rnd";
-      const linkLabel = p.demo ? "Case Study &rarr;" : "Architecture &rarr;";
+      const statusClass = getStatusClass(p.status);
+      const linkLabel = p.demo ? (p.demo.startsWith("http") ? "Live Platform &nearr;" : "Case Study &rarr;") : "Architecture &rarr;";
 
       return `
         <article class="project-item" data-id="${p.id}" data-share="${p.banner || ''}" onclick="handleProjectCardClick('${p.id}')">
@@ -260,8 +289,8 @@ function renderProjects() {
   } else {
     // Render Grid Card Layout with Top Banner
     container.innerHTML = filtered.map(p => {
-      const statusClass = p.status === "Production" ? "project-status-live" : "project-status-rnd";
-      const linkLabel = p.demo ? "Case Study &rarr;" : "Architecture &rarr;";
+      const statusClass = getStatusClass(p.status);
+      const linkLabel = p.demo ? (p.demo.startsWith("http") ? "Live Platform &nearr;" : "Case Study &rarr;") : "Architecture &rarr;";
 
       return `
         <article class="project-item" data-id="${p.id}" onclick="handleProjectCardClick('${p.id}')">
@@ -480,7 +509,8 @@ function openProjectModal(id) {
   const backdrop = document.getElementById("modal-backdrop");
   const modalBody = document.getElementById("modal-body");
 
-  const statusClass = project.status === "Production" ? "project-status-live" : "project-status-rnd";
+  const statusClass = getStatusClass(project.status);
+  const demoLabel = project.demo ? (project.demo.startsWith("http") ? "Visit Live Platform &nearr;" : "Visit Project Page &rarr;") : "";
 
   if (modalBody) {
     modalBody.innerHTML = `
@@ -522,8 +552,8 @@ function openProjectModal(id) {
 
       <div class="modal-meta" style="display: flex; flex-wrap: wrap; gap: 12px;">
         ${project.demo ? `
-          <a href="${project.demo}" class="btn-primary">
-            Visit Project Page &rarr;
+          <a href="${project.demo}" ${project.demo.startsWith('http') ? 'target="_blank" rel="noopener"' : ''} class="btn-primary">
+            ${demoLabel}
           </a>
         ` : ''}
         ${project.github ? `

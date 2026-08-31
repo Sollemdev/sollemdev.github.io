@@ -671,6 +671,22 @@ input, textarea {
   box-shadow: 0 0 6px rgba(245, 158, 11, 0.6);
 }
 
+.project-status-mvp {
+  background-color: rgba(59, 130, 246, 0.12);
+  color: #2563eb;
+  border: 1px solid rgba(59, 130, 246, 0.25);
+}
+
+[data-theme="dark"] .project-status-mvp {
+  color: #60a5fa;
+  background-color: rgba(59, 130, 246, 0.2);
+}
+
+.project-status-mvp .status-dot {
+  background-color: #3b82f6;
+  box-shadow: 0 0 6px rgba(59, 130, 246, 0.6);
+}
+
 /* Project Row & Thumbnail (List View) */
 .project-row-main {
   display: flex;
