@@ -227,9 +227,11 @@ function renderProjects() {
             ` : ''}
             <div class="project-content-body">
               <div class="project-header">
-                <div style="display: inline-flex; align-items: baseline; gap: 8px; flex-wrap: wrap;">
-                  <h3 class="project-title">${p.title}</h3>
-                  ${p.subLabel ? `<span class="project-sub-label" style="font-family: var(--font-mono); font-size: 13px; font-weight: 500; color: var(--text-muted); font-style: italic;">${p.subLabel}</span>` : ''}
+                <div style="display: inline-flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+                  <div class="project-brand-lockup">
+                    <h3 class="project-title">${p.title}</h3>
+                    ${p.subLabel ? `<span class="project-brand-sub">${p.subLabel}</span>` : ''}
+                  </div>
                   <span class="project-status-pill ${statusClass}">
                     <span class="status-dot"></span>
                     ${p.statusLabel || p.status || 'Active'}
@@ -279,9 +281,9 @@ function renderProjects() {
               </div>
               <span class="project-meta-top">${p.year}</span>
             </div>
-            <div style="display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap; margin-top: 4px;">
+            <div class="project-brand-lockup" style="margin-top: 4px;">
               <h3 class="project-title">${p.title}</h3>
-              ${p.subLabel ? `<span style="font-family: var(--font-mono); font-size: 12px; font-weight: 500; color: var(--text-muted); font-style: italic;">${p.subLabel}</span>` : ''}
+              ${p.subLabel ? `<span class="project-brand-sub">${p.subLabel}</span>` : ''}
             </div>
             <p class="project-description">${p.subtitle}</p>
           </div>
@@ -491,9 +493,9 @@ function openProjectModal(id) {
           ${project.year} &bull; ${project.tags.join(" / ")}
         </span>
       </div>
-      <div style="display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 8px;">
-        <h2 class="modal-title" style="margin: 0;">${project.title}</h2>
-        ${project.subLabel ? `<span style="font-family: var(--font-mono); font-size: 16px; font-weight: 500; color: var(--text-muted); font-style: italic;">${project.subLabel}</span>` : ''}
+      <div class="project-brand-lockup" style="margin-bottom: 10px;">
+        <h2 class="modal-title" style="margin: 0; line-height: 1.15;">${project.title}</h2>
+        ${project.subLabel ? `<span class="project-brand-sub" style="font-size: 13px; margin-top: 3px;">${project.subLabel}</span>` : ''}
       </div>
       <p style="font-size: 16px; color: var(--text-secondary); margin-bottom: 20px; font-style: italic; line-height: 1.5;">
         ${project.subtitle}
