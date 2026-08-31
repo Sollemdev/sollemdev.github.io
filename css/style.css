@@ -2482,8 +2482,8 @@ input, textarea {
 
 @media (max-width: 768px) {
   .lang-marquee-container {
-    margin-top: 24px;
-    margin-bottom: -24px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
   .lang-marquee-pill {
     padding: 4px 10px;
@@ -3042,3 +3042,423 @@ input, textarea {
     justify-content: center;
   }
 }
+
+/* ==========================================================================
+   MOBILE APP-LIKE ENHANCEMENTS (Active strictly on <= 768px)
+   Preserves 100% desktop fidelity while transforming mobile scroll fatigue
+   ========================================================================== */
+
+/* Hidden on desktop by default */
+.mobile-bottom-nav {
+  display: none;
+}
+
+.mobile-pricing-tabs {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  /* Global Container Fluid Reset */
+  .container {
+    padding: 0 14px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Site Header Mobile Fluid Fit */
+  .site-header {
+    height: 52px;
+  }
+  .site-header .container {
+    padding: 0 12px;
+  }
+  .brand-logo {
+    font-size: 18px;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+  }
+  .nav-menu {
+    gap: 10px;
+  }
+  .nav-link {
+    font-size: 11px;
+    letter-spacing: 0.03em;
+    padding: 2px 0;
+    white-space: nowrap;
+  }
+  .header-actions {
+    gap: 6px;
+  }
+  .header-actions .icon-btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  /* Section Spacing & Density */
+  .project-hero {
+    padding: 24px 0 18px;
+  }
+  .deep-dive-section, .contact-section {
+    padding: 30px 0;
+  }
+  .section-title {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+  .project-lead-text {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .project-main-title {
+    font-size: 27px;
+  }
+
+  /* Fluid Card Containers: No squishing, no horizontal overflow */
+  .pricing-section-card,
+  .browser-stores-card,
+  .lang-matrix-card,
+  .prompt-engine-card,
+  .contact-card,
+  .boost-packs-container,
+  .units-guide-card {
+    padding: 20px 14px;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    border-radius: var(--radius-md);
+  }
+
+  /* Hero Action Row (Explore Features + Top Share): Hidden on mobile for cleaner hero */
+  .hero-action-row {
+    display: none !important;
+  }
+  .project-share-strip {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+    box-sizing: border-box;
+  }
+  .share-btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    width: 100%;
+  }
+  .share-btn {
+    flex: 1 1 auto;
+    justify-content: center;
+    padding: 6px 10px;
+    font-size: 11.5px;
+  }
+
+  /* Fluid 2-Row / 3-Col In-Hero Anchor Navigation: All 6 buttons visible at once */
+  .project-anchor-nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    width: 100%;
+    margin-top: 16px;
+    padding-bottom: 0;
+    overflow: visible;
+  }
+  .anchor-nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 4px;
+    font-size: 11px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: var(--radius-sm);
+    white-space: nowrap;
+    box-sizing: border-box;
+  }
+  .anchor-nav-arrow {
+    display: none;
+  }
+
+  /* Banner Carousel Mobile: Clean, unblocked artwork */
+  .banner-carousel-container {
+    border-radius: var(--radius-md);
+    margin: 16px 0 20px;
+    padding-top: 36px;
+    background: var(--bg-surface-elevated);
+    width: 100%;
+    box-sizing: border-box;
+  }
+  [data-theme="dark"] .banner-carousel-container {
+    background: #11141b;
+  }
+  .banner-carousel-top-bar {
+    top: 8px;
+    left: 10px;
+    right: 10px;
+  }
+  .banner-counter-badge {
+    font-size: 10px;
+    padding: 2px 8px;
+    background: rgba(0, 0, 0, 0.6);
+  }
+  .banner-status-pill {
+    font-size: 10px;
+    padding: 2px 8px;
+    background: rgba(0, 0, 0, 0.6);
+  }
+  .carousel-nav-btn {
+    display: none !important;
+  }
+  .banner-carousel-bottom-bar {
+    bottom: 8px;
+    gap: 4px;
+  }
+  .carousel-dot {
+    width: 5px;
+    height: 5px;
+  }
+  .carousel-dot.active {
+    width: 14px;
+  }
+
+  /* 6 Feature boxes in Architecture -> Horizontal Snap-Scroll Carousel */
+  .feature-grid-3 {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 12px;
+    padding-bottom: 12px;
+    padding-top: 4px;
+    margin-top: 18px;
+    scrollbar-width: thin;
+  }
+  .feature-box {
+    flex: 0 0 85%;
+    min-width: 260px;
+    max-width: 300px;
+    scroll-snap-align: start;
+    padding: 18px 16px;
+  }
+
+  /* Browser & Platform Store Grids -> Horizontal Snap-Scroll Carousel */
+  .browser-stores-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 12px;
+    padding-bottom: 12px;
+    padding-top: 4px;
+    scrollbar-width: thin;
+  }
+  .browser-store-item {
+    flex: 0 0 80%;
+    min-width: 240px;
+    max-width: 280px;
+    scroll-snap-align: start;
+    padding: 16px;
+  }
+
+  /* 23 Languages Matrix -> Fluid Auto-Fill Chips */
+  .lang-matrix-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 5px;
+    width: 100%;
+  }
+  .lang-badge-chip {
+    padding: 6px 8px;
+    font-size: 11.5px;
+    gap: 5px;
+  }
+  .lang-badge-chip .lang-code {
+    margin-left: auto;
+    font-size: 10px;
+  }
+
+  /* Prompt Steps Pipeline -> Horizontal Snap-Scroll Carousel */
+  .prompt-steps-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 12px;
+    padding-bottom: 12px;
+    padding-top: 4px;
+    scrollbar-width: thin;
+  }
+  .prompt-step-item {
+    flex: 0 0 85%;
+    min-width: 260px;
+    scroll-snap-align: start;
+    padding: 16px;
+  }
+
+  /* AI Platform Cards -> Horizontal Snap-Scroll Carousel */
+  .platform-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 12px;
+    padding-bottom: 12px;
+    padding-top: 4px;
+    scrollbar-width: thin;
+  }
+  .platform-card {
+    flex: 0 0 85%;
+    min-width: 260px;
+    max-width: 300px;
+    scroll-snap-align: start;
+    padding: 16px;
+  }
+
+  /* 100% FLUID 4-Column Pricing Plan Switcher: Fits ANY screen (320px+) with zero cut-off */
+  .mobile-pricing-tabs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    background-color: var(--bg-surface-elevated);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-full);
+    padding: 3px;
+    gap: 3px;
+    margin: 16px 0 14px;
+    box-sizing: border-box;
+  }
+  .mobile-pricing-tab-btn {
+    width: 100%;
+    padding: 8px 2px;
+    font-family: var(--font-sans);
+    font-size: 11.5px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    background: transparent;
+    border: none;
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    text-align: center;
+    justify-content: center;
+    white-space: nowrap;
+    box-sizing: border-box;
+    transition: all var(--transition-fast);
+  }
+  .mobile-pricing-tab-btn.active {
+    background-color: var(--text-primary);
+    color: var(--bg-surface);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+  [data-theme="dark"] .mobile-pricing-tab-btn.active {
+    background-color: #f1f5f9;
+    color: #0b0f17;
+  }
+  .mobile-pricing-tab-btn .tab-badge {
+    display: none; /* Hide badge to guarantee 100% fluid fit across 320px-430px */
+  }
+
+  .pricing-paid-grid {
+    display: block;
+    width: 100%;
+  }
+  .pricing-card {
+    margin-bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 24px 18px;
+  }
+  .pricing-free-wide-card {
+    flex-direction: column;
+    padding: 20px 16px;
+    gap: 14px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Unit Economics Guide */
+  .units-guide-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+    width: 100%;
+  }
+  .unit-item {
+    padding: 8px 10px;
+  }
+
+  /* Boost Packs */
+  .boost-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    width: 100%;
+  }
+
+  /* Mobile Sticky Glassmorphic Bottom Navigation */
+  .mobile-bottom-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 24px);
+    max-width: 440px;
+    padding: 6px 8px;
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: var(--radius-full);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18), 0 2px 6px rgba(0, 0, 0, 0.08);
+    z-index: 999;
+  }
+  [data-theme="dark"] .mobile-bottom-nav {
+    background: rgba(15, 20, 29, 0.88);
+    border-color: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
+  }
+  .mobile-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    padding: 6px 10px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 600;
+    font-family: var(--font-sans);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+  }
+  .mobile-nav-item:hover, .mobile-nav-item.active {
+    color: var(--accent-primary);
+  }
+  .mobile-nav-item svg {
+    stroke-width: 2.2;
+  }
+
+  /* Body bottom padding on mobile so sticky bottom bar doesn't overlap content */
+  body {
+    padding-bottom: 74px;
+  }
+  /* Hide duplicate floating scroll-to-top button on mobile (handled by sticky bottom nav) */
+  #scroll-to-top,
+  .scroll-to-top {
+    display: none !important;
+  }
+}
+
