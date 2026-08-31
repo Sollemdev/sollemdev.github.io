@@ -1,0 +1,22 @@
+# Sollemdev Portfolio & Systems Labs
+
+> Personal engineering portfolio, system architecture cases, and privacy-first software products by Sollemdev.
+
+## Projects
+
+- [Babel — AI In-Place Translation Extension](https://sollemdev.github.io/projects/babel.html): High-speed Manifest V3 Chromium browser extension for instant in-place text translation and AI prompt engineering directly inside any input field via hotkeys.
+  - **Architecture**: Manifest V3, Service Workers, Content Script injection, DOM Text Mutation Observer, Zero-Data Retention (Client-Side Only).
+  - **Multi-Model Support**: OpenAI (GPT-4o / GPT-4o-mini), Anthropic (Claude 3.5 Sonnet / Haiku), DeepSeek, Google Gemini 2.0 Flash / Pro, Groq, OpenRouter, and Local Ollama instances.
+  - **Ecosystem**: Google Chrome, Microsoft Edge, Brave, Arc, Opera, Opera GX, Vivaldi (with future native Windows/macOS/iOS/Android roadmap).
+  - **Dictionaries**: 23 localized UI dictionaries with cross-platform native vector glyphs.
+
+## Core Capabilities
+- Web Extensions Architecture (Manifest V3, Service Workers, Content Script Injections)
+- LLM Prompt Engineering & Local Client-Side Context Extraction
+- Zero-Retention & DLP Privacy-First Architectures
+- High-Performance Web Frontend Engineering
+
+## Contact & Links
+- GitHub: [Sollemdev](https://github.com/Sollemdev)
+- Support Email: [sollemdev@gmail.com](mailto:sollemdev@gmail.com)
+- Main Portfolio: [https://sollemdev.github.io/](https://sollemdev.github.io/)

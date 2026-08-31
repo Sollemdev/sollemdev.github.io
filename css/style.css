@@ -2399,6 +2399,7 @@ input, textarea {
   position: relative;
   overflow: hidden;
   user-select: none;
+  pointer-events: none;
 }
 
 .lang-marquee-track-wrapper {
@@ -2413,10 +2414,6 @@ input, textarea {
   display: flex;
   width: max-content;
   animation: marquee-scroll 55s linear infinite;
-}
-
-.lang-marquee-track:hover {
-  animation-play-state: paused;
 }
 
 .lang-marquee-content {
@@ -2438,13 +2435,6 @@ input, textarea {
   font-weight: 500;
   color: var(--text-primary);
   white-space: nowrap;
-  transition: all var(--transition-fast);
-}
-
-.lang-marquee-pill:hover {
-  border-color: var(--accent-primary);
-  background-color: var(--accent-subtle);
-  transform: translateY(-1px);
 }
 
 .lang-marquee-pill .lang-flag,
@@ -2791,7 +2781,7 @@ input, textarea {
 
 .browser-stores-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
   margin-bottom: 24px;
 }
@@ -2800,9 +2790,10 @@ input, textarea {
   background-color: var(--bg-surface);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
-  padding: 16px 18px;
+  padding: 20px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
   gap: 14px;
   position: relative;
   transition: all var(--transition-fast);
@@ -2810,19 +2801,27 @@ input, textarea {
 
 [data-theme="dark"] .browser-store-item {
   background-color: #141820;
-  border-color: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.07);
 }
 
 .browser-store-item:hover {
   transform: translateY(-2px);
   border-color: var(--accent-primary);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+.store-item-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
 }
 
 .store-icon-wrap {
-  width: 42px;
-  height: 42px;
-  border-radius: 10px;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
   background-color: var(--tag-bg);
   border: 1px solid var(--border-subtle);
   display: flex;
@@ -2838,33 +2837,28 @@ input, textarea {
 }
 
 .store-info {
-  flex: 1;
-  min-width: 0;
+  width: 100%;
 }
 
 .store-name {
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 700;
   color: var(--text-primary);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  line-height: 1.35;
 }
 
 .store-sub {
-  font-size: 11px;
+  font-size: 12px;
   color: var(--text-muted);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin-top: 1px;
+  line-height: 1.45;
+  margin-top: 4px;
 }
 
 .store-badge {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 10.5px;
   font-weight: 700;
-  padding: 3px 8px;
+  padding: 3px 9px;
   border-radius: var(--radius-full);
   background-color: var(--tag-bg);
   border: 1px solid var(--border-color);
@@ -2874,8 +2868,39 @@ input, textarea {
 
 .store-badge.highlight-gx {
   color: #fa1e4e;
-  border-color: rgba(250, 30, 78, 0.3);
+  border-color: rgba(250, 30, 78, 0.35);
   background-color: rgba(250, 30, 78, 0.08);
+}
+
+.store-badge.roadmap-badge {
+  color: #a78bfa;
+  border-color: rgba(139, 92, 246, 0.35);
+  background-color: rgba(139, 92, 246, 0.08);
+  font-size: 10px;
+}
+
+.ecosystem-section-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.ecosystem-count {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  background-color: var(--tag-bg);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-subtle);
 }
 
 /* Compatibility bar */
@@ -2897,7 +2922,13 @@ input, textarea {
   color: var(--text-secondary);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  .browser-stores-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
   .browser-stores-card {
     padding: 24px 18px;
     margin-top: 24px;
@@ -2912,5 +2943,102 @@ input, textarea {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
+  }
+}
+
+/* Hero Action Row: CTA + Social Share Strip */
+.hero-action-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px 18px;
+  margin-top: 28px;
+}
+
+.hero-action-row .hero-cta {
+  margin-top: 0;
+}
+
+.hero-action-row .project-share-strip {
+  margin-top: 0;
+}
+
+/* Social Share Strip */
+.project-share-strip {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  padding: 10px 16px;
+  background-color: var(--bg-surface-elevated);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  width: fit-content;
+  max-width: 100%;
+}
+
+[data-theme="dark"] .project-share-strip {
+  background-color: #12161f;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.share-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.share-btn-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 11px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background-color: var(--tag-bg);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-family: var(--font-sans);
+}
+
+.share-btn:hover {
+  color: var(--text-primary);
+  border-color: var(--accent-primary);
+  background-color: var(--accent-subtle);
+  transform: translateY(-1px);
+}
+
+.share-btn.copy-link-btn {
+  background-color: transparent;
+  border: 1px dashed var(--border-color);
+}
+
+.share-btn.copy-link-btn.copied {
+  background-color: rgba(16, 185, 129, 0.12);
+  border-color: #10b981;
+  color: #10b981;
+}
+
+@media (max-width: 768px) {
+  .project-share-strip {
+    width: 100%;
+    justify-content: center;
   }
 }

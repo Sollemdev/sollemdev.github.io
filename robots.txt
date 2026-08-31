@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sollemdev.github.io/sitemap.xml

@@ -1,10 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" width="48" height="48">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
   <defs>
-    <linearGradient id="gx_gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FF1753"/>
-      <stop offset="60%" stop-color="#FA1E4E"/>
-      <stop offset="100%" stop-color="#990026"/>
+    <linearGradient id="gx-grad-a" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#FF0044"/>
+      <stop offset="50%" stop-color="#FA1E4E"/>
+      <stop offset="100%" stop-color="#800020"/>
+    </linearGradient>
+    <linearGradient id="gx-grad-b" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF4D79"/>
+      <stop offset="100%" stop-color="#A6002A"/>
     </linearGradient>
   </defs>
-  <path fill="url(#gx_gradient)" d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 3.323c4.792 0 8.677 3.885 8.677 8.677S16.792 20.677 12 20.677 3.323 16.792 3.323 12 7.208 3.323 12 3.323zm-5.538 3.693L4.615 8.862l4.616 3.138-4.616 3.138 1.847 1.846 4.615-3.138 4.616 3.138 1.846-1.846-4.615-3.138 4.615-3.138-1.846-1.846-4.616 3.138z"/>
+  <!-- Authentic Opera GX Faceted Polygon Ring -->
+  <path fill="url(#gx-grad-a)" d="M64 0C28.65 0 0 28.65 0 64s28.65 64 64 64 64-28.65 64-64S99.35 0 64 0zm0 120c-30.88 0-56-25.12-56-56S33.12 8 64 8s56 25.12 56 56-25.12 56-56 56z"/>
+  <path fill="url(#gx-grad-b)" d="M64 16C37.49 16 16 37.49 16 64s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm0 80c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32z"/>
+  <!-- GX Cyber Inner Facets -->
+  <polygon points="64,24 84,40 84,88 64,104 44,88 44,40" fill="#0C0E14" opacity="0.95"/>
+  <polygon points="64,36 76,46 76,82 64,92 52,82 52,46" fill="url(#gx-grad-a)"/>
 </svg>
