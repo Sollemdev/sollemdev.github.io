@@ -13,7 +13,7 @@ const PROJECTS_DATA = [
     year: "2026",
     tags: ["AI & LLM", "Chrome Extension", "JavaScript", "UX"],
     icon: "assets/icons/babel/icon48.png",
-    banner: "assets/images/babel-banner.jpg",
+    banner: "assets/images/banners/Babel_Keyboard_Magic_1.jpg",
     github: "https://github.com/Sollemdev",
     demo: "projects/babel.html",
     featured: true,
