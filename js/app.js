@@ -11,6 +11,8 @@ const PROJECTS_DATA = [
     subtitle: "Instant in-place AI translation and prompt engineering browser extension",
     description: "A high-performance Chrome extension (Manifest V3) that translates thoughts into natural conversational English or fine-tuned AI prompts directly inside any input field with a single keystroke (Alt+T). Built with a 4-tier DOM replacement engine compatible with React, Vue, Slate.js, and ProseMirror.",
     year: "2026",
+    status: "Production",
+    statusLabel: "Live Extension",
     tags: ["AI & LLM", "Chrome Extension", "JavaScript", "UX"],
     icon: "assets/icons/babel/icon48.png",
     banner: "assets/images/banners/Babel_Keyboard_Magic_1.jpg",
@@ -23,6 +25,27 @@ const PROJECTS_DATA = [
       "AI Prompt Engineering Mode for Midjourney, Higgsfield, and Google Flow",
       "Client-side Data Loss Prevention (DLP) for secret leak blocking",
       "23 localized UI language dictionaries"
+    ]
+  },
+  {
+    id: "agent-chat",
+    title: "AgentChat",
+    subtitle: "Multimodal real-time messaging platform for hybrid human-agent collaboration and MCP integration",
+    description: "A scalable, microservice-based multimodal messaging system where humans and autonomous AI agents collaborate in real-time as first-class peers. Features native Model Context Protocol (MCP) bridges, low-latency WebSocket streaming, NATS event bus, and distributed media storage.",
+    year: "2026",
+    status: "R&D",
+    statusLabel: "In Active R&D",
+    tags: ["AI Agents", "MCP Protocol", "TypeScript", "Microservices", "WebSockets"],
+    icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f59e0b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z'/%3E%3Ccircle cx='9' cy='10' r='1' fill='%23f59e0b'/%3E%3Ccircle cx='12' cy='10' r='1' fill='%23f59e0b'/%3E%3Ccircle cx='15' cy='10' r='1' fill='%23f59e0b'/%3E%3C/svg%3E",
+    github: "https://github.com/Sollemdev/AgyChat",
+    demo: "",
+    featured: true,
+    highlights: [
+      "Hybrid interaction: AI agents and humans communicate seamlessly as first-class peers",
+      "Native Model Context Protocol (MCP) bridges for Claude, Gemini, and Antigravity tooling",
+      "High-throughput microservices architecture (Gateway, Auth, Chat, Message, Media)",
+      "Real-time event streaming and pub/sub powered by NATS and WebSockets",
+      "Self-hosted & privacy-first data persistence (PostgreSQL 16, Redis 7, MinIO S3)"
     ]
   }
 ];
@@ -188,72 +211,99 @@ function renderProjects() {
 
   if (viewMode === "list") {
     // Render jgthms.com Minimalist List Layout with Cursor-Following Mosaic Preview
-    container.innerHTML = filtered.map(p => `
-      <article class="project-item" data-id="${p.id}" data-share="${p.banner || ''}" onclick="window.location.href='${p.demo || '#'}'">
-        <div class="project-row-main">
-          ${p.icon ? `
-            <div class="project-icon-thumb" aria-label="${p.title}">
-              <img src="${p.icon}" alt="${p.title} icon" />
-            </div>
-          ` : ''}
-          <div class="project-content-body">
-            <div class="project-header">
-              <h3 class="project-title">
-                ${p.title}
-              </h3>
-              <span class="project-meta-top">/ ${p.tags.slice(0, 3).join(" / ")} / ${p.year}</span>
-            </div>
-            <p class="project-description">${p.subtitle}</p>
-            <div class="project-footer">
-              <div class="project-tags">
-                ${p.tags.map(t => `<span class="mini-tag">${t}</span>`).join("")}
+    container.innerHTML = filtered.map(p => {
+      const statusClass = p.status === "Production" ? "project-status-live" : "project-status-rnd";
+      const linkLabel = p.demo ? "Case Study &rarr;" : "Architecture &rarr;";
+
+      return `
+        <article class="project-item" data-id="${p.id}" data-share="${p.banner || ''}" onclick="handleProjectCardClick('${p.id}')">
+          <div class="project-row-main">
+            ${p.icon ? `
+              <div class="project-icon-thumb" aria-label="${p.title}">
+                <img src="${p.icon}" alt="${p.title} icon" />
               </div>
-              <div class="project-links">
-                <span class="link-btn">
-                  Case Study &rarr;
-                </span>
+            ` : ''}
+            <div class="project-content-body">
+              <div class="project-header">
+                <div style="display: inline-flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+                  <h3 class="project-title">${p.title}</h3>
+                  <span class="project-status-pill ${statusClass}">
+                    <span class="status-dot"></span>
+                    ${p.statusLabel || p.status || 'Active'}
+                  </span>
+                </div>
+                <span class="project-meta-top">/ ${p.tags.slice(0, 3).join(" / ")} / ${p.year}</span>
+              </div>
+              <p class="project-description">${p.subtitle}</p>
+              <div class="project-footer">
+                <div class="project-tags">
+                  ${p.tags.map(t => `<span class="mini-tag">${t}</span>`).join("")}
+                </div>
+                <div class="project-links">
+                  <span class="link-btn">
+                    ${linkLabel}
+                  </span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </article>
-    `).join("");
+        </article>
+      `;
+    }).join("");
 
     initProjectPreviews();
   } else {
     // Render Grid Card Layout with Top Banner
-    container.innerHTML = filtered.map(p => `
-      <article class="project-item" data-id="${p.id}" onclick="window.location.href='${p.demo || '#'}'">
-        ${p.banner ? `
-          <div class="project-card-banner">
-            <img src="${p.banner}" alt="${p.title} banner" loading="lazy" />
-          </div>
-        ` : ''}
-        <div>
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-            <div style="display: flex; align-items: center; gap: 8px;">
-              ${p.icon ? `<img src="${p.icon}" alt="${p.title}" style="width: 18px; height: 18px; border-radius: 4px;" />` : ''}
-              <span class="project-meta-top">${p.tags[0]}</span>
+    container.innerHTML = filtered.map(p => {
+      const statusClass = p.status === "Production" ? "project-status-live" : "project-status-rnd";
+      const linkLabel = p.demo ? "Case Study &rarr;" : "Architecture &rarr;";
+
+      return `
+        <article class="project-item" data-id="${p.id}" onclick="handleProjectCardClick('${p.id}')">
+          ${p.banner ? `
+            <div class="project-card-banner">
+              <img src="${p.banner}" alt="${p.title} banner" loading="lazy" />
             </div>
-            <span class="project-meta-top">${p.year}</span>
+          ` : ''}
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 6px;">
+              <div style="display: flex; align-items: center; gap: 8px;">
+                ${p.icon ? `<img src="${p.icon}" alt="${p.title}" style="width: 18px; height: 18px; border-radius: 4px;" />` : ''}
+                <span class="project-status-pill ${statusClass}">
+                  <span class="status-dot"></span>
+                  ${p.statusLabel || p.status || 'Active'}
+                </span>
+              </div>
+              <span class="project-meta-top">${p.year}</span>
+            </div>
+            <h3 class="project-title" style="margin-top: 4px;">
+              ${p.title}
+            </h3>
+            <p class="project-description">${p.subtitle}</p>
           </div>
-          <h3 class="project-title">
-            ${p.title}
-          </h3>
-          <p class="project-description">${p.subtitle}</p>
-        </div>
-        <div>
-          <div class="project-tags" style="margin-bottom: 16px;">
-            ${p.tags.map(t => `<span class="mini-tag">${t}</span>`).join("")}
+          <div>
+            <div class="project-tags" style="margin-bottom: 16px;">
+              ${p.tags.map(t => `<span class="mini-tag">${t}</span>`).join("")}
+            </div>
+            <div class="project-links" style="justify-content: flex-end;">
+              <span class="btn-primary" style="padding: 6px 14px; font-size: 12px;">
+                ${linkLabel}
+              </span>
+            </div>
           </div>
-          <div class="project-links" style="justify-content: flex-end;">
-            <span class="btn-primary" style="padding: 6px 14px; font-size: 12px;">
-              Case Study &rarr;
-            </span>
-          </div>
-        </div>
-      </article>
-    `).join("");
+        </article>
+      `;
+    }).join("");
+  }
+}
+
+function handleProjectCardClick(id) {
+  const project = PROJECTS_DATA.find(p => p.id === id);
+  if (!project) return;
+  if (project.demo) {
+    window.location.href = project.demo;
+  } else {
+    openProjectModal(id);
   }
 }
 
@@ -424,38 +474,51 @@ function openProjectModal(id) {
   const backdrop = document.getElementById("modal-backdrop");
   const modalBody = document.getElementById("modal-body");
 
+  const statusClass = project.status === "Production" ? "project-status-live" : "project-status-rnd";
+
   if (modalBody) {
     modalBody.innerHTML = `
-      <div style="font-size: 12px; font-weight: 700; color: var(--accent-primary); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 8px;">
-        Released ${project.year} &bull; ${project.tags.join(", ")}
+      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-bottom: 12px;">
+        <span class="project-status-pill ${statusClass}">
+          <span class="status-dot"></span>
+          ${project.statusLabel || project.status || 'Active'}
+        </span>
+        <span style="font-size: 12px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">
+          ${project.year} &bull; ${project.tags.join(" / ")}
+        </span>
       </div>
-      <h2 class="modal-title">${project.title}</h2>
-      <p style="font-size: 18px; color: var(--text-secondary); margin-bottom: 20px; font-style: italic;">
+      <h2 class="modal-title" style="margin-bottom: 8px;">${project.title}</h2>
+      <p style="font-size: 16px; color: var(--text-secondary); margin-bottom: 20px; font-style: italic; line-height: 1.5;">
         ${project.subtitle}
       </p>
       
-      <div class="modal-description">
+      <div class="modal-description" style="margin-bottom: 24px; font-size: 15px; line-height: 1.6; color: var(--text-primary);">
         <p>${project.description}</p>
       </div>
 
       ${project.highlights ? `
-        <div style="margin-bottom: 24px;">
-          <h4 style="font-family: var(--font-serif); font-size: 18px; margin-bottom: 12px;">Key Highlights</h4>
+        <div style="margin-bottom: 28px;">
+          <h4 style="font-family: var(--font-serif); font-size: 18px; margin-bottom: 12px;">Architecture &amp; Key Highlights</h4>
           <ul style="padding-left: 20px; font-size: 14px; color: var(--text-secondary); line-height: 1.8;">
             ${project.highlights.map(h => `<li>${h}</li>`).join("")}
           </ul>
         </div>
       ` : ''}
 
-      <div class="modal-meta">
+      <div class="modal-meta" style="display: flex; flex-wrap: wrap; gap: 12px;">
         ${project.demo ? `
-          <a href="${project.demo}" target="_blank" rel="noopener" class="btn-primary">
-            Visit Live Project &nearr;
+          <a href="${project.demo}" class="btn-primary">
+            Visit Project Page &rarr;
           </a>
         ` : ''}
         ${project.github ? `
           <a href="${project.github}" target="_blank" rel="noopener" class="btn-secondary">
-            View Source on GitHub
+            View Repository on GitHub &nearr;
+          </a>
+        ` : ''}
+        ${!project.demo ? `
+          <a href="#contact" onclick="closeModal()" class="btn-primary">
+            Inquire / Request Access &rarr;
           </a>
         ` : ''}
       </div>
