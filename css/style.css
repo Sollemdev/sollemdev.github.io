@@ -2953,6 +2953,7 @@ input, textarea {
   flex-wrap: wrap;
   gap: 14px 18px;
   margin-top: 28px;
+  margin-bottom: 18px;
 }
 
 .hero-action-row .hero-cta {
@@ -2961,6 +2962,54 @@ input, textarea {
 
 .hero-action-row .project-share-strip {
   margin-top: 0;
+}
+
+/* In-Page Anchor Navigation Menu (Desktop) */
+.project-anchor-nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.anchor-nav-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  background-color: var(--bg-surface-elevated);
+  border: 1px solid var(--border-color);
+  font-family: var(--font-sans);
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+[data-theme="dark"] .anchor-nav-item {
+  background-color: #12161f;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.anchor-nav-item:hover {
+  color: var(--text-primary);
+  border-color: var(--accent-primary);
+  background-color: var(--accent-subtle);
+  transform: translateY(-1px);
+}
+
+.anchor-nav-arrow {
+  color: var(--accent-primary);
+  font-size: 13px;
+  transition: transform var(--transition-fast);
+}
+
+.anchor-nav-item:hover .anchor-nav-arrow {
+  transform: translateY(1px);
 }
 
 /* Social Share Strip */
