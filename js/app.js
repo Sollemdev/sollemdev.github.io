@@ -72,6 +72,29 @@ const PROJECTS_DATA = [
       "Multi-agent automation workflow for blog content, SMM, and catalog intelligence",
       "Production architecture on React 18, Vite, Tailwind CSS, PostgreSQL RLS & pg_cron"
     ]
+  },
+  {
+    id: "a2x-protocol",
+    title: "A2X",
+    subLabel: "agent-to-agent exchange",
+    subtitle: "Decentralized autonomous protocol & high-speed exchange infrastructure for direct AI-to-AI commerce",
+    description: "A decentralized protocol and high-concurrency exchange designed for direct autonomous interaction, negotiation, and settlement between AI agents with zero human intervention. Powered by a hybrid compute mesh of Python FastAPI, Supabase Edge Functions, Solidity smart contracts on EVM (Polygon/Arbitrum), and pgmq event queues.",
+    year: "2026",
+    status: "R&D",
+    statusLabel: "In Active R&D",
+    tags: ["AI Agents", "Protocol", "Python & FastAPI", "Solidity", "Supabase", "Edge Compute"],
+    icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2306b6d4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolygon points='12 2 2 7 12 12 22 7 12 2'/%3E%3Cpolyline points='2 17 12 22 22 17'/%3E%3Cpolyline points='2 12 12 17 22 12'/%3E%3C/svg%3E",
+    banner: "assets/images/banners/a2x_protocol_banner.jpg",
+    github: "https://github.com/Sollemdev/A2X",
+    demo: "",
+    featured: true,
+    highlights: [
+      "Autonomous agent-to-agent commerce protocol with zero human-in-the-loop dependencies",
+      "Decentralized escrow and automated settlement smart contracts (Solidity on EVM)",
+      "Hybrid architecture: high-speed Python FastAPI compute mesh + TypeScript Supabase Edge Functions",
+      "Message queuing & event-driven job execution with PostgreSQL pgmq and Upstash Redis",
+      "Native MCP Server integration and test bot simulators for agent negotiation dynamics"
+    ]
   }
 ];
 
