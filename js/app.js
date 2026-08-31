@@ -60,10 +60,10 @@ const PROJECTS_DATA = [
     status: "MVP",
     statusLabel: "Active MVP",
     tags: ["React", "TypeScript", "Supabase", "Edge Functions", "AI Vision"],
-    icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2322c55e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 2a10 10 0 0 1 10 10c0 5.5-4.5 10-10 10S2 17.5 2 12A10 10 0 0 1 12 2z'/%3E%3Cpath d='M12 6v12'/%3E%3Cpath d='M8 10c2-2 4-2 4 0s2 2 4 0'/%3E%3C/svg%3E",
+    icon: "assets/icons/marina_gardener.webp",
     banner: "assets/images/banners/marina_gardener_banner.jpg",
     github: "https://github.com/Sollemdev/MarinaGardener",
-    demo: "https://marina-gardener.vercel.app/",
+    demo: "",
     featured: true,
     highlights: [
       "Interactive 'My Garden' personal hub with AI plant disease diagnostics and care logs",
