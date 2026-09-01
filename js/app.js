@@ -36,6 +36,7 @@ const PROJECTS_DATA = [
     icon: "assets/icons/babel/icon48.png",
     banner: "assets/images/banners/Babel_Keyboard_Magic_1.jpg",
     github: "https://github.com/Sollemdev",
+    isPrivate: false,
     demo: "projects/babel.html",
     featured: true,
     highlights: [
@@ -69,6 +70,7 @@ const PROJECTS_DATA = [
     icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f59e0b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Ccircle cx='12' cy='12' r='4' fill='%23f59e0b'/%3E%3Ccircle cx='19' cy='5' r='2' fill='%2322c55e'/%3E%3C/svg%3E",
     banner: "assets/images/banners/humanagi_preview.png",
     github: "https://github.com/Sollemdev/AgyChat",
+    isPrivate: true,
     demo: "",
     featured: true,
     highlights: [
@@ -102,6 +104,7 @@ const PROJECTS_DATA = [
     icon: "assets/icons/marina_gardener.webp",
     banner: "assets/images/banners/marina_gardener_banner.jpg",
     github: "https://github.com/Sollemdev/MarinaGardener",
+    isPrivate: true,
     demo: "",
     featured: true,
     highlights: [
@@ -135,6 +138,7 @@ const PROJECTS_DATA = [
     icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2306b6d4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolygon points='12 2 2 7 12 12 22 7 12 2'/%3E%3Cpolyline points='2 17 12 22 22 17'/%3E%3Cpolyline points='2 12 12 17 22 12'/%3E%3C/svg%3E",
     banner: "assets/images/banners/a2x_protocol_banner.jpg",
     github: "https://github.com/Sollemdev/A2X",
+    isPrivate: true,
     demo: "",
     featured: true,
     highlights: [
@@ -168,6 +172,7 @@ const PROJECTS_DATA = [
     icon: "assets/icons/together_safe.png",
     banner: "assets/images/banners/together_safe_banner.jpg",
     github: "https://github.com/Sollemdev/TogetherSafe-APP",
+    isPrivate: true,
     demo: "",
     featured: true,
     highlights: [
@@ -766,14 +771,19 @@ function openProjectModal(id) {
             ${demoLabel}
           </a>
         ` : ''}
-        ${project.github ? `
+        ${project.github && !project.isPrivate ? `
           <a href="${project.github}" target="_blank" rel="noopener" class="btn-secondary">
-            View Repository on GitHub &nearr;
+            View on GitHub &nearr;
           </a>
+        ` : ''}
+        ${project.isPrivate ? `
+          <button type="button" onclick="requestRepoAccess('${project.title}')" class="btn-secondary" style="display: inline-flex; align-items: center; gap: 6px; cursor: pointer;">
+            <span>🔒</span> Private Repository (Request Access)
+          </button>
         ` : ''}
         ${!project.demo ? `
           <a href="#contact" onclick="closeModal()" class="btn-primary">
-            Inquire / Request Access &rarr;
+            Inquire / Collaborate &rarr;
           </a>
         ` : ''}
       </div>
@@ -781,6 +791,23 @@ function openProjectModal(id) {
   }
 
   if (backdrop) backdrop.classList.add("open");
+}
+
+function requestRepoAccess(projectTitle) {
+  closeModal();
+  const contactSection = document.getElementById("contact");
+  if (contactSection) {
+    contactSection.scrollIntoView({ behavior: "smooth" });
+  }
+  const subjectSelect = document.getElementById("form-subject");
+  if (subjectSelect) {
+    subjectSelect.value = "Repository Access Request";
+  }
+  const messageInput = document.getElementById("form-message");
+  if (messageInput) {
+    messageInput.value = `Hi Sollemdev, I would like to request repository access / code review for the "${projectTitle}" project.`;
+    messageInput.focus();
+  }
 }
 
 function closeModal() {

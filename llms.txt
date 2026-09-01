@@ -1,22 +1,48 @@
-# Sollemdev Portfolio & Systems Labs
+# Sollemdev - Engineering & Software Studio Labs
 
-> Personal engineering portfolio, system architecture cases, and privacy-first software products by Sollemdev.
+> Sollemdev is an independent software and engineering studio driven by one human architect and collaborative AI agent orchestration. We build high-performance web software, browser extensions, autonomous AI agent protocols, Flutter mobile applications, and custom hardware systems.
 
-## Projects
+## Active Projects Portfolio
 
-- [Babel — AI In-Place Translation Extension](https://sollemdev.github.io/projects/babel.html): High-speed Manifest V3 Chromium browser extension for instant in-place text translation and AI prompt engineering directly inside any input field via hotkeys.
-  - **Architecture**: Manifest V3, Service Workers, Content Script injection, DOM Text Mutation Observer, Zero-Data Retention (Client-Side Only).
-  - **Multi-Model Support**: OpenAI (GPT-4o / GPT-4o-mini), Anthropic (Claude 3.5 Sonnet / Haiku), DeepSeek, Google Gemini 2.0 Flash / Pro, Groq, OpenRouter, and Local Ollama instances.
-  - **Ecosystem**: Google Chrome, Microsoft Edge, Brave, Arc, Opera, Opera GX, Vivaldi (with future native Windows/macOS/iOS/Android roadmap).
-  - **Dictionaries**: 23 localized UI dictionaries with cross-platform native vector glyphs.
+### 1. Babel - AI In-Place Translation Extension
+- **URL**: https://sollemdev.github.io/projects/babel.html
+- **Status**: Live Extension (v1.0 Production, 98% Readiness)
+- **Category**: AI Productivity & Browser Extension (Manifest V3)
+- **Stack**: JavaScript, Chrome Extensions API, MutationObserver, DOM Replacement Engines
+- **Architecture**: Sub-300ms in-place text replacement via Alt+T hotkey across React, Vue, Slate.js, and ProseMirror. Features 6 dynamic style tones, prompt engineering mode (Midjourney, Higgsfield), client-side DLP secret protection, and 23 localized language dictionaries.
+- **Privacy & Licensing**: Zero server data retention; secure digital licensing via Paddle.
 
-## Core Capabilities
-- Web Extensions Architecture (Manifest V3, Service Workers, Content Script Injections)
-- LLM Prompt Engineering & Local Client-Side Context Extraction
-- Zero-Retention & DLP Privacy-First Architectures
-- High-Performance Web Frontend Engineering
+### 2. Humanagi (bubble chat) - Floating Multimodal Messenger
+- **Status**: In Active R&D (45% Readiness)
+- **Category**: AI Agents & Real-Time Messaging Platform
+- **Stack**: TypeScript, React, Microservices (Gateway, Auth, Chat, Message, Media), NATS Event Bus, Redis 7, PostgreSQL 16, MinIO (S3), WebSockets
+- **Architecture**: Physics-driven floating bubble interface with orbital unread message counters where humans and autonomous AI agents collaborate in real-time as first-class peers. Native Model Context Protocol (MCP) bridges for Claude, Gemini, and Antigravity tooling.
 
-## Contact & Links
-- GitHub: [Sollemdev](https://github.com/Sollemdev)
-- Support Email: [sollemdev@gmail.com](mailto:sollemdev@gmail.com)
-- Main Portfolio: [https://sollemdev.github.io/](https://sollemdev.github.io/)
+### 3. Marina Gardener - AI Plant Care & E-Commerce Platform
+- **Status**: Active MVP (70% Readiness)
+- **Category**: AI E-Commerce & Plant Care Diagnostics Ecosystem
+- **Stack**: React 18, TypeScript, Vite, Tailwind CSS, Supabase (PostgreSQL, RLS, pg_cron), Deno Edge Functions (23 functions), AI Vision
+- **Architecture**: Interactive "My Garden" hub with AI plant disease diagnostics, automated supplier price scraping and catalog sync via Edge Functions and cron, seasonal gardening calendar, and multi-agent content automation workflow.
+
+### 4. A2X (agent-to-agent exchange) - Autonomous AI-to-AI Commerce Protocol
+- **Status**: In Active R&D (40% Readiness)
+- **Category**: Decentralized Machine-to-Machine Commerce Protocol
+- **Stack**: Python (FastAPI), Solidity (Polygon/Arbitrum EVM), Supabase (PostgreSQL, pgmq), Upstash Redis, Docker
+- **Architecture**: Decentralized high-concurrency exchange designed for direct autonomous interaction, negotiation, and settlement between AI agents with zero human intervention. Escrow smart contracts, low-latency order matching, and native MCP server integration.
+
+### 5. Together Safe (collective safety network) - Mobile Safety & Isochrone Mapping
+- **Status**: Active MVP (75% Readiness)
+- **Category**: Social Collective Safety & Geospatial Navigation Mobile App
+- **Stack**: Flutter (iOS & Android), Dart, Firebase Cloud Functions (Node.js 18), Supabase (PostgreSQL), Google Maps SDK, OpenRouteService API
+- **Architecture**: Real-time collective safety map with live patrol proximity radar, incident alerts, and server-side dynamic reachability isochrone polygon computation via OpenRouteService geospatial algorithms.
+
+## Technical Capabilities & Engineering Pillars
+- **AI & Autonomous Agents**: AI Agents & Swarms, Model Context Protocol (MCP), LLM Prompt Engineering, DLP Privacy, OpenRouter / Claude / Gemini APIs, Vector & Semantic Search.
+- **Frontend & Mobile Apps**: React 18, Next.js, Vite, TypeScript, Flutter (iOS/Android), Chrome Extensions (Manifest V3), Geospatial SDKs, Tailwind CSS.
+- **Cloud & Distributed Backend**: Python (FastAPI), Supabase & Firebase Cloud Functions, PostgreSQL RLS & pg_cron, NATS, WebSockets, Redis, Docker, MinIO S3.
+- **Hardware & Specialized Systems**: Pulse Power Electronics, High-Voltage Systems, IoT Robotics & Controllers, Solidity EVM Smart Contracts, Embedded Linux.
+
+## Contact & Inquiries
+- GitHub: https://github.com/Sollemdev
+- Studio Inquiries: sollemdev@gmail.com
+- Main Site: https://sollemdev.github.io/
