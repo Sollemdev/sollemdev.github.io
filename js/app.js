@@ -95,6 +95,29 @@ const PROJECTS_DATA = [
       "Message queuing & event-driven job execution with PostgreSQL pgmq and Upstash Redis",
       "Native MCP Server integration and test bot simulators for agent negotiation dynamics"
     ]
+  },
+  {
+    id: "together-safe",
+    title: "Together Safe",
+    subLabel: "collective safety network",
+    subtitle: "Cross-platform mobile collective safety & real-time isochrone mapping application",
+    description: "A real-time community safety and incident awareness mobile network enabling citizens to monitor patrol zones, calculate dynamic safety isochrones, and coordinate secure navigation routes. Built with Flutter, Firebase Cloud Functions, Supabase PostgreSQL, Google Maps SDK, and OpenRouteService geospatial algorithms.",
+    year: "2026",
+    status: "MVP",
+    statusLabel: "Active MVP",
+    tags: ["Flutter", "Firebase", "Supabase", "Google Maps", "OpenRouteService", "Mobile App"],
+    icon: "assets/icons/together_safe.png",
+    banner: "assets/images/banners/together_safe_banner.jpg",
+    github: "https://github.com/Sollemdev/TogetherSafe-APP",
+    demo: "",
+    featured: true,
+    highlights: [
+      "Real-time collective safety map with live patrol proximity radar and incident pins",
+      "Server-side dynamic isochrone polygon generation powered by OpenRouteService API",
+      "Cross-platform Flutter client architecture (iOS & Android) with Google Maps integration",
+      "Firebase Cloud Functions backend orchestrating GPS rate-limiting & security filters",
+      "Zero-hardcoded secrets: secure environment runtime configuration & Supabase Realtime sync"
+    ]
   }
 ];
 
