@@ -696,19 +696,20 @@ input, textarea {
 }
 
 .project-icon-thumb {
-  width: 48px;
-  height: 48px;
-  border-radius: var(--radius-sm);
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
   border: 1px solid var(--border-color);
   background-color: var(--bg-surface-elevated);
-  padding: 8px;
+  padding: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  margin-top: 4px;
+  margin-top: 2px;
   transition: transform var(--transition-fast), border-color var(--transition-fast);
   box-shadow: var(--shadow-sm);
+  overflow: hidden;
 }
 
 .project-item:hover .project-icon-thumb {
@@ -720,6 +721,29 @@ input, textarea {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  border-radius: 4px;
+}
+
+.modal-icon-thumb {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-surface-elevated);
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.modal-icon-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 4px;
 }
 
 .project-content-body {

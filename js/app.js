@@ -350,7 +350,7 @@ function renderProjects() {
           <div>
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 6px;">
               <div style="display: flex; align-items: center; gap: 8px;">
-                ${p.icon ? `<img src="${p.icon}" alt="${p.title}" style="width: 18px; height: 18px; border-radius: 4px;" />` : ''}
+                ${p.icon ? `<img src="${p.icon}" alt="${p.title}" style="width: 26px; height: 26px; border-radius: 6px; object-fit: contain;" />` : ''}
                 <span class="project-status-pill ${statusClass}">
                   <span class="status-dot"></span>
                   ${p.statusLabel || p.status || 'Active'}
@@ -562,7 +562,7 @@ function openProjectModal(id) {
 
   if (modalBody) {
     modalBody.innerHTML = `
-      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-bottom: 12px;">
+      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-bottom: 16px;">
         <span class="project-status-pill ${statusClass}">
           <span class="status-dot"></span>
           ${project.statusLabel || project.status || 'Active'}
@@ -571,9 +571,16 @@ function openProjectModal(id) {
           ${project.year} &bull; ${project.tags.join(" / ")}
         </span>
       </div>
-      <div class="project-brand-lockup" style="margin-bottom: 10px;">
-        <h2 class="modal-title" style="margin: 0; line-height: 1.15;">${project.title}</h2>
-        ${project.subLabel ? `<span class="project-brand-sub" style="font-size: 13px; margin-top: 3px;">${project.subLabel}</span>` : ''}
+      <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 12px;">
+        ${project.icon ? `
+          <div class="modal-icon-thumb">
+            <img src="${project.icon}" alt="${project.title} icon" />
+          </div>
+        ` : ''}
+        <div class="project-brand-lockup">
+          <h2 class="modal-title" style="margin: 0; line-height: 1.15; font-size: 28px;">${project.title}</h2>
+          ${project.subLabel ? `<span class="project-brand-sub" style="font-size: 13px; margin-top: 3px;">${project.subLabel}</span>` : ''}
+        </div>
       </div>
       <p style="font-size: 16px; color: var(--text-secondary); margin-bottom: 20px; font-style: italic; line-height: 1.5;">
         ${project.subtitle}
