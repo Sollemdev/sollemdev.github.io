@@ -3,6 +3,15 @@
  * High-Performance Interactive Portfolio System
  */
 
+// Engineering Pipeline Stages
+const PIPELINE_STEPS = [
+  { id: "concept", label: "01. Spec & R&D" },
+  { id: "core", label: "02. Core Mesh" },
+  { id: "mvp", label: "03. Functional MVP" },
+  { id: "beta", label: "04. Beta Polish" },
+  { id: "live", label: "05. Production Live" }
+];
+
 // Portfolio Data
 const PROJECTS_DATA = [
   {
@@ -13,6 +22,16 @@ const PROJECTS_DATA = [
     year: "2026",
     status: "Production",
     statusLabel: "Live Extension",
+    progress: 98,
+    currentStageIndex: 4,
+    stageName: "Production Live (v1.0)",
+    currentFocus: "Chrome & Edge Web Store reviews, Paddle webhook licensing, and v1.1 style fine-tuning",
+    subsystems: [
+      { name: "DOM Injection Engine", percent: 100 },
+      { name: "AI Style Tone Engine", percent: 100 },
+      { name: "DLP Privacy & 23 Languages", percent: 100 },
+      { name: "Store Review & Billing", percent: 95 }
+    ],
     tags: ["AI & LLM", "Chrome Extension", "JavaScript", "UX"],
     icon: "assets/icons/babel/icon48.png",
     banner: "assets/images/banners/Babel_Keyboard_Magic_1.jpg",
@@ -36,6 +55,16 @@ const PROJECTS_DATA = [
     year: "2026",
     status: "R&D",
     statusLabel: "In Active R&D",
+    progress: 45,
+    currentStageIndex: 1,
+    stageName: "Core Mesh & Microservices Prototype",
+    currentFocus: "Real-time human-agent WebSocket handshake & NATS Event Bus streaming integration",
+    subsystems: [
+      { name: "Floating Bubble Physics UI", percent: 60 },
+      { name: "MCP Protocol Bridge Layer", percent: 50 },
+      { name: "Gateway & NATS Event Mesh", percent: 45 },
+      { name: "Distributed Storage & S3", percent: 30 }
+    ],
     tags: ["AI Agents", "MCP Protocol", "TypeScript", "Microservices", "WebSockets"],
     icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f59e0b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Ccircle cx='12' cy='12' r='4' fill='%23f59e0b'/%3E%3Ccircle cx='19' cy='5' r='2' fill='%2322c55e'/%3E%3C/svg%3E",
     banner: "assets/images/banners/humanagi_preview.png",
@@ -59,6 +88,16 @@ const PROJECTS_DATA = [
     year: "2026",
     status: "MVP",
     statusLabel: "Active MVP",
+    progress: 70,
+    currentStageIndex: 2,
+    stageName: "Functional MVP Stage",
+    currentFocus: "Plant disease AI Vision diagnostic models & automated supplier catalog sync cron",
+    subsystems: [
+      { name: "React 18 & Tailwind UI Hub", percent: 85 },
+      { name: "23 Supabase Edge Functions", percent: 80 },
+      { name: "Plant Disease AI Vision", percent: 65 },
+      { name: "Automated Price Sync Cron", percent: 50 }
+    ],
     tags: ["React", "TypeScript", "Supabase", "Edge Functions", "AI Vision"],
     icon: "assets/icons/marina_gardener.webp",
     banner: "assets/images/banners/marina_gardener_banner.jpg",
@@ -82,6 +121,16 @@ const PROJECTS_DATA = [
     year: "2026",
     status: "R&D",
     statusLabel: "In Active R&D",
+    progress: 40,
+    currentStageIndex: 1,
+    stageName: "Protocol R&D Prototype",
+    currentFocus: "FastAPI order matching engine & Solidity escrow settlement contracts on EVM testnet",
+    subsystems: [
+      { name: "FastAPI Compute & Matching", percent: 55 },
+      { name: "Solidity Escrow Contracts", percent: 50 },
+      { name: "Supabase pgmq Event Queues", percent: 35 },
+      { name: "Autonomous Agent Simulators", percent: 30 }
+    ],
     tags: ["AI Agents", "Protocol", "Python & FastAPI", "Solidity", "Supabase", "Edge Compute"],
     icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2306b6d4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolygon points='12 2 2 7 12 12 22 7 12 2'/%3E%3Cpolyline points='2 17 12 22 22 17'/%3E%3Cpolyline points='2 12 12 17 22 12'/%3E%3C/svg%3E",
     banner: "assets/images/banners/a2x_protocol_banner.jpg",
@@ -105,6 +154,16 @@ const PROJECTS_DATA = [
     year: "2026",
     status: "MVP",
     statusLabel: "Active MVP",
+    progress: 75,
+    currentStageIndex: 2,
+    stageName: "Functional MVP (Feature Complete)",
+    currentFocus: "End-to-end GPS rate limiting, OpenRouteService isochrone polygon optimization & telemetry",
+    subsystems: [
+      { name: "Flutter Client & Map SDK", percent: 90 },
+      { name: "Firebase Functions & Auth", percent: 80 },
+      { name: "OpenRouteService Isochrones", percent: 75 },
+      { name: "App Store / Play Store Prep", percent: 55 }
+    ],
     tags: ["Flutter", "Firebase", "Supabase", "Google Maps", "OpenRouteService", "Mobile App"],
     icon: "assets/icons/together_safe.png",
     banner: "assets/images/banners/together_safe_banner.jpg",
@@ -263,6 +322,12 @@ function getStatusClass(status) {
   return "project-status-rnd";
 }
 
+function getProgressFillClass(status) {
+  if (status === "Production" || status === "Live") return "fill-live";
+  if (status === "MVP") return "fill-mvp";
+  return "fill-rnd";
+}
+
 // Render Projects List / Grid
 function renderProjects() {
   const container = document.getElementById("projects-container");
@@ -309,10 +374,20 @@ function renderProjects() {
                     <h3 class="project-title">${p.title}</h3>
                     ${p.subLabel ? `<span class="project-brand-sub">${p.subLabel}</span>` : ''}
                   </div>
-                  <span class="project-status-pill ${statusClass}">
-                    <span class="status-dot"></span>
-                    ${p.statusLabel || p.status || 'Active'}
-                  </span>
+                  <div style="display: inline-flex; align-items: center; gap: 8px;">
+                    <span class="project-status-pill ${statusClass}">
+                      <span class="status-dot"></span>
+                      ${p.statusLabel || p.status || 'Active'}
+                    </span>
+                    ${p.progress ? `
+                      <div class="project-progress-wrap" title="Engineering Readiness: ${p.progress}%">
+                        <div class="project-progress-bar">
+                          <div class="project-progress-fill ${getProgressFillClass(p.status)}" style="width: ${p.progress}%"></div>
+                        </div>
+                        <span class="project-progress-percent">${p.progress}%</span>
+                      </div>
+                    ` : ''}
+                  </div>
                 </div>
                 <span class="project-meta-top">/ ${p.tags.slice(0, 3).join(" / ")} / ${p.year}</span>
               </div>
@@ -355,6 +430,11 @@ function renderProjects() {
                   <span class="status-dot"></span>
                   ${p.statusLabel || p.status || 'Active'}
                 </span>
+                ${p.progress ? `
+                  <div class="project-progress-wrap" title="Engineering Readiness: ${p.progress}%">
+                    <span class="project-progress-percent">${p.progress}%</span>
+                  </div>
+                ` : ''}
               </div>
               <span class="project-meta-top">${p.year}</span>
             </div>
@@ -550,6 +630,79 @@ function initModal() {
   });
 }
 
+function renderModalReadiness(project) {
+  if (!project.progress) return "";
+  
+  const fillClass = getProgressFillClass(project.status);
+  const activeIdx = project.currentStageIndex ?? 0;
+  
+  const stepperHtml = PIPELINE_STEPS.map((step, idx) => {
+    let stateClass = "";
+    let iconContent = idx + 1;
+    if (idx < activeIdx) {
+      stateClass = "completed";
+      iconContent = "&check;";
+    } else if (idx === activeIdx) {
+      stateClass = "active";
+      iconContent = idx + 1;
+    }
+    
+    return `
+      <div class="pipeline-step ${stateClass}">
+        <div class="pipeline-dot">${iconContent}</div>
+        <span class="pipeline-step-label">${step.label}</span>
+      </div>
+    `;
+  }).join("");
+
+  const subsystemsHtml = project.subsystems ? `
+    <div class="subsystem-grid">
+      ${project.subsystems.map(sub => `
+        <div class="subsystem-item">
+          <div class="subsystem-top">
+            <span class="subsystem-name">${sub.name}</span>
+            <span class="subsystem-val">${sub.percent}%</span>
+          </div>
+          <div class="subsystem-bar">
+            <div class="subsystem-fill ${fillClass}" style="width: ${sub.percent}%"></div>
+          </div>
+        </div>
+      `).join("")}
+    </div>
+  ` : "";
+
+  const focusHtml = project.currentFocus ? `
+    <div class="current-focus-box">
+      <span class="focus-pulse-icon"></span>
+      <div>
+        <strong style="color: var(--text-primary);">Current Focus &amp; Sprint:</strong> ${project.currentFocus}
+      </div>
+    </div>
+  ` : "";
+
+  const scoreColor = project.status === 'Production' ? '#22c55e' : (project.status === 'MVP' ? '#3b82f6' : '#f59e0b');
+
+  return `
+    <div class="modal-readiness-card">
+      <div class="modal-readiness-header">
+        <span class="modal-readiness-title">
+          <span style="font-size: 14px;">⚡</span> Engineering Pipeline &amp; Readiness
+        </span>
+        <span class="modal-readiness-score" style="color: ${scoreColor}">
+          ${project.stageName || project.statusLabel} &bull; ${project.progress}% Complete
+        </span>
+      </div>
+      
+      <div class="pipeline-stepper">
+        ${stepperHtml}
+      </div>
+
+      ${subsystemsHtml}
+      ${focusHtml}
+    </div>
+  `;
+}
+
 function openProjectModal(id) {
   const project = PROJECTS_DATA.find(p => p.id === id);
   if (!project) return;
@@ -586,6 +739,8 @@ function openProjectModal(id) {
         ${project.subtitle}
       </p>
       
+      ${renderModalReadiness(project)}
+
       ${project.banner ? `
         <div style="margin-bottom: 24px; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
           <img src="${project.banner}" alt="${project.title} UI Preview" style="width: 100%; height: auto; display: block; object-fit: cover;" />
