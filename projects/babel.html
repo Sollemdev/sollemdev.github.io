@@ -54,9 +54,11 @@
     "operatingSystem": "Windows, macOS, Linux, ChromeOS",
     "applicationCategory": "ProductivityApplication",
     "browserRequirements": "Google Chrome, Microsoft Edge, Brave, Arc, Opera, Opera GX, Vivaldi",
-    "softwareVersion": "1.10.0",
+    "softwareVersion": "1.10.6",
     "description": "Autonomous browser extension for instant in-place text translation and AI prompt enhancement directly inside any web input field via hotkey.",
     "url": "https://sollemdev.github.io/projects/babel.html",
+    "downloadUrl": "https://chromewebstore.google.com/detail/babel/lhlnianlfdpaaklielfkbkkgikgbaibo",
+    "installUrl": "https://chromewebstore.google.com/detail/babel/lhlnianlfdpaaklielfkbkkgikgbaibo",
     "image": "https://sollemdev.github.io/assets/images/babel-banner.jpg",
     "author": {
       "@type": "Person",
@@ -129,7 +131,7 @@
           <div class="project-title-group">
             <h1 class="project-main-title">
               Babel
-              <span class="project-version-badge">v1.10.0</span>
+              <span class="project-version-badge">v1.10.6</span>
             </h1>
             <div style="font-size: 13px; font-weight: 600; color: var(--accent-primary); letter-spacing: 0.05em; text-transform: uppercase;">
               Chrome Extension (Manifest V3) &bull; AI Productivity &bull; 2026
@@ -143,8 +145,12 @@
 
         <!-- Hero Action Row: CTA + Social Share Strip on one horizontal line -->
         <div class="hero-action-row">
-          <div class="hero-cta">
-            <a href="#features" class="btn-primary">
+          <div class="hero-cta" style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <a href="https://chromewebstore.google.com/detail/babel/lhlnianlfdpaaklielfkbkkgikgbaibo" target="_blank" rel="noopener noreferrer" class="btn-primary" onclick="gtag('event', 'click_install', {'event_category': 'conversion', 'browser': 'chrome'});" style="display: inline-flex; align-items: center; gap: 8px;">
+              <img src="../assets/icons/browsers/chrome.svg" alt="Chrome" width="18" height="18" />
+              <span>Add to Chrome &nearr;</span>
+            </a>
+            <a href="#features" class="btn-secondary">
               Explore Features &darr;
             </a>
           </div>
@@ -156,11 +162,11 @@
               Share:
             </span>
             <div class="share-btn-group">
-              <a href="https://twitter.com/intent/tweet?text=Babel%20%E2%80%94%20Instant%20in-place%20AI%20translation%20%26%20prompt%20engineering%20directly%20inside%20any%20browser%20input%20field!&url=https%3A%2F%2Fsollemdev.github.io%2Fprojects%2Fbabel.html&via=SolLem_Dev" target="_blank" rel="noopener noreferrer" class="share-btn" title="Share on X (Twitter)" aria-label="Share on X">
+              <a href="https://twitter.com/intent/tweet?text=Babel%20-%20Instant%20in-place%20AI%20translation%20%26%20prompt%20engineering%20directly%20inside%20any%20browser%20input%20field!&url=https%3A%2F%2Fsollemdev.github.io%2Fprojects%2Fbabel.html&via=SolLem_Dev" target="_blank" rel="noopener noreferrer" class="share-btn" title="Share on X (Twitter)" aria-label="Share on X">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                 <span>X</span>
               </a>
-              <a href="https://t.me/share/url?url=https%3A%2F%2Fsollemdev.github.io%2Fprojects%2Fbabel.html&text=Babel%20%E2%80%94%20Instant%20In-Place%20AI%20Translation%20%26%20Prompting%20Extension" target="_blank" rel="noopener noreferrer" class="share-btn" title="Share on Telegram" aria-label="Share on Telegram">
+              <a href="https://t.me/share/url?url=https%3A%2F%2Fsollemdev.github.io%2Fprojects%2Fbabel.html&text=Babel%20-%20Instant%20In-Place%20AI%20Translation%20%26%20Prompting%20Extension" target="_blank" rel="noopener noreferrer" class="share-btn" title="Share on Telegram" aria-label="Share on Telegram">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18.847-.96 4.966-1.357 7.085-.168.898-.5 1.199-.821 1.229-.698.064-1.228-.46-1.905-.904-1.06-.694-1.659-1.126-2.687-1.803-1.188-.783-.418-1.213.259-1.916.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.329-.913.489-1.302.481-.428-.009-1.252-.242-1.865-.442-.751-.244-1.349-.374-1.297-.789.027-.216.325-.437.893-.664 3.498-1.524 5.831-2.529 7.001-3.014 3.332-1.386 4.025-1.627 4.477-1.635.099-.002.321.023.465.14.121.099.155.232.171.326.016.093.036.307.02.474z"/></svg>
                 <span>Telegram</span>
               </a>
@@ -363,18 +369,18 @@
 
           <div class="browser-stores-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
             <!-- Chrome Web Store -->
-            <div class="browser-store-item">
+            <a href="https://chromewebstore.google.com/detail/babel/lhlnianlfdpaaklielfkbkkgikgbaibo" target="_blank" rel="noopener noreferrer" class="browser-store-item store-item-live" onclick="gtag('event', 'click_install', {'event_category': 'conversion', 'browser': 'chrome'});" style="text-decoration: none; color: inherit; cursor: pointer; border-color: rgba(34, 197, 94, 0.4); background: rgba(34, 197, 94, 0.04);">
               <div class="store-item-header">
                 <div class="store-icon-wrap">
                   <img src="../assets/icons/browsers/chrome.svg" alt="Google Chrome" width="28" height="28" loading="lazy" />
                 </div>
-                <span class="store-badge">Coming Soon</span>
+                <span class="store-badge" style="background: rgba(34, 197, 94, 0.15); color: #16a34a; border: 1px solid rgba(34, 197, 94, 0.35); font-weight: 700;">● Available Now &nearr;</span>
               </div>
               <div class="store-info">
-                <div class="store-name">Chrome Web Store</div>
-                <div class="store-sub">Chrome &middot; Chromium Engine</div>
+                <div class="store-name" style="color: var(--text-primary); font-weight: 600;">Chrome Web Store</div>
+                <div class="store-sub">Official Release &middot; Install 1-Click</div>
               </div>
-            </div>
+            </a>
 
             <!-- Microsoft Edge Add-ons -->
             <div class="browser-store-item">
@@ -878,121 +884,172 @@
           <div class="pricing-header">
             <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 8px;">
               <h3 class="lang-matrix-title">Plans &amp; Service Tiers</h3>
-              <span class="meta-pill highlight">Informational Overview</span>
+              <div class="gumroad-secure-pill">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.89 12.63c-.3 3.65-3.2 5.37-6.2 5.37-3.8 0-6.19-2.6-6.19-6s2.39-6 6.19-6c2.7 0 4.8 1.3 5.7 3.4l-2.4 1.1c-.6-1.3-1.8-2-3.3-2-2.2 0-3.6 1.6-3.6 3.5s1.4 3.5 3.6 3.5c1.7 0 3-.9 3.5-2.5h-3.5v-2.4h6.1v1.53z"/>
+                </svg>
+                <span>Official Gumroad Store</span>
+              </div>
             </div>
             <p style="font-size: 15px; color: var(--text-secondary); max-width: 820px; line-height: 1.6; margin-bottom: 0;">
               Babel operates on a transparent capacity-tier model with dedicated backend infrastructure, high-concurrency translation quotas, and instant on-demand capacity boosts.
             </p>
-            
-            <!-- In-Extension Payment Notice -->
-            <div class="pricing-extension-notice">
-              <div class="pricing-extension-notice-icon">⚙️</div>
-              <div class="pricing-extension-notice-text">
-                <strong>In-App Purchase &amp; Activation:</strong> Subscription plans, checkout, and capacity boost packs are processed and activated exclusively inside the <strong>Babel Extension Options (Settings) page</strong>. This section is provided for informational reference only.
-              </div>
-            </div>
           </div>
 
-          <!-- Mobile Pricing Plan Switcher (Visible strictly on mobile <= 768px) -->
-          <div class="mobile-pricing-tabs" role="tablist" aria-label="Subscription Plans Selector">
-            <button type="button" class="mobile-pricing-tab-btn active" data-plan="monthly-power" role="tab" aria-selected="true">
-              <span>Power</span>
-              <span class="tab-badge">Popular</span>
-            </button>
-            <button type="button" class="mobile-pricing-tab-btn" data-plan="monthly" role="tab" aria-selected="false">
-              <span>Monthly</span>
-            </button>
-            <button type="button" class="mobile-pricing-tab-btn" data-plan="year" role="tab" aria-selected="false">
-              <span>Year</span>
-              <span class="tab-badge best-val">-40%</span>
-            </button>
-            <button type="button" class="mobile-pricing-tab-btn" data-plan="free" role="tab" aria-selected="false">
-              <span>Free</span>
-            </button>
-          </div>
-
-          <!-- Wide Full-Width Free Tier Card -->
-          <div class="pricing-free-wide-card" data-plan-card="free">
-            <div class="pricing-free-left">
-              <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 2px;">
-                <h4 class="pricing-plan-name" style="margin: 0;">Free</h4>
+          <!-- 3-Column Unified Pricing Grid (Free + Monthly + Monthly Power) -->
+          <div class="pricing-tri-grid">
+            <!-- 1. Free Tier Baseline -->
+            <div class="pricing-card-v2">
+              <div style="min-height: 27px; margin-bottom: 8px;">
                 <span class="meta-pill" style="font-size: 11px; padding: 2px 8px;">Baseline</span>
               </div>
-              <div class="pricing-amount" style="margin: 4px 0 6px;">
-                $0
-                <span class="pricing-period">/ forever</span>
+              <h4 class="pricing-v2-name">Free</h4>
+              <div class="pricing-v2-amount">
+                $0<span class="pricing-v2-period">/forever</span>
               </div>
-              <p class="pricing-plan-desc" style="min-height: auto; margin: 0;">
-                Everything needed for everyday translating without upfront commitment.
+              <p class="pricing-v2-desc">
+                Essential in-place translation for everyday web browsing.
               </p>
+
+              <!-- Limits / Spec Box -->
+              <div class="pricing-duration-box">
+                <div class="duration-row">
+                  <span class="duration-label">Daily Allowance</span>
+                  <span class="duration-price">20 units</span>
+                </div>
+                <div class="duration-row">
+                  <span class="duration-label">Max Length</span>
+                  <span class="duration-price">300 chars</span>
+                </div>
+                <div class="duration-row">
+                  <span class="duration-label">Cost per Alt+T</span>
+                  <span class="duration-price">1 unit</span>
+                </div>
+                <div class="duration-row">
+                  <span class="duration-label">Account Setup</span>
+                  <span class="duration-price" style="color: #22c55e;">Zero-config</span>
+                </div>
+              </div>
+
+              <!-- Features List -->
+              <ul class="pricing-v2-features">
+                <li><span class="pricing-v2-check">&#10003;</span> 20 units daily allowance</li>
+                <li><span class="pricing-v2-check">&#10003;</span> Standard in-place translation</li>
+                <li><span class="pricing-v2-check">&#10003;</span> All 23 target languages</li>
+                <li style="color: var(--text-muted);"><span style="opacity: 0.4;">&bull;</span> Basic modes (No Prompt Mode)</li>
+              </ul>
+
+              <a href="https://chromewebstore.google.com/detail/babel/lhlnianlfdpaaklielfkbkkgikgbaibo" target="_blank" rel="noopener noreferrer" class="btn-secondary" onclick="gtag('event', 'click_install', {'event_category': 'conversion', 'browser': 'chrome'});" style="display: flex; align-items: center; justify-content: center; width: 100%; padding: 12px 20px; border-radius: 8px; font-weight: 700; font-size: 14px; text-decoration: none;">
+                Install Free &nearr;
+              </a>
             </div>
 
-            <div class="pricing-free-mid">
-              <ul class="pricing-free-features">
-                <li><span class="pricing-check-icon">&#10003;</span> 20 units daily allowance</li>
-                <li><span class="pricing-check-icon">&#10003;</span> Up to 300 characters per text</li>
-                <li><span class="pricing-check-icon">&#10003;</span> Standard in-place translation</li>
-                <li style="color: var(--text-muted);"><span style="opacity: 0.5;">&bull;</span> Basic local features (No Prompt Mode)</li>
-              </ul>
-            </div>
-          </div>
+            <!-- 2. Monthly Tier -->
+            <div class="pricing-card-v2">
+              <div style="min-height: 27px; margin-bottom: 8px;"></div>
+              <h4 class="pricing-v2-name">Monthly</h4>
+              <div class="pricing-v2-amount">
+                $3.99<span class="pricing-v2-period">/month</span>
+              </div>
+              <p class="pricing-v2-desc">
+                A solid daily allowance for everyday translating.
+              </p>
 
-          <!-- 3-Column Paid Subscription Plans Grid -->
-          <div class="pricing-paid-grid">
-            <!-- Monthly Tier -->
-            <div class="pricing-card" data-plan-card="monthly">
-              <div class="pricing-card-header">
-                <h4 class="pricing-plan-name">Monthly</h4>
-                <p class="pricing-plan-desc">A solid daily allowance tailored for active everyday multilingual workflows.</p>
+              <!-- Duration Pricing Table -->
+              <div class="pricing-duration-box">
+                <div class="duration-row">
+                  <span class="duration-label">1 month</span>
+                  <span class="duration-price">$3.99</span>
+                </div>
+                <div class="duration-row">
+                  <span class="duration-label">3 months</span>
+                  <div class="duration-price-wrap">
+                    <span class="duration-price">$9.99</span>
+                    <span class="duration-discount">-17%</span>
+                  </div>
+                </div>
+                <div class="duration-row">
+                  <span class="duration-label">6 months</span>
+                  <div class="duration-price-wrap">
+                    <span class="duration-price">$17.99</span>
+                    <span class="duration-discount">-25%</span>
+                  </div>
+                </div>
+                <div class="duration-row">
+                  <span class="duration-label">1 year</span>
+                  <div class="duration-price-wrap">
+                    <span class="duration-price">$29.99</span>
+                    <span class="duration-discount">-37%</span>
+                  </div>
+                </div>
               </div>
-              <div class="pricing-amount">
-                $3.99
-                <span class="pricing-period">/ month</span>
-              </div>
-              <ul class="pricing-features-list">
-                <li><span class="pricing-check-icon">&#10003;</span> 200 translations per day</li>
-                <li><span class="pricing-check-icon">&#10003;</span> Full Prompt Mode enabled</li>
-                <li><span class="pricing-check-icon">&#10003;</span> All 23 target languages</li>
-                <li><span class="pricing-check-icon">&#10003;</span> 6 dynamic style presets &amp; cycling</li>
+
+              <!-- Features List -->
+              <ul class="pricing-v2-features">
+                <li><span class="pricing-v2-check">&#10003;</span> 200 translations per day</li>
+                <li><span class="pricing-v2-check">&#10003;</span> Prompt Mode</li>
+                <li><span class="pricing-v2-check">&#10003;</span> All 23 target languages</li>
+                <li><span class="pricing-v2-check">&#10003;</span> Style presets</li>
               </ul>
+
+              <a href="https://sollem4.gumroad.com/l/okczbb" target="_blank" rel="noopener noreferrer" class="btn-upgrade-v2">
+                Upgrade &nearr;
+              </a>
             </div>
 
-            <!-- Monthly Power Tier (Featured) -->
-            <div class="pricing-card featured" data-plan-card="monthly-power">
-              <span class="pricing-badge">Popular</span>
-              <div class="pricing-card-header">
-                <h4 class="pricing-plan-name">Monthly Power</h4>
-                <p class="pricing-plan-desc">Maximum allowance with priority backend routing for power creators &amp; teams.</p>
+            <!-- 3. Monthly Power Tier (Featured / Popular) -->
+            <div class="pricing-card-v2 featured-power">
+              <div style="min-height: 27px; margin-bottom: 8px;">
+                <span class="pricing-badge-popular" style="margin-bottom: 0;">POPULAR</span>
               </div>
-              <div class="pricing-amount">
-                $7.99
-                <span class="pricing-period">/ month</span>
+              <h4 class="pricing-v2-name">Monthly Power</h4>
+              <div class="pricing-v2-amount">
+                $7.99<span class="pricing-v2-period">/month</span>
               </div>
-              <ul class="pricing-features-list">
-                <li><span class="pricing-check-icon">&#10003;</span> 800 translations per day</li>
-                <li><span class="pricing-check-icon">&#10003;</span> Priority high-speed API routing</li>
-                <li><span class="pricing-check-icon">&#10003;</span> Advanced Prompt Mode (Midjourney, Flow, Higgsfield)</li>
-                <li><span class="pricing-check-icon">&#10003;</span> Extended character boundaries</li>
-              </ul>
-            </div>
+              <p class="pricing-v2-desc">
+                Everything in Monthly, plus Prompt Mode and a higher allowance.
+              </p>
 
-            <!-- Year Tier (Best Value) -->
-            <div class="pricing-card" data-plan-card="year">
-              <span class="pricing-badge best-value">Best Value</span>
-              <div class="pricing-card-header">
-                <h4 class="pricing-plan-name">Year</h4>
-                <p class="pricing-plan-desc">A full year of continuous translation capacity at our best annual rate.</p>
+              <!-- Duration Pricing Table -->
+              <div class="pricing-duration-box">
+                <div class="duration-row">
+                  <span class="duration-label">1 month</span>
+                  <span class="duration-price">$7.99</span>
+                </div>
+                <div class="duration-row">
+                  <span class="duration-label">3 months</span>
+                  <div class="duration-price-wrap">
+                    <span class="duration-price">$19.99</span>
+                    <span class="duration-discount">-17%</span>
+                  </div>
+                </div>
+                <div class="duration-row">
+                  <span class="duration-label">6 months</span>
+                  <div class="duration-price-wrap">
+                    <span class="duration-price">$35.99</span>
+                    <span class="duration-discount">-25%</span>
+                  </div>
+                </div>
+                <div class="duration-row">
+                  <span class="duration-label">1 year</span>
+                  <div class="duration-price-wrap">
+                    <span class="duration-price">$59.99</span>
+                    <span class="duration-discount">-38%</span>
+                  </div>
+                </div>
               </div>
-              <div class="pricing-amount">
-                $29
-                <span class="pricing-period">/ year (~$2.40/mo)</span>
-              </div>
-              <ul class="pricing-features-list">
-                <li><span class="pricing-check-icon">&#10003;</span> 200 translations per day</li>
-                <li><span class="pricing-check-icon">&#10003;</span> Full Prompt Mode access</li>
-                <li><span class="pricing-check-icon">&#10003;</span> Save ~40% vs Monthly billing</li>
-                <li><span class="pricing-check-icon">&#10003;</span> Priority updates &amp; support</li>
+
+              <!-- Features List -->
+              <ul class="pricing-v2-features">
+                <li><span class="pricing-v2-check">&#10003;</span> 800 translations per day</li>
+                <li><span class="pricing-v2-check">&#10003;</span> Prompt Mode</li>
+                <li><span class="pricing-v2-check">&#10003;</span> Priority</li>
+                <li><span class="pricing-v2-check">&#10003;</span> All 23 target languages</li>
               </ul>
+
+              <a href="https://sollem4.gumroad.com/l/fvsjie" target="_blank" rel="noopener noreferrer" class="btn-upgrade-v2">
+                Upgrade &nearr;
+              </a>
             </div>
           </div>
 
@@ -1002,28 +1059,38 @@
               <div>
                 <h4 class="boost-packs-title">On-Demand Boost Packs</h4>
                 <p style="font-size: 13px; color: var(--text-secondary); margin-top: 2px;">
-                  Instant top-up units to keep working uninterrupted whenever daily limits are reached.
+                  Instant top-up units to keep translating uninterrupted whenever daily limits are reached.
                 </p>
               </div>
-              <span class="meta-pill" style="font-size: 11px;">One-Time Top-up</span>
+              <span class="meta-pill" style="font-size: 11px;">One-Time Purchase</span>
             </div>
 
             <div class="boost-grid">
-              <div class="boost-pack-item">
-                <div class="boost-pack-info">
-                  <h5>Boost 100</h5>
-                  <p>Adds 100 translation units on demand</p>
+              <a href="https://sollem4.gumroad.com/l/alghsb?variant=Boost%20100" target="_blank" rel="noopener noreferrer" class="boost-pack-card">
+                <div class="boost-pack-left">
+                  <div class="boost-badge">⚡ Instant +100 Units</div>
+                  <h5 class="boost-title">Boost 100</h5>
+                  <p class="boost-desc">Instant 100 translation units top-up for active sprints.</p>
                 </div>
-                <span class="boost-pack-price">$1.49</span>
-              </div>
+                <div class="boost-pack-right">
+                  <span class="boost-btn-action">
+                    Buy $1.49 &nearr;
+                  </span>
+                </div>
+              </a>
 
-              <div class="boost-pack-item">
-                <div class="boost-pack-info">
-                  <h5>Boost 500</h5>
-                  <p>Adds 500 translation units on demand</p>
+              <a href="https://sollem4.gumroad.com/l/alghsb?variant=Boost%20500" target="_blank" rel="noopener noreferrer" class="boost-pack-card popular">
+                <div class="boost-pack-left">
+                  <div class="boost-badge value">⚡ Value +500 Units</div>
+                  <h5 class="boost-title">Boost 500</h5>
+                  <p class="boost-desc">Instant 500 translation units high-volume top-up package.</p>
                 </div>
-                <span class="boost-pack-price">$2.99</span>
-              </div>
+                <div class="boost-pack-right">
+                  <span class="boost-btn-action value">
+                    Buy $2.99 &nearr;
+                  </span>
+                </div>
+              </a>
             </div>
           </div>
 
@@ -1083,7 +1150,7 @@
               </tr>
               <tr>
                 <td>Translation Latency</td>
-                <td>~180ms – 320ms (via Groq / OpenAI LLM endpoints)</td>
+                <td>~180ms - 320ms (via Groq / OpenAI LLM endpoints)</td>
               </tr>
               <tr>
                 <td>Supported Tones</td>
@@ -1112,7 +1179,7 @@
             <span class="meta-pill highlight">Direct Developer Channel</span>
           </div>
           <p class="contact-subtitle" style="margin-bottom: 28px;">
-            Babel operates with zero-account privacy. To identify your instance or subscription, please provide your <strong>Transaction ID</strong> (from payment receipt) or <strong>Device ID</strong> (from Babel Options).
+            Babel operates with zero-account privacy. To identify your instance or support ticket, please provide your <strong>Account ID</strong> (from the Babel extension popup or Options page).
           </p>
 
           <!-- Interactive Support Form -->
@@ -1127,22 +1194,22 @@
             <div class="form-row">
               <div class="form-group">
                 <label for="support-user-id" class="form-label" style="display: flex; justify-content: space-between; align-items: center;">
-                  <span>Transaction ID or Device ID</span>
+                  <span>Account ID</span>
                   <span style="font-size: 11px; font-weight: 600; color: var(--accent-primary);">Required</span>
                 </label>
                 <input 
                   type="text" 
                   id="support-user-id" 
-                  name="transaction_or_device_id" 
+                  name="account_id" 
                   class="form-input" 
-                  placeholder="txn_01m... or a1b2c3d4-3d74..." 
-                  pattern="^(txn_[a-zA-Z0-9_]{15,40}|[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})$"
-                  title="Transaction ID (txn_...) or Device ID (UUID: a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d)"
+                  placeholder="a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d" 
+                  pattern="^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$"
+                  title="Account ID (e.g. a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d)"
                   style="font-family: var(--font-mono); font-size: 13px;"
                   required 
                 />
                 <div style="font-size: 11.5px; color: var(--text-muted); margin-top: 6px; line-height: 1.45; text-align: left;">
-                  <span><strong>💳 Paid:</strong> Order ID (<code style="font-family: var(--font-mono); font-size: 11px;">txn_...</code>) from receipt &middot; <strong>🆓 Free:</strong> Device ID from Options page</span>
+                  <span><strong>🔑 Account ID:</strong> Found inside Babel popup or Options page (<code style="font-family: var(--font-mono); font-size: 11px;">a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d</code>)</span>
                 </div>
               </div>
               <div class="form-group">

@@ -21,16 +21,17 @@ const PROJECTS_DATA = [
     description: "A high-performance Chrome extension (Manifest V3) that translates thoughts into natural conversational English or fine-tuned AI prompts directly inside any input field with a single keystroke (Alt+T). Built with a 4-tier DOM replacement engine compatible with React, Vue, Slate.js, and ProseMirror.",
     year: "2026",
     status: "Production",
-    statusLabel: "Live Extension",
-    progress: 98,
+    statusLabel: "Live on Chrome Store",
+    progress: 100,
     currentStageIndex: 4,
-    stageName: "Production Live (v1.0)",
-    currentFocus: "Chrome & Edge Web Store reviews, Paddle webhook licensing, and v1.1 style fine-tuning",
+    stageName: "Production Live (Chrome Web Store)",
+    currentFocus: "Live in Chrome Web Store! Active maintenance & preparing Microsoft Edge Add-ons certification",
+    storeUrl: "https://chromewebstore.google.com/detail/babel/lhlnianlfdpaaklielfkbkkgikgbaibo",
     subsystems: [
       { name: "DOM Injection Engine", percent: 100 },
       { name: "AI Style Tone Engine", percent: 100 },
       { name: "DLP Privacy & 23 Languages", percent: 100 },
-      { name: "Store Review & Billing", percent: 95 }
+      { name: "Chrome Web Store Release", percent: 100 }
     ],
     tags: ["AI & LLM", "Chrome Extension", "JavaScript", "UX"],
     icon: "assets/icons/babel/icon48.png",
@@ -199,6 +200,8 @@ document.addEventListener("DOMContentLoaded", () => {
   initModal();
   initContactForm();
   renderProjects();
+  initScrollToTop();
+  initMobileStickyNav();
 });
 
 // Theme Management
@@ -766,8 +769,14 @@ function openProjectModal(id) {
       ` : ''}
 
       <div class="modal-meta" style="display: flex; flex-wrap: wrap; gap: 12px;">
+        ${project.storeUrl ? `
+          <a href="${project.storeUrl}" target="_blank" rel="noopener noreferrer" class="btn-primary" onclick="gtag('event', 'click_install', {'event_category': 'conversion', 'browser': 'chrome'});" style="display: inline-flex; align-items: center; gap: 8px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C8.21 0 4.831 1.757 2.632 4.501l3.953 6.848A5.454 5.454 0 0 1 12 6.545h10.691A12 12 0 0 0 12 0zM1.931 5.47A11.943 11.943 0 0 0 0 12c0 6.013 4.42 10.995 10.207 11.85l3.953-6.847a5.45 5.45 0 0 1-5.719-2.288L1.931 5.47zm13.784 6.53a5.455 5.455 0 0 1-2.26 4.455L8.047 24h3.953c6.627 0 12-5.373 12-12 0-.616-.048-1.22-.138-1.812l-7.906.002a5.46 5.46 0 0 1-.241 1.81zM12 7.636a4.364 4.364 0 1 0 0 8.728 4.364 4.364 0 0 0 0-8.728z"/></svg>
+            <span>Add to Chrome &nearr;</span>
+          </a>
+        ` : ''}
         ${project.demo ? `
-          <a href="${project.demo}" ${project.demo.startsWith('http') ? 'target="_blank" rel="noopener"' : ''} class="btn-primary">
+          <a href="${project.demo}" ${project.demo.startsWith('http') ? 'target="_blank" rel="noopener"' : ''} class="${project.storeUrl ? 'btn-secondary' : 'btn-primary'}">
             ${demoLabel}
           </a>
         ` : ''}
@@ -781,7 +790,7 @@ function openProjectModal(id) {
             <span>🔒</span> Private Repository (Request Access)
           </button>
         ` : ''}
-        ${!project.demo ? `
+        ${!project.demo && !project.storeUrl ? `
           <a href="#contact" onclick="closeModal()" class="btn-primary">
             Inquire / Collaborate &rarr;
           </a>
@@ -916,4 +925,70 @@ function initContactForm() {
       if (submitBtn) submitBtn.disabled = false;
     }
   });
+}
+
+// Scroll to Top Floating Button Handler
+function initScrollToTop() {
+  const scrollBtn = document.getElementById("scroll-to-top");
+  if (!scrollBtn) return;
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 400) {
+      scrollBtn.classList.add("is-visible");
+    } else {
+      scrollBtn.classList.remove("is-visible");
+    }
+  }, { passive: true });
+
+  scrollBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
+
+// Mobile Bottom Sticky Navigation Active Section Spy & Smooth Scrolling
+function initMobileStickyNav() {
+  const navItems = document.querySelectorAll(".mobile-nav-item[data-section]");
+  const mobileTopBtn = document.querySelector(".mobile-nav-top");
+
+  if (mobileTopBtn) {
+    mobileTopBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+
+  if (!navItems.length) return;
+
+  navItems.forEach((item) => {
+    item.addEventListener("click", (e) => {
+      const targetId = item.getAttribute("href");
+      if (targetId && targetId.startsWith("#")) {
+        const targetEl = document.querySelector(targetId);
+        if (targetEl) {
+          e.preventDefault();
+          targetEl.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    });
+  });
+
+  const sections = Array.from(navItems).map((item) => {
+    const id = item.getAttribute("data-section");
+    return { el: document.getElementById(id), item: item };
+  }).filter((s) => s.el !== null);
+
+  window.addEventListener("scroll", () => {
+    if (window.innerWidth > 768) return;
+    const scrollPos = window.scrollY + 220;
+
+    sections.forEach(({ el, item }) => {
+      const top = el.offsetTop;
+      const height = el.offsetHeight;
+      if (scrollPos >= top && scrollPos < top + height) {
+        item.classList.add("active");
+      } else {
+        item.classList.remove("active");
+      }
+    });
+  }, { passive: true });
 }

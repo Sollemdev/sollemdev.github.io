@@ -6,11 +6,12 @@
 
 ### 1. Babel - AI In-Place Translation Extension
 - **URL**: https://sollemdev.github.io/projects/babel.html
-- **Status**: Live Extension (v1.0 Production, 98% Readiness)
+- **Chrome Web Store**: https://chromewebstore.google.com/detail/babel/lhlnianlfdpaaklielfkbkkgikgbaibo
+- **Status**: Live Production (100% Readiness - Published in Chrome Web Store)
 - **Category**: AI Productivity & Browser Extension (Manifest V3)
 - **Stack**: JavaScript, Chrome Extensions API, MutationObserver, DOM Replacement Engines
 - **Architecture**: Sub-300ms in-place text replacement via Alt+T hotkey across React, Vue, Slate.js, and ProseMirror. Features 6 dynamic style tones, prompt engineering mode (Midjourney, Higgsfield), client-side DLP secret protection, and 23 localized language dictionaries.
-- **Privacy & Licensing**: Zero server data retention; secure digital licensing via Paddle.
+- **Privacy & Licensing**: Zero server data retention; secure digital licensing via Gumroad.
 
 ### 2. Humanagi (bubble chat) - Floating Multimodal Messenger
 - **Status**: In Active R&D (45% Readiness)
