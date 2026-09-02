@@ -21,13 +21,27 @@
   <meta name="author" content="Sollemdev" />
   <link rel="canonical" href="https://sollemdev.github.io/" />
   
-  <!-- OpenGraph & Twitter Metadata -->
+  <!-- OpenGraph & Twitter Metadata (Studio Social Card Preview) -->
+  <meta property="og:site_name" content="Sollemdev Studio" />
   <meta property="og:title" content="Sollemdev | Independent Software Studio &amp; AI Systems Labs" />
-  <meta property="og:description" content="Building AI productivity extensions, autonomous agent protocols, Flutter mobile apps, and distributed cloud systems." />
+  <meta property="og:description" content="Independent engineering studio driven by one human architect and collaborative AI orchestration. High-performance software, browser extensions, IoT robotics, and custom hardware." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://sollemdev.github.io/" />
-  <meta property="og:image" content="https://sollemdev.github.io/assets/images/banners/Babel_Keyboard_Magic_1.jpg" />
+  <meta property="og:image" content="https://sollemdev.github.io/assets/images/og-studio-card.jpg" />
+  <meta property="og:image:secure_url" content="https://sollemdev.github.io/assets/images/og-studio-card.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Sollemdev Studio - Leonid Kulcha, Lead Architect" />
+  <meta property="og:locale" content="en_US" />
+
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@SolLem_Dev" />
+  <meta name="twitter:creator" content="@SolLem_Dev" />
+  <meta name="twitter:title" content="Sollemdev | Independent Software Studio &amp; AI Systems Labs" />
+  <meta name="twitter:description" content="Independent engineering studio driven by one human architect and collaborative AI orchestration. High-performance software, AI systems, and custom hardware." />
+  <meta name="twitter:image" content="https://sollemdev.github.io/assets/images/og-studio-card.jpg" />
+  <meta name="twitter:image:alt" content="Sollemdev Studio Preview" />
 
   <!-- Schema.org JSON-LD Structured Data for AI & Search Engines -->
   <script type="application/ld+json">
@@ -37,10 +51,12 @@
     "name": "Sollemdev Studio",
     "url": "https://sollemdev.github.io/",
     "logo": "https://sollemdev.github.io/favicon.svg",
+    "image": "https://sollemdev.github.io/assets/images/og-studio-card.jpg",
     "description": "Independent software and systems engineering studio specializing in AI tools, autonomous agent protocols, browser extensions, and mobile applications.",
     "founder": {
       "@type": "Person",
-      "name": "Sollemdev"
+      "name": "Leonid Kulcha",
+      "alternateName": "Sollemdev"
     },
     "knowsAbout": [
       "AI Agents",
@@ -51,7 +67,8 @@
       "Pulse Power & Hardware Systems"
     ],
     "sameAs": [
-      "https://github.com/Sollemdev"
+      "https://github.com/Sollemdev",
+      "https://twitter.com/SolLem_Dev"
     ]
   }
   </script>
@@ -65,7 +82,7 @@
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
   
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css?v=1.10.6" />
 </head>
 <body>
 
@@ -85,6 +102,37 @@
       </nav>
 
       <div class="header-actions">
+        <!-- Header Share Dropdown -->
+        <div class="header-share-dropdown" id="header-share-dropdown">
+          <button id="header-share-btn" class="header-action-btn" aria-label="Share Sollemdev Studio" title="Share portfolio" aria-expanded="false">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+            </svg>
+            <span>Share</span>
+          </button>
+
+          <!-- Share Popover Menu -->
+          <div class="header-share-menu" id="header-share-menu">
+            <div class="header-share-menu-title">Share Studio</div>
+            <a href="https://twitter.com/intent/tweet?text=Sollemdev%20Studio%20%E2%80%94%20Software%2C%20AI%20Systems%20%26%20Hardware&url=https%3A%2F%2Fsollemdev.github.io%2F&via=SolLem_Dev" target="_blank" rel="noopener noreferrer" class="header-share-item">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              <span>Share on X</span>
+            </a>
+            <a href="https://t.me/share/url?url=https%3A%2F%2Fsollemdev.github.io%2F&text=Sollemdev%20Studio%20%E2%80%94%20Software%2C%20AI%20Systems%20%26%20Hardware" target="_blank" rel="noopener noreferrer" class="header-share-item">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18.847-.96 4.966-1.357 7.085-.168.898-.5 1.199-.821 1.229-.698.064-1.228-.46-1.905-.904-1.06-.694-1.659-1.126-2.687-1.803-1.188-.783-.418-1.213.259-1.916.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.329-.913.489-1.302.481-.428-.009-1.252-.242-1.865-.442-.751-.244-1.349-.374-1.297-.789.027-.216.325-.437.893-.664 3.498-1.524 5.831-2.529 7.001-3.014 3.332-1.386 4.025-1.627 4.477-1.635.099-.002.321.023.465.14.121.099.155.232.171.326.016.093.036.307.02.474z"/></svg>
+              <span>Telegram</span>
+            </a>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fsollemdev.github.io%2F" target="_blank" rel="noopener noreferrer" class="header-share-item">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              <span>LinkedIn</span>
+            </a>
+            <button type="button" class="header-share-item copy-portfolio-link" id="copy-portfolio-btn">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              <span id="copy-share-label">Copy Link</span>
+            </button>
+          </div>
+        </div>
+
         <button id="theme-toggle" class="icon-btn" aria-label="Toggle Dark/Light Mode" title="Toggle theme">
           <svg id="theme-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -103,16 +151,16 @@
         </h1>
 
         <div class="hero-bio-wrap">
-          <div class="hero-author-avatar-card">
-            <div class="hero-avatar-frame">
+          <div class="hero-author-avatar-card" style="float: left; margin: 4px 24px 16px 0; width: clamp(100px, 24vw, 145px); text-align: center;">
+            <div class="hero-avatar-frame" style="position: relative; width: 100%; aspect-ratio: 1 / 1.05; border-radius: clamp(12px, 2.8vw, 16px); padding: 3px; background: linear-gradient(135deg, rgba(255, 36, 80, 0.45) 0%, rgba(56, 189, 248, 0.45) 50%, rgba(139, 92, 246, 0.45) 100%); box-shadow: 0 10px 25px -8px rgba(0, 0, 0, 0.45), 0 0 20px -4px rgba(56, 189, 248, 0.35); overflow: hidden;">
               <picture>
                 <source srcset="assets/images/sollem-portrait.webp" type="image/webp">
-                <img src="assets/images/sollem-portrait.jpg" alt="Leonid Kulcha (Sollem) - Lead Architect &amp; Founder" class="hero-avatar-img" width="145" height="155" loading="eager" />
+                <img src="assets/images/sollem-portrait.jpg" alt="Leonid Kulcha (Sollem) - Lead Architect &amp; Founder" class="hero-avatar-img" width="145" height="155" style="width: 100%; height: 100%; object-fit: cover; border-radius: clamp(9px, 2.2vw, 12px); display: block;" loading="eager" />
               </picture>
             </div>
-            <div class="hero-avatar-info">
-              <span class="hero-avatar-caption">Sollem &bull; Architect</span>
-              <span class="hero-avatar-subcaption">Leonid Kulcha</span>
+            <div class="hero-avatar-info" style="margin-top: 6px; display: flex; flex-direction: column; align-items: center; gap: 2px;">
+              <span class="hero-avatar-caption" style="display: block; font-family: var(--font-mono); font-size: clamp(9.5px, 2.2vw, 11px); font-weight: 600; color: var(--text-muted); letter-spacing: 0.02em; white-space: nowrap;">Sollem &bull; Architect</span>
+              <span class="hero-avatar-subcaption" style="display: block; font-family: var(--font-mono); font-size: clamp(9.5px, 2.2vw, 11px); font-weight: 600; color: var(--text-primary); letter-spacing: 0.02em; white-space: nowrap;">Leonid Kulcha</span>
             </div>
           </div>
 
@@ -340,12 +388,6 @@
     <div class="container footer-content">
       <div class="footer-left">
         &copy; 2026 Sollemdev. Built with Editorial Precision &amp; HTML5.
-      </div>
-      <div class="footer-legal-links">
-        <a href="projects/terms.html">Terms of Service</a> &middot;
-        <a href="projects/privacy.html">Privacy Notice</a> &middot;
-        <a href="projects/refund.html">Refund Policy</a> &middot;
-        <a href="projects/babel.html">Babel Project &amp; Pricing</a>
       </div>
       <div class="footer-right">
         Hosted on <a href="https://pages.github.com/" target="_blank" rel="noopener" style="text-decoration: underline;">GitHub Pages</a>

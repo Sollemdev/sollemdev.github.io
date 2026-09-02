@@ -199,10 +199,53 @@ document.addEventListener("DOMContentLoaded", () => {
   initSearch();
   initModal();
   initContactForm();
+  initHeaderShare();
   renderProjects();
   initScrollToTop();
   initMobileStickyNav();
 });
+
+// Header Share Dropdown Handler
+function initHeaderShare() {
+  const dropdown = document.getElementById("header-share-dropdown");
+  const shareBtn = document.getElementById("header-share-btn");
+  const copyBtn = document.getElementById("copy-portfolio-btn");
+  const copyLabel = document.getElementById("copy-share-label");
+
+  if (!dropdown || !shareBtn) return;
+
+  shareBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    dropdown.classList.toggle("open");
+    const isOpen = dropdown.classList.contains("open");
+    shareBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!dropdown.contains(e.target)) {
+      dropdown.classList.remove("open");
+      shareBtn.setAttribute("aria-expanded", "false");
+    }
+  });
+
+  if (copyBtn) {
+    copyBtn.addEventListener("click", async (e) => {
+      e.stopPropagation();
+      const url = "https://sollemdev.github.io/";
+      try {
+        await navigator.clipboard.writeText(url);
+        if (copyLabel) copyLabel.textContent = "Copied!";
+        showToast("Portfolio link copied to clipboard!");
+        setTimeout(() => {
+          if (copyLabel) copyLabel.textContent = "Copy Link";
+          dropdown.classList.remove("open");
+        }, 1500);
+      } catch (err) {
+        showToast("URL: https://sollemdev.github.io/");
+      }
+    });
+  }
+}
 
 // Theme Management
 function initTheme() {
