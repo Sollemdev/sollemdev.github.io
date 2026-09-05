@@ -1319,6 +1319,33 @@
               <span class="faq-group-badge">6 Guides</span>
             </div>
 
+            <!-- HUD Visual Showcase Card -->
+            <div class="faq-hud-card">
+              <div class="faq-hud-card-media">
+                <div class="faq-hud-glow"></div>
+                <img src="../assets/images/babel-hud-menu.png" alt="Babel Cyberpunk Radial HUD Menu Preview" width="280" height="308" loading="lazy" />
+              </div>
+              <div class="faq-hud-card-content">
+                <div class="meta-pill" style="font-size: 10.5px; padding: 2px 8px; border-color: rgba(6, 182, 212, 0.4); color: #06b6d4;">Interface Architecture</div>
+                <h4 class="faq-hud-card-title">Concentric Cyberpunk Radial HUD</h4>
+                <p class="faq-hud-card-desc">
+                  Babel's floating companion features an isolated Shadow DOM interface with an outer <strong>Cyan Language Ring</strong> (23 languages with national flags) and an inner <strong>Magenta Tone Ring</strong> (8 conversation styles). Controlled seamlessly via hardware shortcuts, mouse wheel, or direct sector clicks.
+                </p>
+                <div class="faq-hud-rings-grid">
+                  <div class="faq-hud-ring-item cyan">
+                    <span class="faq-hud-ring-badge">Outer Ring</span>
+                    <strong>23 Target Languages</strong>
+                    <span>Dynamic $360^\circ/N$ geometric slicing with flag markers &middot; <kbd class="faq-kbd">Alt+Q/W</kbd></span>
+                  </div>
+                  <div class="faq-hud-ring-item magenta">
+                    <span class="faq-hud-ring-badge">Inner Ring</span>
+                    <strong>8 Conversation Tones</strong>
+                    <span>Natural, Friendly, Slang, Business, Brief, Vivid, Prompt &amp; Base64 &middot; <kbd class="faq-kbd">Alt+A/S</kbd></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <!-- Q6 -->
             <details class="faq-item">
               <summary class="faq-summary">
@@ -1363,15 +1390,17 @@
                 <div class="faq-question-wrap">
                   <span class="faq-q-icon">🎡</span>
                   <span class="faq-q-text">How do I navigate the two-ring Cyberpunk Radial HUD?</span>
+                  <span class="meta-pill" style="font-size: 10px; padding: 1px 7px; border-color: rgba(6, 182, 212, 0.4); color: #06b6d4;">📸 Visual Diagram</span>
                 </div>
                 <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
               </summary>
               <div class="faq-answer">
-                <p>Left-clicking the mascot or pressing any rotation shortcut (<kbd class="faq-kbd">Alt+Q/W/A/S</kbd>) deploys the dual-ring radial HUD centered on the mascot:</p>
+                <p>As illustrated in the interactive preview above, left-clicking the mascot or pressing any rotation shortcut (<kbd class="faq-kbd">Alt+Q/W/A/S</kbd>) deploys the dual-ring radial HUD centered on the mascot:</p>
                 <ul>
                   <li><strong>Outer Ring (Neon Cyan):</strong> Controls <strong>Target Translation Languages</strong>. Features dynamic sector slicing based on your active favorites (from 3 languages up to all 23). Rotate with <kbd class="faq-kbd">Alt + Q</kbd> (↶) / <kbd class="faq-kbd">Alt + W</kbd> (↷), mouse wheel, or direct click.</li>
                   <li><strong>Inner Ring (Neon Magenta):</strong> Controls <strong>Conversation Tones</strong> (Natural, Friendly, Slang, Business, Brief, Vivid, Prompt, Base64). Rotate with <kbd class="faq-kbd">Alt + A</kbd> (↶) / <kbd class="faq-kbd">Alt + S</kbd> (↷), mouse wheel, or direct click.</li>
-                  <li><strong>Hub Center:</strong> Shows current language and tone. Clicking the center or pressing <kbd class="faq-kbd">Escape</kbd> closes the menu instantly. It also auto-closes after 3.5 seconds of inactivity.</li>
+                  <li><strong>Hub Center:</strong> Shows the chameleon avatar and current status (e.g. <code style="font-family: var(--font-mono); font-size: 11.5px; background: rgba(0,0,0,0.06); padding: 2px 6px; border-radius: 4px;">🇬🇧 EN • ⚡ Slang</code>). Clicking the center or pressing <kbd class="faq-kbd">Escape</kbd> closes the menu instantly. It also auto-closes after 3.5 seconds of inactivity.</li>
+                  <li><strong>Bottom Hint Strip:</strong> Displays hardware key hints (<kbd class="faq-kbd">Alt+Q/W</kbd> Language, <kbd class="faq-kbd">Alt+A/S</kbd> Style, <kbd class="faq-kbd">Alt+T</kbd> Translate).</li>
                 </ul>
               </div>
             </details>
