@@ -204,6 +204,10 @@
             <span>Plans</span>
             <span class="anchor-nav-arrow">&darr;</span>
           </a>
+          <a href="#faq" class="anchor-nav-item">
+            <span>User FAQ</span>
+            <span class="anchor-nav-arrow">&darr;</span>
+          </a>
           <a href="#specs" class="anchor-nav-item">
             <span>Specs</span>
             <span class="anchor-nav-arrow">&darr;</span>
@@ -364,7 +368,7 @@
           <!-- Section 1: Browser Extensions -->
           <div class="ecosystem-section-label">
             <span>Chromium Browser Extensions</span>
-            <span class="ecosystem-count">6 Browsers</span>
+            <span class="ecosystem-count">3 Live &middot; 3 In Review</span>
           </div>
 
           <div class="browser-stores-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
@@ -374,11 +378,39 @@
                 <div class="store-icon-wrap">
                   <img src="../assets/icons/browsers/chrome.svg" alt="Google Chrome" width="28" height="28" loading="lazy" />
                 </div>
-                <span class="store-badge" style="background: rgba(34, 197, 94, 0.15); color: #16a34a; border: 1px solid rgba(34, 197, 94, 0.35); font-weight: 700;">● Available Now &nearr;</span>
+                <span class="store-badge badge-live" style="background: rgba(34, 197, 94, 0.15); color: #16a34a; border: 1px solid rgba(34, 197, 94, 0.35); font-weight: 700;">● Available Now &nearr;</span>
               </div>
               <div class="store-info">
                 <div class="store-name" style="color: var(--text-primary); font-weight: 600;">Chrome Web Store</div>
                 <div class="store-sub">Official Release &middot; Install 1-Click</div>
+              </div>
+            </a>
+
+            <!-- Brave Browser -->
+            <a href="https://chromewebstore.google.com/detail/babel/lhlnianlfdpaaklielfkbkkgikgbaibo" target="_blank" rel="noopener noreferrer" class="browser-store-item store-item-live" onclick="gtag('event', 'click_install', {'event_category': 'conversion', 'browser': 'brave'});" style="text-decoration: none; color: inherit; cursor: pointer; border-color: rgba(34, 197, 94, 0.4); background: rgba(34, 197, 94, 0.04);">
+              <div class="store-item-header">
+                <div class="store-icon-wrap">
+                  <img src="../assets/icons/platforms/brave.svg" alt="Brave Browser" width="28" height="28" loading="lazy" />
+                </div>
+                <span class="store-badge badge-live" style="background: rgba(34, 197, 94, 0.15); color: #16a34a; border: 1px solid rgba(34, 197, 94, 0.35); font-weight: 700;">● Available Now &nearr;</span>
+              </div>
+              <div class="store-info">
+                <div class="store-name" style="color: var(--text-primary); font-weight: 600;">Brave Browser</div>
+                <div class="store-sub">Shields &middot; Install 1-Click</div>
+              </div>
+            </a>
+
+            <!-- Arc Browser -->
+            <a href="https://chromewebstore.google.com/detail/babel/lhlnianlfdpaaklielfkbkkgikgbaibo" target="_blank" rel="noopener noreferrer" class="browser-store-item store-item-live" onclick="gtag('event', 'click_install', {'event_category': 'conversion', 'browser': 'arc'});" style="text-decoration: none; color: inherit; cursor: pointer; border-color: rgba(34, 197, 94, 0.4); background: rgba(34, 197, 94, 0.04);">
+              <div class="store-item-header">
+                <div class="store-icon-wrap">
+                  <img src="../assets/icons/platforms/arc.svg" alt="Arc Browser" width="28" height="28" loading="lazy" />
+                </div>
+                <span class="store-badge badge-live" style="background: rgba(34, 197, 94, 0.15); color: #16a34a; border: 1px solid rgba(34, 197, 94, 0.35); font-weight: 700;">● Available Now &nearr;</span>
+              </div>
+              <div class="store-info">
+                <div class="store-name" style="color: var(--text-primary); font-weight: 600;">Arc Browser</div>
+                <div class="store-sub">Arc Spaces &middot; Install 1-Click</div>
               </div>
             </a>
 
@@ -388,39 +420,11 @@
                 <div class="store-icon-wrap">
                   <img src="../assets/icons/browsers/edge.svg" alt="Microsoft Edge" width="28" height="28" loading="lazy" />
                 </div>
-                <span class="store-badge">Coming Soon</span>
+                <span class="store-badge badge-review" style="background: rgba(245, 158, 11, 0.12); color: #d97706; border: 1px solid rgba(245, 158, 11, 0.35); font-weight: 700;">● In Review</span>
               </div>
               <div class="store-info">
                 <div class="store-name">Edge Add-ons</div>
-                <div class="store-sub">Microsoft Edge &middot; Windows 11</div>
-              </div>
-            </div>
-
-            <!-- Brave Browser -->
-            <div class="browser-store-item">
-              <div class="store-item-header">
-                <div class="store-icon-wrap">
-                  <img src="../assets/icons/platforms/brave.svg" alt="Brave Browser" width="28" height="28" loading="lazy" />
-                </div>
-                <span class="store-badge">Coming Soon</span>
-              </div>
-              <div class="store-info">
-                <div class="store-name">Brave Browser</div>
-                <div class="store-sub">Shields &middot; Privacy First</div>
-              </div>
-            </div>
-
-            <!-- Arc Browser -->
-            <div class="browser-store-item">
-              <div class="store-item-header">
-                <div class="store-icon-wrap">
-                  <img src="../assets/icons/platforms/arc.svg" alt="Arc Browser" width="28" height="28" loading="lazy" />
-                </div>
-                <span class="store-badge">Coming Soon</span>
-              </div>
-              <div class="store-info">
-                <div class="store-name">Arc Browser</div>
-                <div class="store-sub">Arc Spaces &middot; Command Bar</div>
+                <div class="store-sub">Microsoft Edge &middot; Store Review</div>
               </div>
             </div>
 
@@ -430,11 +434,11 @@
                 <div class="store-icon-wrap">
                   <img src="../assets/icons/browsers/opera.svg" alt="Opera" width="28" height="28" loading="lazy" />
                 </div>
-                <span class="store-badge">Coming Soon</span>
+                <span class="store-badge badge-review" style="background: rgba(245, 158, 11, 0.12); color: #d97706; border: 1px solid rgba(245, 158, 11, 0.35); font-weight: 700;">● In Review</span>
               </div>
               <div class="store-info">
                 <div class="store-name">Opera Addons</div>
-                <div class="store-sub">Opera Browser &middot; Opera One</div>
+                <div class="store-sub">Opera Browser &middot; Store Review</div>
               </div>
             </div>
 
@@ -444,11 +448,11 @@
                 <div class="store-icon-wrap">
                   <img src="../assets/icons/browsers/opera-gx.svg" alt="Opera GX" width="28" height="28" loading="lazy" />
                 </div>
-                <span class="store-badge highlight-gx">Coming Soon</span>
+                <span class="store-badge badge-review highlight-gx" style="background: rgba(245, 158, 11, 0.12); color: #d97706; border: 1px solid rgba(245, 158, 11, 0.35); font-weight: 700;">● In Review</span>
               </div>
               <div class="store-info">
                 <div class="store-name">Opera GX Store</div>
-                <div class="store-sub">Opera GX Gaming Browser</div>
+                <div class="store-sub">Opera GX &middot; Store Review</div>
               </div>
             </div>
           </div>
@@ -1119,6 +1123,577 @@
             </div>
           </div>
         </div>
+
+        <!-- User Guide & Frequently Asked Questions (FAQ) Section -->
+        <div class="faq-section-card" id="faq">
+          <div class="faq-header">
+            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 8px;">
+              <h3 class="lang-matrix-title">User Guide &amp; Frequently Asked Questions</h3>
+              <div class="meta-pill" style="font-size: 11px; padding: 3px 10px; border-color: rgba(255, 36, 80, 0.4); color: var(--accent-primary);">
+                📖 Interactive Handbook
+              </div>
+            </div>
+            <p style="font-size: 15px; color: var(--text-secondary); max-width: 820px; line-height: 1.6; margin-bottom: 20px;">
+              The definitive reference for interacting with Babel. Master keyboard gestures, floating mascot management, radial HUD navigation, proofreading mechanics, text tokenization, and troubleshooting.
+            </p>
+
+            <!-- Category Filter Pills & Global Toggle Bar -->
+            <div class="faq-categories-tabs" role="tablist" aria-label="FAQ Categories">
+              <button type="button" class="faq-tab-btn active" data-category="all">
+                <span>All Guides (22)</span>
+              </button>
+              <button type="button" class="faq-tab-btn" data-category="hotkeys">
+                <span>⌨️ Hotkeys &amp; Gestures</span>
+              </button>
+              <button type="button" class="faq-tab-btn" data-category="mascot">
+                <span>🐱 Mascot &amp; Radial HUD</span>
+              </button>
+              <button type="button" class="faq-tab-btn" data-category="translation">
+                <span>✍️ Translation &amp; Tones</span>
+              </button>
+              <button type="button" class="faq-tab-btn" data-category="privacy">
+                <span>🛡️ Privacy &amp; DLP</span>
+              </button>
+              <button type="button" class="faq-tab-btn" data-category="plans">
+                <span>💼 Plans &amp; Troubleshooting</span>
+              </button>
+              <button type="button" class="faq-tab-btn" id="faq-expand-toggle" style="margin-left: auto; border-color: var(--border-color);">
+                <span>Expand All</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- FAQ Group 1: Hotkeys & Daily Gestures -->
+          <div class="faq-group" data-category="hotkeys">
+            <div class="faq-group-title">
+              <span>⌨️ 1. Core Hotkeys &amp; Daily Gestures</span>
+              <span class="faq-group-badge">5 Guides</span>
+            </div>
+
+            <!-- Q1 -->
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <div class="faq-question-wrap">
+                  <span class="faq-q-icon">🎯</span>
+                  <span class="faq-q-text">What is the full default hotkey mapping in Babel?</span>
+                </div>
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </summary>
+              <div class="faq-answer">
+                <p>Babel is engineered around keyboard-first, zero-friction interaction. All hotkeys are registered using physical hardware key codes (<code style="font-family: var(--font-mono); font-size: 12px;">KeyboardEvent.code</code>), meaning they work identically regardless of whether your operating system keyboard layout is currently English, Russian, Ukrainian, German, or any other language:</p>
+                <div style="overflow-x: auto;">
+                  <table class="faq-table">
+                    <thead>
+                      <tr>
+                        <th>Shortcut</th>
+                        <th>Action Name</th>
+                        <th>Functionality</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><kbd class="faq-kbd">Alt + T</kbd></td>
+                        <td><strong>In-Place Translation</strong></td>
+                        <td>Instant sub-300ms translation inside active input field or on highlighted text.</td>
+                      </tr>
+                      <tr>
+                        <td><kbd class="faq-kbd">Alt + P</kbd></td>
+                        <td><strong>Grammar Proofreading</strong></td>
+                        <td>Polishes spelling, syntax, punctuation, and flow <em>on the same language</em> without translating.</td>
+                      </tr>
+                      <tr>
+                        <td><kbd class="faq-kbd">Alt + Q</kbd> / <kbd class="faq-kbd">Alt + W</kbd></td>
+                        <td><strong>Language HUD Ring</strong></td>
+                        <td>Rotates outer Cyan HUD ring counter-clockwise ↶ / clockwise ↷ to pick target language.</td>
+                      </tr>
+                      <tr>
+                        <td><kbd class="faq-kbd">Alt + A</kbd> / <kbd class="faq-kbd">Alt + S</kbd></td>
+                        <td><strong>Tone HUD Ring</strong></td>
+                        <td>Rotates inner Magenta HUD ring counter-clockwise ↶ / clockwise ↷ to pick conversation tone.</td>
+                      </tr>
+                      <tr>
+                        <td><kbd class="faq-kbd">Ctrl + Shift + F</kbd></td>
+                        <td><strong>Layout Typo Fixer</strong></td>
+                        <td>Instantly fixes text typed in the wrong layout (e.g. <code style="font-family: var(--font-mono); font-size: 12px;">ghbdtn</code> ↔ <code style="font-family: var(--font-mono); font-size: 12px;">привет</code>) 100% offline.</td>
+                      </tr>
+                      <tr>
+                        <td><kbd class="faq-kbd">Escape</kbd></td>
+                        <td><strong>Dismiss / Revert</strong></td>
+                        <td>Closes the radial HUD menu immediately, or reverts temporary selection translations.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="faq-callout">
+                  <strong>💡 Pro Tip:</strong> Hotkeys work uniformly across all keyboard layouts. For instance, <kbd class="faq-kbd">Alt + T</kbd> triggers smoothly whether pressed as English <kbd class="faq-kbd">Alt+T</kbd> or Russian <kbd class="faq-kbd">Alt+Е</kbd>.
+                </div>
+              </div>
+            </details>
+
+            <!-- Q2 -->
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <div class="faq-question-wrap">
+                  <span class="faq-q-icon">⚡</span>
+                  <span class="faq-q-text">How does In-Place Translation (Alt + T) work inside active input fields?</span>
+                </div>
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </summary>
+              <div class="faq-answer">
+                <p>Unlike legacy translation services that force you to copy drafts, open another browser tab, paste text, copy the output, and navigate back, Babel operates directly within the browser's Document Object Model (DOM):</p>
+                <ol>
+                  <li>Click into any text field, textarea, contenteditable box, or chat interface (Telegram Web, WhatsApp Web, Gmail, ChatGPT, Slack, Discord, Reddit).</li>
+                  <li>Type your thoughts in your native language naturally without worrying about foreign phrasing.</li>
+                  <li>Press <kbd class="faq-kbd">Alt + T</kbd>.</li>
+                  <li>Babel's 4-tier DOM injection engine swaps your draft with natural, context-aware translation in under 300 milliseconds.</li>
+                  <li>Cursor focus is preserved at the end of the line, allowing you to immediately hit <kbd class="faq-kbd">Enter</kbd> to send the message.</li>
+                </ol>
+              </div>
+            </details>
+
+            <!-- Q3 -->
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <div class="faq-question-wrap">
+                  <span class="faq-q-icon">✍️</span>
+                  <span class="faq-q-text">What is Proofreading mode (Alt + P) and how is it different from translation?</span>
+                </div>
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </summary>
+              <div class="faq-answer">
+                <p><kbd class="faq-kbd">Alt + P</kbd> is designed specifically for editorial polish in your current language:</p>
+                <ul>
+                  <li><strong>Zero Language Conversion:</strong> It strictly preserves the source language (English remains English, Russian remains Russian, Spanish remains Spanish).</li>
+                  <li><strong>Comprehensive Correction:</strong> Corrects grammatical errors, typos, awkward comma placement, run-on sentences, and irregular capitalization.</li>
+                  <li><strong>Stylistic Consistency:</strong> Smoothes rough phrasing into clean, authoritative, and natural prose while retaining your authentic voice.</li>
+                  <li><strong>One-Stroke Replacement:</strong> Operates in-place within the same field with a single keystroke.</li>
+                </ul>
+              </div>
+            </details>
+
+            <!-- Q4 -->
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <div class="faq-question-wrap">
+                  <span class="faq-q-icon">🔄</span>
+                  <span class="faq-q-text">How does the Keyboard Layout Typo Fixer (Ctrl + Shift + F) work?</span>
+                </div>
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </summary>
+              <div class="faq-answer">
+                <p>If you've ever typed an entire sentence only to realize your keyboard was in the wrong layout (e.g. <code style="font-family: var(--font-mono); font-size: 12px;">ghbdtn? rfr ltkf&</code> instead of <code style="font-family: var(--font-mono); font-size: 12px;">привет, как дела?</code>), Babel eliminates the need to delete and re-type:</p>
+                <ul>
+                  <li>Leave your cursor in the input field (or highlight the mistyped phrase) and press <kbd class="faq-kbd">Ctrl + Shift + F</kbd>.</li>
+                  <li>Babel instantly swaps characters into the correct layout in approximately 1 millisecond.</li>
+                  <li><strong>100% Offline:</strong> Operates locally via deterministic character mapping tables without sending network packets or consuming translation quota.</li>
+                  <li><strong>Wide Layout Support:</strong> Bi-directional QWERTY conversions for Russian (ЙЦУКЕН), Ukrainian, Belarusian, Kazakh, Kyrgyz, Tajik, Georgian, and Armenian.</li>
+                </ul>
+              </div>
+            </details>
+
+            <!-- Q5 -->
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <div class="faq-question-wrap">
+                  <span class="faq-q-icon">⚙️</span>
+                  <span class="faq-q-text">Can I customize and remap hotkeys if they conflict with a website?</span>
+                </div>
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </summary>
+              <div class="faq-answer">
+                <p>Yes. If you frequently use web applications with reserved keyboard shortcuts (such as browser-based IDEs, Figma, or web terminals):</p>
+                <ol>
+                  <li>Right-click the floating mascot and select <strong>"⚙️ Settings"</strong> (or open extension options via your browser toolbar).</li>
+                  <li>Scroll to the <strong>"Keyboard Shortcuts"</strong> section.</li>
+                  <li>Click into the target input box and press your desired shortcut combination (e.g., <kbd class="faq-kbd">Alt + Shift + T</kbd> or <kbd class="faq-kbd">Ctrl + Alt + Space</kbd>).</li>
+                  <li>Changes are stored in <code style="font-family: var(--font-mono); font-size: 12px;">chrome.storage.local</code> and applied immediately across all active tabs without restarting.</li>
+                </ol>
+              </div>
+            </details>
+          </div>
+
+          <!-- FAQ Group 2: Mascot & Radial HUD -->
+          <div class="faq-group" data-category="mascot">
+            <div class="faq-group-title">
+              <span>🐱 2. Interactive Mascot &amp; Radial HUD Navigation</span>
+              <span class="faq-group-badge">6 Guides</span>
+            </div>
+
+            <!-- Q6 -->
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <div class="faq-question-wrap">
+                  <span class="faq-q-icon">🛸</span>
+                  <span class="faq-q-text">How do I move and position the floating Mascot on my screen?</span>
+                </div>
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </summary>
+              <div class="faq-answer">
+                <p>The mascot is rendered inside an isolated Shadow DOM container to prevent host website CSS from interfering with its appearance:</p>
+                <ul>
+                  <li><strong>Hardware-Locked Drag &amp; Drop:</strong> Click and hold the mascot avatar with the left mouse button, then drag it freely to any corner, edge, or workspace zone on your screen.</li>
+                  <li><strong>Automatic Coordinate Sync:</strong> The exact screen coordinates are saved immediately to local extension storage. Whenever you navigate to new pages or relaunch the browser, the mascot stays right where you left it.</li>
+                  <li><strong>Non-Intrusive Presence:</strong> The mascot stays quietly in the background until hovered, clicked, or summoned via keyboard shortcuts.</li>
+                </ul>
+              </div>
+            </details>
+
+            <!-- Q7 -->
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <div class="faq-question-wrap">
+                  <span class="faq-q-icon">📍</span>
+                  <span class="faq-q-text">What should I do if the mascot gets pushed off-screen or lost?</span>
+                </div>
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </summary>
+              <div class="faq-answer">
+                <p>If changing display resolutions or aggressive website layout shifts push the mascot off-screen:</p>
+                <ol>
+                  <li>Right-click anywhere on the mascot (or right-click the central hub if HUD is visible).</li>
+                  <li>Select <strong>"📍 Reset Position"</strong> from the context menu.</li>
+                  <li>The mascot will smoothly animate back to its default bottom-right anchor and display a confirmation thought bubble: <em>"Position reset 📍"</em>.</li>
+                </ol>
+              </div>
+            </details>
+
+            <!-- Q8 -->
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <div class="faq-question-wrap">
+                  <span class="faq-q-icon">🎡</span>
+                  <span class="faq-q-text">How do I navigate the two-ring Cyberpunk Radial HUD?</span>
+                </div>
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </summary>
+              <div class="faq-answer">
+                <p>Left-clicking the mascot or pressing any rotation shortcut (<kbd class="faq-kbd">Alt+Q/W/A/S</kbd>) deploys the dual-ring radial HUD centered on the mascot:</p>
+                <ul>
+                  <li><strong>Outer Ring (Neon Cyan):</strong> Controls <strong>Target Translation Languages</strong>. Features dynamic sector slicing based on your active favorites (from 3 languages up to all 23). Rotate with <kbd class="faq-kbd">Alt + Q</kbd> (↶) / <kbd class="faq-kbd">Alt + W</kbd> (↷), mouse wheel, or direct click.</li>
+                  <li><strong>Inner Ring (Neon Magenta):</strong> Controls <strong>Conversation Tones</strong> (Natural, Friendly, Slang, Business, Brief, Vivid, Prompt, Base64). Rotate with <kbd class="faq-kbd">Alt + A</kbd> (↶) / <kbd class="faq-kbd">Alt + S</kbd> (↷), mouse wheel, or direct click.</li>
+                  <li><strong>Hub Center:</strong> Shows current language and tone. Clicking the center or pressing <kbd class="faq-kbd">Escape</kbd> closes the menu instantly. It also auto-closes after 3.5 seconds of inactivity.</li>
+                </ul>
+              </div>
+            </details>
+
+            <!-- Q9 -->
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <div class="faq-question-wrap">
+                  <span class="faq-q-icon">🙈</span>
+                  <span class="faq-q-text">What is Stealth Mode and how do I hide the mascot completely?</span>
+                </div>
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </summary>
+              <div class="faq-answer">
+                <p>For users who prefer a minimalist, completely clean web interface without floating overlays:</p>
+                <ol>
+                  <li>Right-click the floating mascot avatar to open its glassmorphic context menu.</li>
+                  <li>Click <strong>"🙈 Hide Mascot"</strong>.</li>
+                  <li>The mascot will show a quick farewell cloud and unmount from the DOM (<code style="font-family: var(--font-mono); font-size: 12px;">display: none; pointer-events: none</code>). It will never block web elements, chat send buttons, or scrollbars.</li>
+                </ol>
+              </div>
+            </details>
+
+            <!-- Q10 -->
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <div class="faq-question-wrap">
+                  <span class="faq-q-icon">👁️</span>
+                  <span class="faq-q-text">Do shortcuts still work in Stealth Mode, and how do I bring the mascot back?</span>
+                </div>
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </summary>
+              <div class="faq-answer">
+                <p><strong>Yes, 100% of Babel's functionality remains active in Stealth Mode:</strong></p>
+                <ul>
+                  <li><kbd class="faq-kbd">Alt + T</kbd>, <kbd class="faq-kbd">Alt + P</kbd>, and <kbd class="faq-kbd">Ctrl + Shift + F</kbd> continue translating and proofreading without interruption.</li>
+                  <li>When a translation completes, the mascot briefly fades in for 2 seconds to show a confirmation thought bubble, then smoothly vanishes.</li>
+                  <li><strong>Restore Method 1 (Directly on Page):</strong> Press <kbd class="faq-kbd">Alt + W</kbd> to temporarily summon the HUD $\rightarrow$ click the <strong>"👁️ Show Mascot"</strong> button on the bottom HUD hint strip.</li>
+                  <li><strong>Restore Method 2 (Settings):</strong> Open Babel Settings $\rightarrow$ under "Mascot &amp; HUD" switch Mascot Visibility back to <strong>"Always Show"</strong>.</li>
+                </ul>
+              </div>
+            </details>
+
+            <!-- Q11 -->
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <div class="faq-question-wrap">
+                  <span class="faq-q-icon">💭</span>
+                  <span class="faq-q-text">What do the mascot's thought bubbles mean?</span>
+                </div>
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </summary>
+              <div class="faq-answer">
+                <p>The thought bubble provides glanceable real-time feedback without modal interruptions:</p>
+                <ul>
+                  <li>⏳ <em>"Translating to English..."</em> — Active sub-300ms model inference in progress.</li>
+                  <li>✨ <em>"Done! [English • Business]"</em> — Translation replaced successfully with target language and tone confirmed.</li>
+                  <li>🌐 <em>"Language: Deutsch"</em> / 🌿 <em>"Tone: Friendly"</em> — Instant rotation status indicator.</li>
+                  <li>🔄 <em>"Keyboard layout fixed!"</em> — Offline layout conversion completed (<kbd class="faq-kbd">Ctrl+Shift+F</kbd>).</li>
+                  <li>📝 <em>"Please select text first!"</em> — Warns if <kbd class="faq-kbd">Alt+T</kbd> was pressed outside of an active input field or selection.</li>
+                  <li>❌ Clear error notifications with actionable recovery steps for network issues, quota limits, or DLP alerts.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+
+          <!-- FAQ Group 3: Translation & Tones -->
+          <div class="faq-group" data-category="translation">
+            <div class="faq-group-title">
+              <span>✍️ 3. Translation, Tones &amp; Text Integrity</span>
+              <span class="faq-group-badge">5 Guides</span>
+            </div>
+
+            <!-- Q12 -->
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <div class="faq-question-wrap">
+                  <span class="faq-q-icon">🌐</span>
+                  <span class="faq-q-text">How do I translate existing text on any website (Selection Translation)?</span>
+                </div>
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </summary>
+              <div class="faq-answer">
+                <p>You can translate foreign messages, tweets, blog articles, and documentation in-place without opening separate translator tabs:</p>
+                <ol>
+                  <li>Highlight any text passage on the page using your mouse cursor.</li>
+                  <li>Press <kbd class="faq-kbd">Alt + T</kbd>.</li>
+                  <li>The highlighted segment transforms in-place into your target language with an indicator badge.</li>
+                  <li><strong>Revert anytime:</strong> Press <kbd class="faq-kbd">Escape</kbd> or click anywhere on the page to instantly restore the original text.</li>
+                </ol>
+              </div>
+            </details>
+
+            <!-- Q13 -->
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <div class="faq-question-wrap">
+                  <span class="faq-q-icon">🛡️</span>
+                  <span class="faq-q-text">Does Selection Translation work on Shadow DOM web components (Reddit, YouTube)?</span>
+                </div>
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </summary>
+              <div class="faq-answer">
+                <p><strong>Yes.</strong> Traditional extensions fail on modern Web Components because text encapsulated inside shadow roots (<code style="font-family: var(--font-mono); font-size: 12px;">#shadow-root</code>) is hidden from standard DOM selection APIs:</p>
+                <ul>
+                  <li>Babel integrates an advanced <strong>Shadow DOM Piercing</strong> engine utilizing <code style="font-family: var(--font-mono); font-size: 12px;">getComposedRanges()</code> and <code style="font-family: var(--font-mono); font-size: 12px;">composedPath()</code> standards.</li>
+                  <li>Accurately reads selections across Reddit post feeds, YouTube comments, Lit elements, and custom design systems.</li>
+                  <li>Extracts pure text cleanly without capturing hidden template metadata or internal <code style="font-family: var(--font-mono); font-size: 12px;">&lt;slot&gt;</code> tags.</li>
+                </ul>
+              </div>
+            </details>
+
+            <!-- Q14 -->
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <div class="faq-question-wrap">
+                  <span class="faq-q-icon">🎭</span>
+                  <span class="faq-q-text">What 8 style tones are supported and when should I use each?</span>
+                </div>
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </summary>
+              <div class="faq-answer">
+                <p>Babel gives you 8 tailored voice styles to match any communicative context:</p>
+                <ul>
+                  <li><strong>🌿 Natural:</strong> Fluid, contemporary native speaker phrasing. The default setting for daily browsing, forums, and friendly comments.</li>
+                  <li><strong>😊 Friendly:</strong> Warm, upbeat, and encouraging tone with pleasant conversational manners.</li>
+                  <li><strong>⚡ Slang:</strong> Authentic youth slang, colloquial contractions (<em>gonna</em>, <em>tbh</em>, <em>fr</em>), and modern vernacular for Discord and gaming.</li>
+                  <li><strong>💼 Business:</strong> Formal corporate tone with polished vocabulary for client proposals, executive emails, and partner discussions.</li>
+                  <li><strong>✂️ Brief:</strong> High-density executive summarization that condenses meaning with zero conversational fluff.</li>
+                  <li><strong>✨ Vivid:</strong> Expressive, sensory, and evocative prose with rich descriptive vocabulary.</li>
+                  <li><strong>🤖 Prompt:</strong> Specialized AI prompt engineering mode for Midjourney, Higgsfield, Flux, and Sora that injects camera lenses, cinematic lighting, and artistic direction.</li>
+                  <li><strong>🔒 Base64:</strong> 100% offline local Base64 string encoder/decoder with zero network calls.</li>
+                </ul>
+              </div>
+            </details>
+
+            <!-- Q15 -->
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <div class="faq-question-wrap">
+                  <span class="faq-q-icon">🏷️</span>
+                  <span class="faq-q-text">How does Babel preserve @mentions, URLs, hashtags, and code variables?</span>
+                </div>
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </summary>
+              <div class="faq-answer">
+                <p>Generic AI translation frequently translates or mangles usernames, web links, and code syntax. Babel avoids this through its pre-flight tokenization engine (<code style="font-family: var(--font-mono); font-size: 12px;">mentions.js</code>):</p>
+                <ul>
+                  <li><strong>User Handles:</strong> <code style="font-family: var(--font-mono); font-size: 12px;">@alex_dev</code>, <code style="font-family: var(--font-mono); font-size: 12px;">@durov</code> and localized Cyrillic handles are isolated.</li>
+                  <li><strong>Web URLs:</strong> Hyperlinks (<code style="font-family: var(--font-mono); font-size: 12px;">https://...</code>) are masked and left untouched.</li>
+                  <li><strong>Hashtags:</strong> <code style="font-family: var(--font-mono); font-size: 12px;">#startup</code>, <code style="font-family: var(--font-mono); font-size: 12px;">#crypto</code> are fully preserved.</li>
+                  <li><strong>Code Variables:</strong> Placeholders like <code style="font-family: var(--font-mono); font-size: 12px;">{userId}</code>, <code style="font-family: var(--font-mono); font-size: 12px;">%path%</code>, and <code style="font-family: var(--font-mono); font-size: 12px;">{{template}}</code> remain unaltered.</li>
+                </ul>
+                <p>After translation, all tokens are deterministically reconstituted back into their precise structural locations.</p>
+              </div>
+            </details>
+
+            <!-- Q16 -->
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <div class="faq-question-wrap">
+                  <span class="faq-q-icon">➖</span>
+                  <span class="faq-q-text">Why are long em-dashes (—) converted into spaced hyphens ( - )?</span>
+                </div>
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </summary>
+              <div class="faq-answer">
+                <p>In digital chat applications (Telegram, Slack, WhatsApp), heavy typographic em-dashes (<code style="font-family: var(--font-mono); font-size: 12px;">—</code>) can look robotic and signal AI-generated text. Babel applies intelligent <strong>Dash Normalization</strong>:</p>
+                <ul>
+                  <li>Spaced em-dashes are converted into natural conversational hyphens with spaces (<code style="font-family: var(--font-mono); font-size: 12px;"> - </code>).</li>
+                  <li>Words accidentally joined by dashes are cleanly separated.</li>
+                  <li>Dialogue dashes at the start of dialogue lines are preserved as standard punctuation.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+
+          <!-- FAQ Group 4: Privacy & DLP -->
+          <div class="faq-group" data-category="privacy">
+            <div class="faq-group-title">
+              <span>🛡️ 4. Privacy, Security &amp; Data Loss Prevention (DLP)</span>
+              <span class="faq-group-badge">3 Guides</span>
+            </div>
+
+            <!-- Q17 -->
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <div class="faq-question-wrap">
+                  <span class="faq-q-icon">🔒</span>
+                  <span class="faq-q-text">Does Babel store or log my translations and correspondence?</span>
+                </div>
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </summary>
+              <div class="faq-answer">
+                <p><strong>Never. Babel enforces a strict Zero Data Retention policy:</strong></p>
+                <ul>
+                  <li>Requests are processed in volatile server RAM over encrypted TLS 1.3 connections exclusively for the lifespan of that specific inference call.</li>
+                  <li>Drafts are <strong>never</strong> written to disk, never recorded in relational databases, and never used to train or fine-tune AI models.</li>
+                  <li>Babel operates with zero-account privacy — you never need to connect personal social identities or email accounts.</li>
+                </ul>
+              </div>
+            </details>
+
+            <!-- Q18 -->
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <div class="faq-question-wrap">
+                  <span class="faq-q-icon">🚨</span>
+                  <span class="faq-q-text">What is client-side Data Loss Prevention (DLP) and how does it protect secrets?</span>
+                </div>
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </summary>
+              <div class="faq-answer">
+                <p>Before any text packet leaves your browser, Babel's local DLP regex engine validates your text locally to prevent accidental leaks of credentials or financial data:</p>
+                <ul>
+                  <li>🔑 <strong>API Keys &amp; Tokens:</strong> Detects OpenAI (<code style="font-family: var(--font-mono); font-size: 12px;">sk-...</code>), Groq (<code style="font-family: var(--font-mono); font-size: 12px;">gsk_...</code>), GitHub (<code style="font-family: var(--font-mono); font-size: 12px;">ghp_...</code>), JWT tokens, and database credentials.</li>
+                  <li>💳 <strong>Credit Cards:</strong> Verifies 13–19 digit sequences using the <strong>Luhn checksum algorithm</strong> to intercept real card numbers while avoiding false positives on random digits.</li>
+                  <li>🛂 <strong>PII &amp; Passwords:</strong> Flags sensitive credential markers.</li>
+                  <li><strong>Configurable Modes:</strong>
+                    <ul>
+                      <li><strong>Strict (Default):</strong> Blocks the request completely, keeps your text in the input box, and alerts you via a thought bubble.</li>
+                      <li><strong>Mask:</strong> Automatically redacts the token (e.g. <code style="font-family: var(--font-mono); font-size: 12px;">[CARD REDACTED]</code>) and translates the safe remainder.</li>
+                      <li><strong>Off:</strong> Disables local checking (recommended only for local developer testing).</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </details>
+
+            <!-- Q19 -->
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <div class="faq-question-wrap">
+                  <span class="faq-q-icon">🌐</span>
+                  <span class="faq-q-text">What is Domain Whitelisting and how do I restrict Babel to specific websites?</span>
+                </div>
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </summary>
+              <div class="faq-answer">
+                <p>If your personal or corporate security guidelines require Babel to execute only on authorized portals:</p>
+                <ol>
+                  <li>Open Babel Settings $\rightarrow$ enable <strong>"Domain Whitelist"</strong>.</li>
+                  <li>Specify your approved domains (e.g. <code style="font-family: var(--font-mono); font-size: 12px;">web.telegram.org</code>, <code style="font-family: var(--font-mono); font-size: 12px;">mail.google.com</code>).</li>
+                  <li>On all non-whitelisted websites, Babel completely unmounts its content script and mascot, ensuring zero code execution.</li>
+                </ol>
+              </div>
+            </details>
+          </div>
+
+          <!-- FAQ Group 5: Plans & Troubleshooting -->
+          <div class="faq-group" data-category="plans">
+            <div class="faq-group-title">
+              <span>💼 5. Plans, Licences &amp; Troubleshooting</span>
+              <span class="faq-group-badge">3 Guides</span>
+            </div>
+
+            <!-- Q20 -->
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <div class="faq-question-wrap">
+                  <span class="faq-q-icon">💳</span>
+                  <span class="faq-q-text">How do Free vs. Pro tiers compare and how do I activate my Gumroad license key?</span>
+                </div>
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </summary>
+              <div class="faq-answer">
+                <p>Babel offers a transparent capability model for every workflow:</p>
+                <ul>
+                  <li><strong>Free Tier:</strong> 20 daily translation units, 300 maximum characters per request, 7 core styles, zero registration required.</li>
+                  <li><strong>Pro Tiers (Monthly / Monthly Power):</strong> 200 to 800 daily translations, 3,000-character allowance (handles full emails and articles), AI Prompt Mode, priority cloud queue, and activation on <strong>up to 3 personal devices</strong>.</li>
+                  <li><strong>Activation Steps:</strong>
+                    <ol>
+                      <li>Open Babel Settings $\rightarrow$ click the <strong>"Account / Plan"</strong> tab.</li>
+                      <li>Paste your Gumroad key (<code style="font-family: var(--font-mono); font-size: 12px;">XXXXXXXX-XXXXXXXX-XXXXXXXX-XXXXXXXX</code>) into the license field.</li>
+                      <li>Click <strong>"Activate"</strong>. The extension verifies the license with Gumroad and instantly unlocks all Pro capabilities.</li>
+                    </ol>
+                  </li>
+                </ul>
+              </div>
+            </details>
+
+            <!-- Q21 -->
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <div class="faq-question-wrap">
+                  <span class="faq-q-icon">💻</span>
+                  <span class="faq-q-text">What if I reinstall my operating system, switch browsers, or change computers?</span>
+                </div>
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </summary>
+              <div class="faq-answer">
+                <p>A single Gumroad Pro license includes <strong>3 simultaneous device seats</strong> (e.g. desktop PC, work laptop, and secondary browser):</p>
+                <ul>
+                  <li>Each browser installation generates an anonymous, hardware-bound <code style="font-family: var(--font-mono); font-size: 12px;">Device ID</code>.</li>
+                  <li>If you format your computer, switch to a new machine, or re-install your OS, open Babel Settings $\rightarrow$ Account tab $\rightarrow$ click <strong>"Reset Device Bindings"</strong> to release older slots and register your current device.</li>
+                </ul>
+              </div>
+            </details>
+
+            <!-- Q22 -->
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <div class="faq-question-wrap">
+                  <span class="faq-q-icon">🔧</span>
+                  <span class="faq-q-text">Troubleshooting: What should I check if pressing Alt + T does not translate?</span>
+                </div>
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </summary>
+              <div class="faq-answer">
+                <p>Run through this quick 6-step checklist:</p>
+                <ol>
+                  <li><strong>Reload the Tab (<kbd class="faq-kbd">F5</kbd>):</strong> If the tab was open prior to installing or updating the extension, the browser has not yet injected the Babel content script.</li>
+                  <li><strong>Check Cursor Focus:</strong> Ensure your typing cursor is actively blinking inside the target text box or textarea.</li>
+                  <li><strong>Look at the Mascot Thought Bubble:</strong> If you exceeded the 300-char free limit or daily quota, the bubble will state the exact issue.</li>
+                  <li><strong>Check Domain Whitelist:</strong> In Babel Settings, ensure the current domain is not blocked by an active whitelist.</li>
+                  <li><strong>Canvas &amp; Custom Editors:</strong> In non-standard editors (such as Google Docs canvas or custom WebGL inputs), highlight the text with your mouse and press <kbd class="faq-kbd">Alt + T</kbd> to invoke Selection Translation.</li>
+                  <li><strong>Test Connection:</strong> In Babel Settings, click <strong>"Test Connection"</strong> to verify server connectivity with our Fly.io cloud gateway.</li>
+                </ol>
+              </div>
+            </details>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -1745,6 +2320,50 @@
       }, { passive: true });
     }
 
+    // FAQ Accordion & Category Filter Controller
+    function initFaqAccordion() {
+      const tabs = document.querySelectorAll(".faq-tab-btn[data-category]");
+      const groups = document.querySelectorAll(".faq-group");
+      const expandBtn = document.getElementById("faq-expand-toggle");
+      const allItems = document.querySelectorAll(".faq-item");
+
+      if (!tabs.length || !groups.length) return;
+
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          const cat = tab.getAttribute("data-category");
+          tabs.forEach((t) => t.classList.remove("active"));
+          tab.classList.add("active");
+
+          groups.forEach((group) => {
+            const groupCat = group.getAttribute("data-category");
+            if (cat === "all" || groupCat === cat) {
+              group.style.display = "";
+            } else {
+              group.style.display = "none";
+            }
+          });
+        });
+      });
+
+      if (expandBtn) {
+        let isExpanded = false;
+        expandBtn.addEventListener("click", () => {
+          isExpanded = !isExpanded;
+          allItems.forEach((item) => {
+            const parentGroup = item.closest(".faq-group");
+            if (!parentGroup || parentGroup.style.display !== "none") {
+              item.open = isExpanded;
+            }
+          });
+          const span = expandBtn.querySelector("span");
+          if (span) {
+            span.textContent = isExpanded ? "Collapse All" : "Expand All";
+          }
+        });
+      }
+    }
+
     document.addEventListener("DOMContentLoaded", () => {
       initTheme();
       initScrollToTop();
@@ -1753,6 +2372,7 @@
       initSocialShare();
       initMobilePricingTabs();
       initMobileStickyNav();
+      initFaqAccordion();
     });
   </script>
 

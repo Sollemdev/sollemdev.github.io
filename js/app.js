@@ -25,7 +25,7 @@ const PROJECTS_DATA = [
     progress: 100,
     currentStageIndex: 4,
     stageName: "Production Live (Chrome Web Store)",
-    currentFocus: "Live in Chrome Web Store! Active maintenance & preparing Microsoft Edge Add-ons certification",
+    currentFocus: "Live in Chrome Web Store, Brave & Arc! Microsoft Edge and Opera Add-ons currently in review",
     storeUrl: "https://chromewebstore.google.com/detail/babel/lhlnianlfdpaaklielfkbkkgikgbaibo",
     subsystems: [
       { name: "DOM Injection Engine", percent: 100 },
