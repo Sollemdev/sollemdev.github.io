@@ -581,10 +581,13 @@
 
           <!-- Feature 3 -->
           <div class="feature-box">
-            <div class="feature-tag">03 / AI Prompts</div>
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+              <div class="feature-tag" style="margin-bottom: 0;">03 / AI Prompts</div>
+              <span class="meta-pill" style="font-size: 10px; padding: 1px 7px; border-color: rgba(245, 158, 11, 0.4); color: #f59e0b; background: rgba(245, 158, 11, 0.08); font-weight: 600;">Beta</span>
+            </div>
             <h3 class="feature-heading">AI Prompt Engineering Mode</h3>
             <p class="feature-text">
-              Transform rough descriptions into platform-optimized prompts for Midjourney, Higgsfield, Google Flow, and Flux. Automatically formats lighting, composition, perspective, camera lenses, and aspect ratio parameters.
+              Transform rough descriptions into platform-optimized prompts for Midjourney, Higgsfield, Google Flow, and Flux. Automatically formats lighting, composition, perspective, camera lenses, and aspect ratio parameters. <em>(Currently in public Beta &middot; actively evolving)</em>.
             </p>
           </div>
 
@@ -752,11 +755,20 @@
           <div class="prompt-engine-header">
             <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 8px;">
               <h3 class="lang-matrix-title">Context-Aware AI Prompt Engineering</h3>
-              <span class="meta-pill highlight">Auto-Detection Active</span>
+              <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                <span class="meta-pill" style="border-color: rgba(245, 158, 11, 0.45); color: #f59e0b; background: rgba(245, 158, 11, 0.1); font-weight: 600; font-size: 11px;">🧪 Beta &middot; In Active Development</span>
+                <span class="meta-pill highlight">Auto-Detection Active</span>
+              </div>
             </div>
-            <p style="font-size: 15px; color: var(--text-secondary); max-width: 820px; line-height: 1.6;">
+            <p style="font-size: 15px; color: var(--text-secondary); max-width: 820px; line-height: 1.6; margin-bottom: 12px;">
               Babel intelligently understands when you are typing inside a generative AI workspace. Instead of performing literal translation, the extension automatically inspects the active platform, extracts your core conceptual intent, and synthesizes a production-grade, syntactically compliant master prompt tailored to that studio's specific diffusion or video mechanics.
             </p>
+            <div style="display: flex; align-items: flex-start; gap: 12px; padding: 12px 16px; background: rgba(245, 158, 11, 0.07); border: 1px solid rgba(245, 158, 11, 0.28); border-left: 4px solid #f59e0b; border-radius: 8px; margin-top: 10px;">
+              <span style="font-size: 20px; line-height: 1.2; flex-shrink: 0;">🧪</span>
+              <div style="font-size: 13px; line-height: 1.55; color: var(--text-secondary);">
+                <strong style="color: #f59e0b;">Beta Feature Notice:</strong> AI Prompt Engineering Mode is currently in public beta and under active evolution. Generation rules, syntax modifiers, camera/lighting heuristics, and supported studio targets are rapidly expanding and refined based on creator workflows and user feedback.
+              </div>
+            </div>
           </div>
 
           <!-- 3-Step Detection & Compilation Pipeline -->
@@ -877,9 +889,9 @@
           <div class="roadmap-notice">
             <div style="display: flex; align-items: center; gap: 10px;">
               <span style="font-size: 16px;">🚀</span>
-              <span><strong>Continuously Expanding Platform Ecosystem:</strong> Native integrations for Runway Gen-3, Luma Dream Machine, Sora, and Kling AI are actively rolling out in upcoming releases.</span>
+              <span><strong>Continuously Expanding Platform Ecosystem (Beta):</strong> Native integrations for Runway Gen-3, Luma Dream Machine, Sora, and Kling AI are actively rolling out, with prompt heuristic models continuously being trained and refined.</span>
             </div>
-            <span class="meta-pill" style="border-color: rgba(255, 36, 80, 0.4); color: var(--accent-primary);">Active Roadmap</span>
+            <span class="meta-pill" style="border-color: rgba(245, 158, 11, 0.4); color: #f59e0b; background: rgba(245, 158, 11, 0.08);">Beta Evolution</span>
           </div>
         </div>
 
@@ -1113,7 +1125,7 @@
                 <span class="unit-cost">2 Units</span>
               </div>
               <div class="unit-item">
-                <span class="unit-label">AI Prompt Mode</span>
+                <span class="unit-label">AI Prompt Mode <span style="font-size: 10px; color: #f59e0b; font-weight: 600;">(Beta)</span></span>
                 <span class="unit-cost">3 Units</span>
               </div>
               <div class="unit-item">
@@ -1531,7 +1543,7 @@
                   <li><strong>💼 Business:</strong> Formal corporate tone with polished vocabulary for client proposals, executive emails, and partner discussions.</li>
                   <li><strong>✂️ Brief:</strong> High-density executive summarization that condenses meaning with zero conversational fluff.</li>
                   <li><strong>✨ Vivid:</strong> Expressive, sensory, and evocative prose with rich descriptive vocabulary.</li>
-                  <li><strong>🤖 Prompt:</strong> Specialized AI prompt engineering mode for Midjourney, Higgsfield, Flux, and Sora that injects camera lenses, cinematic lighting, and artistic direction.</li>
+                  <li><strong>🤖 Prompt:</strong> Specialized AI prompt engineering mode for Midjourney, Higgsfield, Flux, and Sora that injects camera lenses, cinematic lighting, and artistic direction. <span class="meta-pill" style="font-size: 10px; padding: 1px 6px; border-color: rgba(245, 158, 11, 0.4); color: #f59e0b; vertical-align: middle;">Beta</span></li>
                   <li><strong>🔒 Base64:</strong> 100% offline local Base64 string encoder/decoder with zero network calls.</li>
                 </ul>
               </div>
@@ -2411,9 +2423,9 @@
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
       <span>Features</span>
     </a>
-    <a href="#prompts" class="mobile-nav-item" data-section="prompts">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/></svg>
-      <span>Prompts</span>
+    <a href="#faq" class="mobile-nav-item" data-section="faq">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      <span>FAQ</span>
     </a>
     <a href="#pricing" class="mobile-nav-item" data-section="pricing">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
