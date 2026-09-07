@@ -54,7 +54,7 @@
     "operatingSystem": "Windows, macOS, Linux, ChromeOS",
     "applicationCategory": "ProductivityApplication",
     "browserRequirements": "Google Chrome, Microsoft Edge, Brave, Arc, Opera, Opera GX, Vivaldi",
-    "softwareVersion": "1.10.6",
+    "softwareVersion": "1.10.7",
     "description": "Autonomous browser extension for instant in-place text translation and AI prompt enhancement directly inside any web input field via hotkey.",
     "url": "https://sollemdev.github.io/projects/babel.html",
     "downloadUrl": "https://chromewebstore.google.com/detail/babel/lhlnianlfdpaaklielfkbkkgikgbaibo",
@@ -131,7 +131,7 @@
           <div class="project-title-group">
             <h1 class="project-main-title">
               Babel
-              <span class="project-version-badge">v1.10.6</span>
+              <span class="project-version-badge">v1.10.7</span>
             </h1>
             <div style="font-size: 13px; font-weight: 600; color: var(--accent-primary); letter-spacing: 0.05em; text-transform: uppercase;">
               Chrome Extension (Manifest V3) &bull; AI Productivity &bull; 2026
@@ -1206,7 +1206,12 @@
                       <tr>
                         <td><kbd class="faq-kbd">Alt + T</kbd></td>
                         <td><strong>In-Place Translation</strong></td>
-                        <td>Instant sub-300ms translation inside active input field or on highlighted text.</td>
+                        <td>Instant sub-300ms translation inside active input field or textarea.</td>
+                      </tr>
+                      <tr>
+                        <td><kbd class="faq-kbd">Alt + U</kbd></td>
+                        <td><strong>Selection Translation</strong></td>
+                        <td>Translates highlighted text anywhere on any webpage (including Shadow DOM) in-place.</td>
                       </tr>
                       <tr>
                         <td><kbd class="faq-kbd">Alt + P</kbd></td>
@@ -1499,7 +1504,7 @@
                 <p>You can translate foreign messages, tweets, blog articles, and documentation in-place without opening separate translator tabs:</p>
                 <ol>
                   <li>Highlight any text passage on the page using your mouse cursor.</li>
-                  <li>Press <kbd class="faq-kbd">Alt + T</kbd>.</li>
+                  <li>Press <kbd class="faq-kbd">Alt + U</kbd> (or <kbd class="faq-kbd">Alt + T</kbd>).</li>
                   <li>The highlighted segment transforms in-place into your target language with an indicator badge.</li>
                   <li><strong>Revert anytime:</strong> Press <kbd class="faq-kbd">Escape</kbd> or click anywhere on the page to instantly restore the original text.</li>
                 </ol>
@@ -1750,7 +1755,7 @@
               <h2 class="section-title" style="margin-bottom: 0;">Project News &amp; Release Notes</h2>
               <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
                 <span class="meta-pill highlight"><span class="pulse-dot"></span> Live Dispatch</span>
-                <span class="meta-pill" style="border-color: rgba(6, 182, 212, 0.4); color: #06b6d4;">v1.10.6 Latest</span>
+                <span class="meta-pill" style="border-color: rgba(6, 182, 212, 0.4); color: #06b6d4;">v1.10.7 Latest</span>
               </div>
             </div>
             <p class="section-subtitle" style="font-size: 15px; color: var(--text-secondary); max-width: 840px; line-height: 1.6; margin-bottom: 24px;">
@@ -1780,81 +1785,88 @@
           <!-- News Feed Grid -->
           <div class="news-feed-grid">
 
-            <!-- NEWS 1: FEATURED / STORE LAUNCH -->
+            <!-- NEWS 1: FEATURED / v1.10.7 MAJOR RELEASE -->
             <article class="news-item-card featured" data-category="releases">
               <div class="news-card-meta">
                 <div class="news-meta-left">
-                  <span class="news-badge release">🚀 Store Launch</span>
-                  <span class="news-version">v1.10.6</span>
-                  <span class="meta-pill" style="font-size: 10px; padding: 1px 7px; border-color: rgba(16, 185, 129, 0.4); color: #10b981;">Chrome Web Store Live</span>
+                  <span class="news-badge release">🚀 Major Release</span>
+                  <span class="news-version">v1.10.7</span>
+                  <span class="meta-pill" style="font-size: 10px; padding: 1px 7px; border-color: rgba(16, 185, 129, 0.4); color: #10b981;">Latest Release</span>
                 </div>
-                <time class="news-date" datetime="2026-03">
+                <time class="news-date" datetime="2026-09">
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                  March 2026
+                  September 2026
                 </time>
               </div>
 
               <h3 class="news-title">
-                Babel Officially Launched on Chrome Web Store — Brave &amp; Arc Verified
+                Babel v1.10.7: Chameleon Radial HUD, In-Place Proofreading &amp; Selection Translation
               </h3>
 
               <div class="news-body">
                 <p>
-                  We are thrilled to announce that Babel is officially published and live in the <strong>Google Chrome Web Store</strong>! Following intensive compatibility testing across modern Chromium environments, native installation and full hotkey integration have also been verified and enabled for <strong>Brave Browser</strong> and <strong>Arc Browser</strong>.
+                  Babel delivers instant in-place text translation, grammar proofreading, and AI prompt refinement directly inside any web input field with simple keyboard shortcuts. Write naturally in your native language in Telegram Web, WhatsApp, Gmail, ChatGPT, Slack, Discord, Reddit, or any web form — press your shortcut (<kbd class="sim-hotkey-badge">Alt + T</kbd>), and your draft instantly transforms into fluent, natural text directly where you type. No extra tabs, no copy-pasting.
                 </p>
                 <ul>
-                  <li><strong>Active Store Deployment:</strong> Instant 1-click install directly from Chrome Web Store with automatic background updates.</li>
-                  <li><strong>Multi-Browser Compatibility:</strong> Seamless out-of-the-box support for Chrome, Brave, and Arc with hardware keyboard shortcuts (<kbd class="sim-hotkey-badge">Alt+T</kbd>, <kbd class="sim-hotkey-badge">Alt+P</kbd>).</li>
-                  <li><strong>Store Review Queue:</strong> Submissions for <strong>Microsoft Edge Add-ons</strong> and <strong>Opera Add-ons</strong> are currently in final verification and will be activated upon store clearance.</li>
+                  <li><strong>🦎 Interactive Radial HUD &amp; Chameleon Mascot:</strong> A sleek circular heads-up display. Rotate between 23 target languages (<kbd class="sim-hotkey-badge">Alt + Q</kbd> / <kbd class="sim-hotkey-badge">Alt + W</kbd>) and 8 tone styles (<kbd class="sim-hotkey-badge">Alt + A</kbd> / <kbd class="sim-hotkey-badge">Alt + S</kbd>) using mouse wheel or hotkeys. Drag the chameleon mascot anywhere or enable Stealth Mode (hotkey-only).</li>
+                  <li><strong>✍️ In-Place Proofreading (<kbd class="sim-hotkey-badge">Alt + P</kbd>):</strong> Polish your grammar, punctuation, and phrasing in the same language without translation. Perfect for professional emails and publications.</li>
+                  <li><strong>📖 In-Place Selection Translation (<kbd class="sim-hotkey-badge">Alt + U</kbd>):</strong> Highlight any text on any webpage (including Shadow DOM components) and read the translation immediately in-place.</li>
+                  <li><strong>🌐 Full 23-Language Ecosystem:</strong> Translate seamlessly into and between English, Spanish, French, German, Russian, Chinese, Japanese, Ukrainian, Portuguese, and 14 more languages.</li>
+                  <li><strong>🏷️ Smart Mention &amp; Entity Preservation:</strong> @usernames, URLs, and hashtags remain untouched and accurately placed during translation in Telegram, Discord, and Slack.</li>
+                  <li><strong>⚡ Lightning-Fast &amp; Broad Editor Support:</strong> Ultra-low latency (~200–400ms) compatible with standard textareas and modern rich-text editors (Quill, Slate, ProseMirror, Lexical, Draft.js, React, Vue).</li>
                 </ul>
               </div>
 
               <div class="news-tags-row">
                 <div class="news-tags">
-                  <span class="news-tag">#ChromeStore</span>
-                  <span class="news-tag">#Brave</span>
-                  <span class="news-tag">#Arc</span>
-                  <span class="news-tag">#ManifestV3</span>
+                  <span class="news-tag">#v1107</span>
+                  <span class="news-tag">#ChameleonHUD</span>
+                  <span class="news-tag">#Proofreading</span>
+                  <span class="news-tag">#SelectionTranslation</span>
+                  <span class="news-tag">#SmartMentions</span>
+                  <span class="news-tag">#23Languages</span>
                 </div>
                 <a href="https://chromewebstore.google.com/detail/babel/lhlnianlfdpaaklielfkbkkgikgbaibo" target="_blank" rel="noopener noreferrer" class="news-link-action">
-                  Get Babel from Chrome Web Store &nearr;
+                  Install or Update in Chrome Web Store &nearr;
                 </a>
               </div>
             </article>
 
-            <!-- NEWS 2: AI PROMPT ENGINEERING BETA -->
+            <!-- NEWS 2: AI PROMPT ENGINEERING ENGINE -->
             <article class="news-item-card" data-category="features">
               <div class="news-card-meta">
                 <div class="news-meta-left">
-                  <span class="news-badge beta">🧪 Beta Feature</span>
-                  <span class="news-version">v1.10.5</span>
+                  <span class="news-badge beta">🎨 AI Prompt Engine</span>
+                  <span class="news-version">v1.10.7</span>
                 </div>
-                <time class="news-date" datetime="2026-03">
+                <time class="news-date" datetime="2026-09">
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                  March 2026
+                  September 2026
                 </time>
               </div>
 
               <h3 class="news-title">
-                Context-Aware AI Prompt Engineering Enters Public Beta
+                AI Prompt Engineering Engine: Cinematic Image &amp; Video Presets
               </h3>
 
               <div class="news-body">
                 <p>
-                  Babel now intelligently senses when you type inside creative generative AI studios. Instead of plain literal translation, it extracts your raw conceptual thought and automatically compiles high-yield diffusion prompts.
+                  Elevate raw ideas into structured, high-detail cinematic prompts tailored specifically for creative generative studios directly inside the generator prompt box:
                 </p>
                 <ul>
-                  <li><strong>Target Studios:</strong> Native syntax rules for <strong>Midjourney v6</strong> (flags <code style="font-family: var(--font-mono); font-size: 11px;">--ar 16:9 --v 6.0</code>), <strong>Higgsfield AI</strong> video mechanics, <strong>Google FLOW</strong> motion descriptors, and <strong>Flux / Civitai</strong> LoRA weights.</li>
-                  <li><strong>Smart Host Detection:</strong> Content engine auto-matches active tab hostnames and DOM containers to apply correct tokenization.</li>
+                  <li><strong>Target Studio Presets:</strong> Pre-configured compiler rules for <strong>Midjourney</strong> (aspect flags <code style="font-family: var(--font-mono); font-size: 11px;">--ar 16:9 --v 6.0</code>), <strong>Higgsfield AI</strong> video mechanics, and <strong>Google FLOW</strong> (Veo / Gemini Omni) with Image and Video presets.</li>
+                  <li><strong>LoRA &amp; Diffusion Support:</strong> Fine-grained control for Flux and Civitai models (<code style="font-family: var(--font-mono); font-size: 11px;">&lt;lora:detail:0.8&gt;</code>) plus negative prompt weighting.</li>
+                  <li><strong>Smart Host Detection:</strong> Extension automatically detects host studio domains to engage model-specific prompt schemas.</li>
                 </ul>
               </div>
 
               <div class="news-tags-row">
                 <div class="news-tags">
-                  <span class="news-tag">#PromptEngineering</span>
+                  <span class="news-tag">#PromptEngine</span>
                   <span class="news-tag">#Midjourney</span>
+                  <span class="news-tag">#Higgsfield</span>
+                  <span class="news-tag">#GoogleFLOW</span>
                   <span class="news-tag">#Flux</span>
-                  <span class="news-tag">#PublicBeta</span>
                 </div>
                 <a href="#prompts" class="news-link-action">
                   Explore Prompt Mode &darr;
@@ -1862,130 +1874,132 @@
               </div>
             </article>
 
-            <!-- NEWS 3: CYBERPUNK RADIAL HUD 2.0 -->
+            <!-- NEWS 3: OFFLINE TYPO FIXER & TONES -->
             <article class="news-item-card" data-category="features">
               <div class="news-card-meta">
                 <div class="news-meta-left">
-                  <span class="news-badge hud">🎡 UI/UX 2.0</span>
-                  <span class="news-version">v1.10.0</span>
+                  <span class="news-badge hud">⚡ Productivity</span>
+                  <span class="news-version">v1.10.7</span>
                 </div>
-                <time class="news-date" datetime="2026-02">
+                <time class="news-date" datetime="2026-09">
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                  February 2026
+                  September 2026
                 </time>
               </div>
 
               <h3 class="news-title">
-                Concentric Cyberpunk Radial HUD &amp; Persistent Shadow DOM Mascot
+                Offline Keyboard Layout Fixer (1ms) &amp; 8 Adaptive Speech Tones
               </h3>
 
               <div class="news-body">
                 <p>
-                  A ground-up redesign of Babel's in-page companion interface. Rendered in an isolated Shadow DOM to ensure zero style leakage with host web pages:
+                  Two high-frequency productivity superpowers built directly into your everyday keyboard flow:
                 </p>
                 <ul>
-                  <li><strong>Concentric Dual Rings:</strong> Outer Cyan Ring (23 target languages with dynamic sector division) and inner Magenta Ring (8 tone voices).</li>
-                  <li><strong>Hardware Drag &amp; Drop:</strong> Smooth positioning with coordinate sync persisted in local extension storage across sessions.</li>
-                  <li><strong>Fail-Safe Controls:</strong> Right-click <em>"📍 Reset Position"</em> menu and one-touch Stealth Mode (<kbd class="sim-hotkey-badge">Alt+W</kbd>).</li>
+                  <li><strong>⌨️ Offline Keyboard Layout Fixer (<kbd class="sim-hotkey-badge">Ctrl + Shift + F</kbd>):</strong> Typed in the wrong keyboard layout (e.g. «ghbdtn» ↔ «привет»)? Instantly fix it 100% offline in 1ms without consuming quota.</li>
+                  <li><strong>🎭 8 Adaptive Speech Tones:</strong> Effortlessly switch voice: <em>Natural</em>, <em>Friendly</em>, <em>Internet Slang</em>, <em>Professional Business</em>, <em>Brief</em>, <em>Vivid</em>, <em>Prompt Mode</em>, and 100% offline <em>Base64</em>.</li>
                 </ul>
               </div>
 
               <div class="news-tags-row">
                 <div class="news-tags">
-                  <span class="news-tag">#RadialHUD</span>
-                  <span class="news-tag">#ShadowDOM</span>
-                  <span class="news-tag">#Mascot</span>
-                  <span class="news-tag">#UI</span>
+                  <span class="news-tag">#LayoutFixer</span>
+                  <span class="news-tag">#Offline1ms</span>
+                  <span class="news-tag">#8Tones</span>
+                  <span class="news-tag">#ZeroQuota</span>
                 </div>
                 <a href="#faq" class="news-link-action">
-                  View HUD Handbook &darr;
+                  Read Tone &amp; Hotkey Guides &darr;
                 </a>
               </div>
             </article>
 
-            <!-- NEWS 4: CLIENT-SIDE DLP & GATEWAY -->
+            <!-- NEWS 4: STRICT ZERO-LOG PRIVACY & DLP -->
             <article class="news-item-card" data-category="security">
               <div class="news-card-meta">
                 <div class="news-meta-left">
-                  <span class="news-badge security">🛡️ Security &amp; DLP</span>
-                  <span class="news-version">v1.9.5</span>
+                  <span class="news-badge security">🛡️ Zero-Log DLP</span>
+                  <span class="news-version">v1.10.7</span>
                 </div>
-                <time class="news-date" datetime="2026-02">
+                <time class="news-date" datetime="2026-09">
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                  February 2026
+                  September 2026
                 </time>
               </div>
 
               <h3 class="news-title">
-                Client-Side DLP Regex Engine &amp; Ephemeral In-Memory Gateway
+                Strict Zero-Log Privacy, Built-In DLP &amp; Domain Whitelist
               </h3>
 
               <div class="news-body">
                 <p>
-                  Zero-trust security enhancements for privacy-conscious developers, lawyers, and writers handling proprietary data:
+                  Your privacy is non-negotiable. Babel does not track keystrokes, does not retain chat logs, and operates exclusively over encrypted TLS 1.3 channels:
                 </p>
                 <ul>
-                  <li><strong>Pre-Flight Regex Inspection:</strong> Automatically intercepts and masks API tokens (<code style="font-family: var(--font-mono); font-size: 11px;">sk-...</code>, <code style="font-family: var(--font-mono); font-size: 11px;">ghp_...</code>), JWT keys, passwords, and credit card numbers before transmission.</li>
-                  <li><strong>Ephemeral In-Memory Inference:</strong> Translation requests live strictly in volatile server RAM for &lt;300ms over TLS 1.3: zero disk logging, zero database records, zero model training.</li>
+                  <li><strong>Client-Side DLP Shield:</strong> Local Data Loss Prevention automatically masks passwords, API keys, session tokens, and credit card numbers before transmission. Zero data retention — your text is never stored or used for training.</li>
+                  <li><strong>Domain Whitelist:</strong> Restrict extension activation exclusively to chosen websites if desired (e.g. only on work domains).</li>
+                  <li><strong>Transparent Capacity Tiers:</strong> Generous Free allowance, unlimited Monthly / Monthly Power subscriptions, and non-expiring on-demand Boost Packs.</li>
                 </ul>
               </div>
 
               <div class="news-tags-row">
                 <div class="news-tags">
-                  <span class="news-tag">#DLP</span>
-                  <span class="news-tag">#ZeroRetention</span>
-                  <span class="news-tag">#Privacy</span>
+                  <span class="news-tag">#ZeroLog</span>
+                  <span class="news-tag">#ClientDLP</span>
+                  <span class="news-tag">#DomainWhitelist</span>
                   <span class="news-tag">#TLS13</span>
                 </div>
-                <a href="#features" class="news-link-action">
-                  Security Overview &darr;
+                <a href="#pricing" class="news-link-action">
+                  View Security &amp; Plans &darr;
                 </a>
               </div>
             </article>
 
-            <!-- NEWS 5: ROADMAP EXPANSION -->
-            <article class="news-item-card" data-category="roadmap">
+            <!-- NEWS 5: MULTI-BROWSER LAUNCH & ROADMAP -->
+            <article class="news-item-card" data-category="releases">
               <div class="news-card-meta">
                 <div class="news-meta-left">
-                  <span class="news-badge roadmap">🗺️ Roadmap</span>
-                  <span class="news-version">Upcoming</span>
+                  <span class="news-badge release">🌐 Multi-Browser</span>
+                  <span class="news-version">Store Status</span>
                 </div>
-                <time class="news-date" datetime="2026-04">
+                <time class="news-date" datetime="2026-09">
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                  Q2 2026
+                  September 2026
                 </time>
               </div>
 
               <h3 class="news-title">
-                Next Horizons: Video Diffusion Presets (Sora, Kling, Runway) &amp; Store Rollouts
+                Chrome Web Store Live — Brave &amp; Arc Verified, Edge &amp; Opera in Review
               </h3>
 
               <div class="news-body">
                 <p>
-                  Our engineering sprint is expanding multi-modal capabilities and extending native browser reach:
+                  Babel is expanding its browser footprint across the global Chromium developer and user community:
                 </p>
                 <ul>
-                  <li><strong>Generative Video Synthesizers:</strong> Fine-tuned heuristics in training for Runway Gen-3, Luma Dream Machine, OpenAI Sora, and Kling AI.</li>
-                  <li><strong>Microsoft Edge &amp; Opera Releases:</strong> Anticipating completion of catalog reviews to provide direct installs from Microsoft Edge Add-ons and Opera store.</li>
+                  <li><strong>Google Chrome, Brave &amp; Arc:</strong> Live and verified on Chrome Web Store with 1-click install and seamless hotkey performance.</li>
+                  <li><strong>Microsoft Edge &amp; Opera:</strong> Submissions are in final review and scheduled for activation as soon as catalog approvals complete.</li>
+                  <li><strong>Expanding Video Studio Roadmaps:</strong> Fine-tuned heuristics actively in training for Runway Gen-3, Luma Dream Machine, OpenAI Sora, and Kling AI.</li>
                 </ul>
               </div>
 
               <div class="news-tags-row">
                 <div class="news-tags">
-                  <span class="news-tag">#Sora</span>
-                  <span class="news-tag">#RunwayGen3</span>
-                  <span class="news-tag">#Kling</span>
+                  <span class="news-tag">#ChromeWebStore</span>
+                  <span class="news-tag">#Brave</span>
+                  <span class="news-tag">#Arc</span>
                   <span class="news-tag">#EdgeAddons</span>
+                  <span class="news-tag">#Opera</span>
                 </div>
-                <a href="#support" class="news-link-action">
-                  Suggest Feature &rarr;
+                <a href="https://chromewebstore.google.com/detail/babel/lhlnianlfdpaaklielfkbkkgikgbaibo" target="_blank" rel="noopener noreferrer" class="news-link-action">
+                  Chrome Web Store Listing &nearr;
                 </a>
               </div>
             </article>
 
           </div>
 
-          <!-- News Footer / Feedback Dispatch Strip -->
+          <!-- News Footer / Feedback Dispatch Strip (No GitHub links) -->
           <div class="news-footer-strip">
             <div class="news-footer-text">
               <strong>Stay in the loop &amp; shape Babel's trajectory:</strong> Have an idea for a new prompt studio target, feedback on a translation model, or want to report an issue?
@@ -1994,8 +2008,8 @@
               <a href="#support" class="btn-news-action btn-news-primary">
                 Send Direct Feedback &rarr;
               </a>
-              <a href="https://github.com/Sollemdev/sollemdev.github.io" target="_blank" rel="noopener noreferrer" class="btn-news-action btn-news-secondary">
-                GitHub Repository &nearr;
+              <a href="#faq" class="btn-news-action btn-news-secondary">
+                Explore User FAQ &darr;
               </a>
             </div>
           </div>
