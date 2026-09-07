@@ -82,7 +82,7 @@
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="../css/style.css?v=1.10.6" />
+  <link rel="stylesheet" href="../css/style.css?v=1.10.7" />
 </head>
 <body>
 
@@ -208,8 +208,8 @@
             <span>User FAQ</span>
             <span class="anchor-nav-arrow">&darr;</span>
           </a>
-          <a href="#specs" class="anchor-nav-item">
-            <span>Specs</span>
+          <a href="#news" class="anchor-nav-item">
+            <span>News &amp; Updates</span>
             <span class="anchor-nav-arrow">&darr;</span>
           </a>
           <a href="#support" class="anchor-nav-item">
@@ -1738,50 +1738,268 @@
       </div>
     </section>
 
-    <!-- Technical Specifications Table -->
-    <section class="deep-dive-section" id="specs" style="border-bottom: none;">
+    <!-- Project News, Releases & Updates Section -->
+    <section class="deep-dive-section" id="news" style="border-bottom: none;">
+      <!-- Hidden anchor alias for legacy #specs links -->
+      <span id="specs" style="position: absolute; top: -100px; opacity: 0; pointer-events: none;" aria-hidden="true"></span>
       <div class="container">
-        <h2 class="section-title">Technical Specifications</h2>
-        
-        <div class="spec-table-container">
-          <table class="spec-table">
-            <thead>
-              <tr>
-                <th>Specification</th>
-                <th>Details</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Platform</td>
-                <td>Google Chrome, Brave, Microsoft Edge, Arc, Opera (Chromium MV3)</td>
-              </tr>
-              <tr>
-                <td>Runtime Environment</td>
-                <td>Manifest V3 (Service Worker + Content Scripts)</td>
-              </tr>
-              <tr>
-                <td>DOM Compatibility</td>
-                <td>HTML5 Input, Textarea, ContentEditable, Draft.js, Slate.js, ProseMirror, React 18, Vue 3</td>
-              </tr>
-              <tr>
-                <td>Translation Latency</td>
-                <td>~180ms - 320ms (via Groq / OpenAI LLM endpoints)</td>
-              </tr>
-              <tr>
-                <td>Supported Tones</td>
-                <td>Natural, Friendly, Slang, Business, Brief, Vivid, AI Prompt Mode</td>
-              </tr>
-              <tr>
-                <td>Localization</td>
-                <td>23 UI Language Dictionaries in <code style="font-family: var(--font-mono); font-size: 13px;">_locales/</code></td>
-              </tr>
-              <tr>
-                <td>Security &amp; DLP</td>
-                <td>Client-side secret masking, server-side AI keys, minimal anonymized usage statistics</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="news-section-card">
+          <!-- News Header -->
+          <div class="news-header">
+            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 8px;">
+              <h2 class="section-title" style="margin-bottom: 0;">Project News &amp; Release Notes</h2>
+              <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                <span class="meta-pill highlight"><span class="pulse-dot"></span> Live Dispatch</span>
+                <span class="meta-pill" style="border-color: rgba(6, 182, 212, 0.4); color: #06b6d4;">v1.10.6 Latest</span>
+              </div>
+            </div>
+            <p class="section-subtitle" style="font-size: 15px; color: var(--text-secondary); max-width: 840px; line-height: 1.6; margin-bottom: 24px;">
+              Official releases, browser store milestones, newly integrated generative studios, security bulletins, and technical evolutions of the Babel project.
+            </p>
+
+            <!-- Category Filter Tabs -->
+            <div class="news-categories-tabs" role="tablist" aria-label="News Categories">
+              <button type="button" class="news-tab-btn active" data-news-filter="all">
+                <span>All Dispatches</span>
+              </button>
+              <button type="button" class="news-tab-btn" data-news-filter="releases">
+                <span>🚀 Releases &amp; Stores</span>
+              </button>
+              <button type="button" class="news-tab-btn" data-news-filter="features">
+                <span>✨ Features &amp; Beta</span>
+              </button>
+              <button type="button" class="news-tab-btn" data-news-filter="security">
+                <span>🛡️ Security &amp; Core</span>
+              </button>
+              <button type="button" class="news-tab-btn" data-news-filter="roadmap">
+                <span>🗺️ Roadmap</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- News Feed Grid -->
+          <div class="news-feed-grid">
+
+            <!-- NEWS 1: FEATURED / STORE LAUNCH -->
+            <article class="news-item-card featured" data-category="releases">
+              <div class="news-card-meta">
+                <div class="news-meta-left">
+                  <span class="news-badge release">🚀 Store Launch</span>
+                  <span class="news-version">v1.10.6</span>
+                  <span class="meta-pill" style="font-size: 10px; padding: 1px 7px; border-color: rgba(16, 185, 129, 0.4); color: #10b981;">Chrome Web Store Live</span>
+                </div>
+                <time class="news-date" datetime="2026-03">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  March 2026
+                </time>
+              </div>
+
+              <h3 class="news-title">
+                Babel Officially Launched on Chrome Web Store — Brave &amp; Arc Verified
+              </h3>
+
+              <div class="news-body">
+                <p>
+                  We are thrilled to announce that Babel is officially published and live in the <strong>Google Chrome Web Store</strong>! Following intensive compatibility testing across modern Chromium environments, native installation and full hotkey integration have also been verified and enabled for <strong>Brave Browser</strong> and <strong>Arc Browser</strong>.
+                </p>
+                <ul>
+                  <li><strong>Active Store Deployment:</strong> Instant 1-click install directly from Chrome Web Store with automatic background updates.</li>
+                  <li><strong>Multi-Browser Compatibility:</strong> Seamless out-of-the-box support for Chrome, Brave, and Arc with hardware keyboard shortcuts (<kbd class="sim-hotkey-badge">Alt+T</kbd>, <kbd class="sim-hotkey-badge">Alt+P</kbd>).</li>
+                  <li><strong>Store Review Queue:</strong> Submissions for <strong>Microsoft Edge Add-ons</strong> and <strong>Opera Add-ons</strong> are currently in final verification and will be activated upon store clearance.</li>
+                </ul>
+              </div>
+
+              <div class="news-tags-row">
+                <div class="news-tags">
+                  <span class="news-tag">#ChromeStore</span>
+                  <span class="news-tag">#Brave</span>
+                  <span class="news-tag">#Arc</span>
+                  <span class="news-tag">#ManifestV3</span>
+                </div>
+                <a href="https://chromewebstore.google.com/detail/babel/lhlnianlfdpaaklielfkbkkgikgbaibo" target="_blank" rel="noopener noreferrer" class="news-link-action">
+                  Get Babel from Chrome Web Store &nearr;
+                </a>
+              </div>
+            </article>
+
+            <!-- NEWS 2: AI PROMPT ENGINEERING BETA -->
+            <article class="news-item-card" data-category="features">
+              <div class="news-card-meta">
+                <div class="news-meta-left">
+                  <span class="news-badge beta">🧪 Beta Feature</span>
+                  <span class="news-version">v1.10.5</span>
+                </div>
+                <time class="news-date" datetime="2026-03">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  March 2026
+                </time>
+              </div>
+
+              <h3 class="news-title">
+                Context-Aware AI Prompt Engineering Enters Public Beta
+              </h3>
+
+              <div class="news-body">
+                <p>
+                  Babel now intelligently senses when you type inside creative generative AI studios. Instead of plain literal translation, it extracts your raw conceptual thought and automatically compiles high-yield diffusion prompts.
+                </p>
+                <ul>
+                  <li><strong>Target Studios:</strong> Native syntax rules for <strong>Midjourney v6</strong> (flags <code style="font-family: var(--font-mono); font-size: 11px;">--ar 16:9 --v 6.0</code>), <strong>Higgsfield AI</strong> video mechanics, <strong>Google FLOW</strong> motion descriptors, and <strong>Flux / Civitai</strong> LoRA weights.</li>
+                  <li><strong>Smart Host Detection:</strong> Content engine auto-matches active tab hostnames and DOM containers to apply correct tokenization.</li>
+                </ul>
+              </div>
+
+              <div class="news-tags-row">
+                <div class="news-tags">
+                  <span class="news-tag">#PromptEngineering</span>
+                  <span class="news-tag">#Midjourney</span>
+                  <span class="news-tag">#Flux</span>
+                  <span class="news-tag">#PublicBeta</span>
+                </div>
+                <a href="#prompts" class="news-link-action">
+                  Explore Prompt Mode &darr;
+                </a>
+              </div>
+            </article>
+
+            <!-- NEWS 3: CYBERPUNK RADIAL HUD 2.0 -->
+            <article class="news-item-card" data-category="features">
+              <div class="news-card-meta">
+                <div class="news-meta-left">
+                  <span class="news-badge hud">🎡 UI/UX 2.0</span>
+                  <span class="news-version">v1.10.0</span>
+                </div>
+                <time class="news-date" datetime="2026-02">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  February 2026
+                </time>
+              </div>
+
+              <h3 class="news-title">
+                Concentric Cyberpunk Radial HUD &amp; Persistent Shadow DOM Mascot
+              </h3>
+
+              <div class="news-body">
+                <p>
+                  A ground-up redesign of Babel's in-page companion interface. Rendered in an isolated Shadow DOM to ensure zero style leakage with host web pages:
+                </p>
+                <ul>
+                  <li><strong>Concentric Dual Rings:</strong> Outer Cyan Ring (23 target languages with dynamic sector division) and inner Magenta Ring (8 tone voices).</li>
+                  <li><strong>Hardware Drag &amp; Drop:</strong> Smooth positioning with coordinate sync persisted in local extension storage across sessions.</li>
+                  <li><strong>Fail-Safe Controls:</strong> Right-click <em>"📍 Reset Position"</em> menu and one-touch Stealth Mode (<kbd class="sim-hotkey-badge">Alt+W</kbd>).</li>
+                </ul>
+              </div>
+
+              <div class="news-tags-row">
+                <div class="news-tags">
+                  <span class="news-tag">#RadialHUD</span>
+                  <span class="news-tag">#ShadowDOM</span>
+                  <span class="news-tag">#Mascot</span>
+                  <span class="news-tag">#UI</span>
+                </div>
+                <a href="#faq" class="news-link-action">
+                  View HUD Handbook &darr;
+                </a>
+              </div>
+            </article>
+
+            <!-- NEWS 4: CLIENT-SIDE DLP & GATEWAY -->
+            <article class="news-item-card" data-category="security">
+              <div class="news-card-meta">
+                <div class="news-meta-left">
+                  <span class="news-badge security">🛡️ Security &amp; DLP</span>
+                  <span class="news-version">v1.9.5</span>
+                </div>
+                <time class="news-date" datetime="2026-02">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  February 2026
+                </time>
+              </div>
+
+              <h3 class="news-title">
+                Client-Side DLP Regex Engine &amp; Ephemeral In-Memory Gateway
+              </h3>
+
+              <div class="news-body">
+                <p>
+                  Zero-trust security enhancements for privacy-conscious developers, lawyers, and writers handling proprietary data:
+                </p>
+                <ul>
+                  <li><strong>Pre-Flight Regex Inspection:</strong> Automatically intercepts and masks API tokens (<code style="font-family: var(--font-mono); font-size: 11px;">sk-...</code>, <code style="font-family: var(--font-mono); font-size: 11px;">ghp_...</code>), JWT keys, passwords, and credit card numbers before transmission.</li>
+                  <li><strong>Ephemeral In-Memory Inference:</strong> Translation requests live strictly in volatile server RAM for &lt;300ms over TLS 1.3: zero disk logging, zero database records, zero model training.</li>
+                </ul>
+              </div>
+
+              <div class="news-tags-row">
+                <div class="news-tags">
+                  <span class="news-tag">#DLP</span>
+                  <span class="news-tag">#ZeroRetention</span>
+                  <span class="news-tag">#Privacy</span>
+                  <span class="news-tag">#TLS13</span>
+                </div>
+                <a href="#features" class="news-link-action">
+                  Security Overview &darr;
+                </a>
+              </div>
+            </article>
+
+            <!-- NEWS 5: ROADMAP EXPANSION -->
+            <article class="news-item-card" data-category="roadmap">
+              <div class="news-card-meta">
+                <div class="news-meta-left">
+                  <span class="news-badge roadmap">🗺️ Roadmap</span>
+                  <span class="news-version">Upcoming</span>
+                </div>
+                <time class="news-date" datetime="2026-04">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  Q2 2026
+                </time>
+              </div>
+
+              <h3 class="news-title">
+                Next Horizons: Video Diffusion Presets (Sora, Kling, Runway) &amp; Store Rollouts
+              </h3>
+
+              <div class="news-body">
+                <p>
+                  Our engineering sprint is expanding multi-modal capabilities and extending native browser reach:
+                </p>
+                <ul>
+                  <li><strong>Generative Video Synthesizers:</strong> Fine-tuned heuristics in training for Runway Gen-3, Luma Dream Machine, OpenAI Sora, and Kling AI.</li>
+                  <li><strong>Microsoft Edge &amp; Opera Releases:</strong> Anticipating completion of catalog reviews to provide direct installs from Microsoft Edge Add-ons and Opera store.</li>
+                </ul>
+              </div>
+
+              <div class="news-tags-row">
+                <div class="news-tags">
+                  <span class="news-tag">#Sora</span>
+                  <span class="news-tag">#RunwayGen3</span>
+                  <span class="news-tag">#Kling</span>
+                  <span class="news-tag">#EdgeAddons</span>
+                </div>
+                <a href="#support" class="news-link-action">
+                  Suggest Feature &rarr;
+                </a>
+              </div>
+            </article>
+
+          </div>
+
+          <!-- News Footer / Feedback Dispatch Strip -->
+          <div class="news-footer-strip">
+            <div class="news-footer-text">
+              <strong>Stay in the loop &amp; shape Babel's trajectory:</strong> Have an idea for a new prompt studio target, feedback on a translation model, or want to report an issue?
+            </div>
+            <div class="news-footer-actions">
+              <a href="#support" class="btn-news-action btn-news-primary">
+                Send Direct Feedback &rarr;
+              </a>
+              <a href="https://github.com/Sollemdev/sollemdev.github.io" target="_blank" rel="noopener noreferrer" class="btn-news-action btn-news-secondary">
+                GitHub Repository &nearr;
+              </a>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -2405,6 +2623,30 @@
       }
     }
 
+    // Project News & Release Notes Filter Controller
+    function initNewsFilter() {
+      const tabs = document.querySelectorAll(".news-tab-btn[data-news-filter]");
+      const items = document.querySelectorAll(".news-item-card[data-category]");
+      if (!tabs.length || !items.length) return;
+
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          const filter = tab.getAttribute("data-news-filter");
+          tabs.forEach((t) => t.classList.remove("active"));
+          tab.classList.add("active");
+
+          items.forEach((item) => {
+            const cat = item.getAttribute("data-category");
+            if (filter === "all" || cat === filter) {
+              item.style.display = "";
+            } else {
+              item.style.display = "none";
+            }
+          });
+        });
+      });
+    }
+
     document.addEventListener("DOMContentLoaded", () => {
       initTheme();
       initScrollToTop();
@@ -2414,6 +2656,7 @@
       initMobilePricingTabs();
       initMobileStickyNav();
       initFaqAccordion();
+      initNewsFilter();
     });
   </script>
 
