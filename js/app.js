@@ -201,6 +201,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initContactForm();
   initHeaderShare();
   renderProjects();
+  initGitActivity();
   initScrollToTop();
   initMobileStickyNav();
 });
@@ -1034,4 +1035,83 @@ function initMobileStickyNav() {
       }
     });
   }, { passive: true });
+}
+
+// Git Activity Stream Hydration from data/activity.json
+async function initGitActivity() {
+  const container = document.getElementById("activity-list");
+  if (!container) return;
+
+  try {
+    const res = await fetch(`data/activity.json?t=${Date.now()}`);
+    if (!res.ok) return;
+    const items = await res.json();
+    if (!Array.isArray(items) || !items.length) return;
+
+    const top3 = items.slice(0, 3);
+    const html = top3.map((item) => {
+      const project = escapeActivityHtml(item.project || "Project");
+      const badge = escapeActivityHtml(item.badge || "Update");
+      const hash = item.hash ? `#${escapeActivityHtml(item.hash)}` : "";
+      const title = escapeActivityHtml(item.title || "Codebase update");
+      const desc = item.description ? `<p class="activity-desc">${escapeActivityHtml(item.description)}</p>` : "";
+      const dateText = formatRelativeActivityDate(item.date);
+
+      return `
+        <article class="activity-card">
+          <div class="activity-card-top">
+            <div class="activity-card-meta-left">
+              <span class="activity-project-pill">${project}</span>
+              ${hash ? `<span class="activity-hash-pill">${hash}</span>` : ""}
+              <span class="activity-type-pill">${badge}</span>
+            </div>
+            <time class="activity-date" datetime="${escapeActivityHtml(item.date || "")}">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              ${dateText}
+            </time>
+          </div>
+          <h3 class="activity-title">${title}</h3>
+          ${desc}
+        </article>
+      `;
+    }).join("");
+
+    container.innerHTML = html;
+  } catch (e) {
+    // Graceful fallback to static pre-rendered items
+  }
+}
+
+function escapeActivityHtml(str) {
+  if (!str) return "";
+  return String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+function formatRelativeActivityDate(dateStr) {
+  if (!dateStr) return "";
+  try {
+    const date = new Date(dateStr);
+    if (isNaN(date.getTime())) return dateStr;
+
+    const now = new Date();
+    const diffMs = now - date;
+    const diffMins = Math.floor(diffMs / 60000);
+    const diffHours = Math.floor(diffMs / 3600000);
+    const diffDays = Math.floor(diffMs / 86400000);
+
+    if (diffMins < 1) return "Just now";
+    if (diffMins < 60) return `${diffMins}m ago`;
+    if (diffHours < 24) return `${diffHours}h ago`;
+    if (diffDays === 1) return "Yesterday";
+    if (diffDays < 7) return `${diffDays}d ago`;
+
+    return date.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
+  } catch {
+    return dateStr;
+  }
 }

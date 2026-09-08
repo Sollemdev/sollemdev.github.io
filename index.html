@@ -96,6 +96,7 @@
       <nav>
         <ul class="nav-menu">
           <li><a href="#work" class="nav-link active">Work</a></li>
+          <li><a href="#activity" class="nav-link">Activity</a></li>
           <li><a href="#skills" class="nav-link">Skills</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
@@ -249,6 +250,90 @@
           <div class="preview-container">
             <div class="preview-grid" id="preview-grid"></div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Git Activity Section (Live Development Stream) -->
+    <section class="activity-section" id="activity">
+      <div class="container">
+        <div class="activity-header">
+          <div class="activity-header-left">
+            <div class="activity-badge-pulse">
+              <span class="pulse-dot"></span>
+              <span>Live Development Pulse</span>
+            </div>
+            <h2 class="section-title" style="margin-bottom: 6px;">Recent Codebase Updates</h2>
+            <p class="section-subtitle" style="font-size: 15px; color: var(--text-secondary); max-width: 680px; margin-bottom: 0;">
+              Automated stream of recent engineering commits, architectural enhancements, and feature deployments across our active projects.
+            </p>
+          </div>
+          <div class="activity-header-meta">
+            <span class="meta-pill" style="font-size: 12px; font-family: var(--font-mono);"><span style="color: #22c55e;">●</span> 3 Latest Commits</span>
+          </div>
+        </div>
+
+        <div class="activity-list" id="activity-list">
+          <!-- Populated dynamically via app.js from data/activity.json, with progressive enhancement fallbacks -->
+          <article class="activity-card">
+            <div class="activity-card-top">
+              <div class="activity-card-meta-left">
+                <span class="activity-project-pill">Babel</span>
+                <span class="activity-hash-pill">#586bded</span>
+                <span class="activity-type-pill">Release</span>
+              </div>
+              <time class="activity-date" datetime="2026-09-08T21:19:47Z">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Today, 21:19
+              </time>
+            </div>
+            <h3 class="activity-title">
+              chore(release): bump product version to 1.10.8
+            </h3>
+            <p class="activity-desc">
+              Updated version metadata, assets, schema and performance enhancements across core engine.
+            </p>
+          </article>
+
+          <article class="activity-card">
+            <div class="activity-card-top">
+              <div class="activity-card-meta-left">
+                <span class="activity-project-pill">Babel</span>
+                <span class="activity-hash-pill">#1cbef7b</span>
+                <span class="activity-type-pill">Pricing &amp; UI</span>
+              </div>
+              <time class="activity-date" datetime="2026-09-08T00:12:59Z">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Today, 00:12
+              </time>
+            </div>
+            <h3 class="activity-title">
+              fix(pricing): restore card specs, update Lava.top operator and boost rows
+            </h3>
+            <p class="activity-desc">
+              Integrated verified Lava.top checkout operator, aligned subscription quotas and streamlined boost unit packages.
+            </p>
+          </article>
+
+          <article class="activity-card">
+            <div class="activity-card-top">
+              <div class="activity-card-meta-left">
+                <span class="activity-project-pill">Babel</span>
+                <span class="activity-hash-pill">#77de3dd</span>
+                <span class="activity-type-pill">Core Engine</span>
+              </div>
+              <time class="activity-date" datetime="2026-09-07T18:40:00Z">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Yesterday, 18:40
+              </time>
+            </div>
+            <h3 class="activity-title">
+              feat(hud): radial chameleon menu, in-place proofreading &amp; selection translation
+            </h3>
+            <p class="activity-desc">
+              Implemented full 23-language circular HUD navigation, 8 tone presets, instant offline typo fixer, and zero-log DLP.
+            </p>
+          </article>
         </div>
       </div>
     </section>
@@ -415,6 +500,10 @@
     <a href="#work" class="mobile-nav-item active" data-section="work">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
       <span>Work</span>
+    </a>
+    <a href="#activity" class="mobile-nav-item" data-section="activity">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      <span>Pulse</span>
     </a>
     <a href="#skills" class="mobile-nav-item" data-section="skills">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
