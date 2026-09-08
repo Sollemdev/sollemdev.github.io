@@ -1048,8 +1048,8 @@ async function initGitActivity() {
     const items = await res.json();
     if (!Array.isArray(items) || !items.length) return;
 
-    const top3 = items.slice(0, 3);
-    const html = top3.map((item) => {
+    const topCommits = items.slice(0, 5);
+    const html = topCommits.map((item) => {
       const project = escapeActivityHtml(item.project || "Project");
       const badge = escapeActivityHtml(item.badge || "Update");
       const hash = item.hash ? `#${escapeActivityHtml(item.hash)}` : "";
