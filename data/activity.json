@@ -1,5 +1,13 @@
 [
   {
+    "project": "Together Safe",
+    "badge": "Update",
+    "title": "ci: update broadcast activity workflow (clean utf8 without bom)",
+    "description": "Continuous codebase optimization, features, and refinements.",
+    "date": "2026-09-09T20:46:39+03:00",
+    "hash": "d0bc5f3"
+  },
+  {
     "project": "Humanagi",
     "badge": "Update",
     "title": "ci: update broadcast activity workflow (clean utf8 without bom)",
@@ -38,13 +46,5 @@
     "description": "Integrated verified Lava.top checkout operator, aligned subscription quotas and streamlined boost unit packages.",
     "date": "2026-09-08T00:12:59Z",
     "hash": "1cbef7b"
-  },
-  {
-    "project": "Babel",
-    "badge": "Core Engine",
-    "title": "feat(hud): radial chameleon menu, in-place proofreading & selection translation",
-    "description": "Implemented full 23-language circular HUD navigation, 8 tone presets, instant offline typo fixer, and zero-log DLP.",
-    "date": "2026-09-07T18:40:00Z",
-    "hash": "77de3dd"
   }
 ]
