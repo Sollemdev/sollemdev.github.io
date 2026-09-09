@@ -1,5 +1,13 @@
 [
   {
+    "project": "A2X",
+    "badge": "Update",
+    "title": "ci: update broadcast activity workflow (clean utf8 without bom)",
+    "description": "Continuous codebase optimization, features, and refinements.",
+    "date": "2026-09-09T20:46:40+03:00",
+    "hash": "10e728d"
+  },
+  {
     "project": "Together Safe",
     "badge": "Update",
     "title": "ci: update broadcast activity workflow (clean utf8 without bom)",
@@ -38,13 +46,5 @@
     "description": "Updated version metadata, assets, schema and performance enhancements across core engine.",
     "date": "2026-09-08T21:19:47Z",
     "hash": "586bded"
-  },
-  {
-    "project": "Babel",
-    "badge": "Pricing & UI",
-    "title": "fix(pricing): restore card specs, update Lava.top operator and boost rows",
-    "description": "Integrated verified Lava.top checkout operator, aligned subscription quotas and streamlined boost unit packages.",
-    "date": "2026-09-08T00:12:59Z",
-    "hash": "1cbef7b"
   }
 ]
