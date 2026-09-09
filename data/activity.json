@@ -1,5 +1,13 @@
 [
   {
+    "project": "Marina Gardener",
+    "badge": "Update",
+    "title": "ci: update broadcast activity workflow (clean utf8 without bom)",
+    "description": "Continuous codebase optimization, features, and refinements.",
+    "date": "2026-09-09T17:46:36Z",
+    "hash": "57c00a0"
+  },
+  {
     "project": "A2X",
     "badge": "Update",
     "title": "ci: update broadcast activity workflow (clean utf8 without bom)",
@@ -38,13 +46,5 @@
     "description": "Continuous codebase optimization, features, and refinements.",
     "date": "2026-09-09T20:45:55+03:00",
     "hash": "3131452"
-  },
-  {
-    "project": "Babel",
-    "badge": "Update",
-    "title": "Codebase enhancement",
-    "description": "Continuous codebase optimization, features, and refinements.",
-    "date": "2026-09-09T17:45:14.239Z",
-    "hash": "147a7d7"
   }
 ]
