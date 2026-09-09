@@ -4,6 +4,14 @@
     "badge": "Update",
     "title": "ci: update broadcast activity workflow (clean utf8 without bom)",
     "description": "Continuous codebase optimization, features, and refinements.",
+    "date": "2026-09-09T20:46:46+03:00",
+    "hash": "c70bc6e"
+  },
+  {
+    "project": "A2X",
+    "badge": "Update",
+    "title": "ci: update broadcast activity workflow (clean utf8 without bom)",
+    "description": "Continuous codebase optimization, features, and refinements.",
     "date": "2026-09-09T20:46:40+03:00",
     "hash": "10e728d"
   },
@@ -38,13 +46,5 @@
     "description": "Continuous codebase optimization, features, and refinements.",
     "date": "2026-09-09T17:45:14.239Z",
     "hash": "147a7d7"
-  },
-  {
-    "project": "Babel",
-    "badge": "Release",
-    "title": "chore(release): bump product version to 1.10.8",
-    "description": "Updated version metadata, assets, schema and performance enhancements across core engine.",
-    "date": "2026-09-08T21:19:47Z",
-    "hash": "586bded"
   }
 ]
