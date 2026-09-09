@@ -1,5 +1,13 @@
 [
   {
+    "project": "Humanagi",
+    "badge": "Update",
+    "title": "ci: update broadcast activity workflow (clean utf8 without bom)",
+    "description": "Continuous codebase optimization, features, and refinements.",
+    "date": "2026-09-09T20:46:33+03:00",
+    "hash": "54d5add"
+  },
+  {
     "project": "Babel",
     "badge": "Update",
     "title": "ci: enhance commit message extractor with fallback",
