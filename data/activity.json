@@ -1,6 +1,14 @@
 [
   {
     "project": "Babel",
+    "badge": "Update",
+    "title": "Codebase enhancement",
+    "description": "Continuous codebase optimization, features, and refinements.",
+    "date": "2026-09-09T17:45:14.239Z",
+    "hash": "147a7d7"
+  },
+  {
+    "project": "Babel",
     "badge": "Release",
     "title": "chore(release): bump product version to 1.10.8",
     "description": "Updated version metadata, assets, schema and performance enhancements across core engine.",
