@@ -1,5 +1,13 @@
 [
   {
+    "project": "A2X",
+    "badge": "Update",
+    "title": "Merge pull request #1 from Sollemdev/code-analysis-without-fluff-14489",
+    "description": "Update from task 4a925b3b-cec9-466f-b86a-d3013d514489",
+    "date": "2026-09-10T00:16:30+03:00",
+    "hash": "38181c8"
+  },
+  {
     "project": "Marina Gardener",
     "badge": "Update",
     "title": "ci: update broadcast activity workflow (clean utf8 without bom)",
@@ -38,13 +46,5 @@
     "description": "Continuous codebase optimization, features, and refinements.",
     "date": "2026-09-09T20:46:33+03:00",
     "hash": "54d5add"
-  },
-  {
-    "project": "Babel",
-    "badge": "Update",
-    "title": "ci: enhance commit message extractor with fallback",
-    "description": "Continuous codebase optimization, features, and refinements.",
-    "date": "2026-09-09T20:45:55+03:00",
-    "hash": "3131452"
   }
 ]
