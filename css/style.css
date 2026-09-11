@@ -1887,6 +1887,69 @@ input, textarea {
   transition: transform var(--transition-fast);
 }
 
+@media (max-width: 640px) {
+  .partner-badges-block {
+    gap: 8px;
+    padding-bottom: 18px;
+    margin-bottom: 2px;
+  }
+
+  .partner-badges-sub {
+    font-size: 11.5px;
+    line-height: 1.35;
+    max-width: 320px;
+  }
+
+  .partner-badges-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px 10px;
+    width: 100%;
+    max-width: 380px;
+    margin: 4px auto 0;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .partner-badges-list > .partner-badge-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+
+  .partner-badge-card {
+    width: 100%;
+    max-width: 175px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .partner-badge-card img {
+    height: 38px;
+    max-height: 38px;
+    max-width: 100%;
+    width: auto;
+    object-fit: contain;
+    border-radius: 6px;
+  }
+}
+
+@media (max-width: 380px) {
+  .partner-badges-list {
+    gap: 6px 8px;
+    max-width: 310px;
+  }
+
+  .partner-badge-card {
+    max-width: 145px;
+  }
+
+  .partner-badge-card img {
+    height: 34px;
+    max-height: 34px;
+  }
+}
+
 /* Modal Popup */
 .modal-backdrop {
   position: fixed;
