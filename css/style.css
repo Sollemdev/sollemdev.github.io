@@ -1808,6 +1808,93 @@ input, textarea {
   color: var(--accent-primary);
 }
 
+/* Partner & Growth Badges (Directories & Backlinks) */
+.partner-badges-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 960px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border-subtle);
+  margin-bottom: 4px;
+}
+
+.partner-badges-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+}
+
+.partner-badges-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.partner-badges-label svg {
+  color: #f59e0b;
+}
+
+.partner-badges-sub {
+  font-size: 12.5px;
+  color: var(--text-secondary);
+  margin: 0;
+  max-width: 520px;
+  line-height: 1.45;
+}
+
+.partner-badges-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 6px;
+}
+
+.partner-badge-card {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  background: #ffffff;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+  line-height: 0;
+  text-decoration: none;
+}
+
+.partner-badge-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  border-color: var(--accent-primary);
+}
+
+.partner-badge-card img {
+  display: block;
+  height: auto;
+  max-height: 52px;
+  width: auto;
+  max-width: 200px;
+}
+
+[data-theme="dark"] .partner-badge-card {
+  border-color: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+}
+
 /* Modal Popup */
 .modal-backdrop {
   position: fixed;
