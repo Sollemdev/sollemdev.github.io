@@ -1954,12 +1954,13 @@
               </div>
             </article>
 
-            <!-- NEWS 5: MULTI-BROWSER LAUNCH & ROADMAP -->
-            <article class="news-item-card" data-category="releases">
+            <!-- NEWS 5: PUBLIC STORE TESTING & LOCAL APP IN DEVELOPMENT -->
+            <article class="news-item-card" data-category="releases roadmap">
               <div class="news-card-meta">
                 <div class="news-meta-left">
-                  <span class="news-badge release">🌐 Multi-Browser</span>
-                  <span class="news-version">Store Status</span>
+                  <span class="news-badge release">🚀 Public Testing</span>
+                  <span class="news-badge roadmap">🗺️ In Development</span>
+                  <span class="news-version">CWS Live &bull; Local Beta</span>
                 </div>
                 <time class="news-date" datetime="2026-09">
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
@@ -1968,30 +1969,33 @@
               </div>
 
               <h3 class="news-title">
-                Chrome Web Store Live — Brave &amp; Arc Verified, Edge &amp; Opera in Review
+                Main Release Open for Testing on Chrome Web Store — Edge &amp; Opera Reviews Underway, Local Version in Development
               </h3>
 
               <div class="news-body">
                 <p>
-                  Babel is expanding its browser footprint across the global Chromium developer and user community:
+                  We are pleased to announce that the main production release of Babel is now open for public testing directly on the Chrome Web Store, while multi-browser store certifications proceed and engineering on a local standalone app begins:
                 </p>
                 <ul>
-                  <li><strong>Google Chrome, Brave &amp; Arc:</strong> Live and verified on Chrome Web Store with 1-click install and seamless hotkey performance.</li>
-                  <li><strong>Microsoft Edge &amp; Opera:</strong> Submissions are in final review and scheduled for activation as soon as catalog approvals complete.</li>
-                  <li><strong>Expanding Video Studio Roadmaps:</strong> Fine-tuned heuristics actively in training for Runway Gen-3, Luma Dream Machine, OpenAI Sora, and Kling AI.</li>
+                  <li><strong>🛒 Chrome Web Store Public Testing Live:</strong> You can now install and test the full Babel release on <a href="https://chromewebstore.google.com/detail/babel/lhlnianlfdpaaklielfkbkkgikgbaibo" target="_blank" rel="noopener noreferrer" style="color: var(--accent-primary); text-decoration: underline;">Google Chrome, Brave, and Arc</a> via the official Chrome Web Store. Test in-place translation (<kbd class="sim-hotkey-badge">Alt + T</kbd>), Radial Chameleon HUD, grammar proofreading, and prompt engineering in live web forms and apps.</li>
+                  <li><strong>⏳ Edge &amp; Opera Reviews in Active Progress:</strong> Verification and catalog reviews are actively underway for Microsoft Edge Add-ons and Opera Addons (including Opera GX). Native store listings will be live as soon as final approvals are granted.</li>
+                  <li><strong>💻 Local Standalone App (Custom APIs &amp; Local Models):</strong> Meanwhile, we are actively engineering a local standalone desktop version of Babel. This edition will allow users to plug in their <strong>own custom API keys</strong> (BYOK: OpenAI, Claude, Gemini, DeepSeek, Groq) or run <strong>100% locally with private offline models</strong> (via Ollama, LM Studio, or local OpenAI-compatible endpoints) — zero third-party proxies, zero subscriptions, and complete data privacy.</li>
                 </ul>
               </div>
 
               <div class="news-tags-row">
                 <div class="news-tags">
                   <span class="news-tag">#ChromeWebStore</span>
-                  <span class="news-tag">#Brave</span>
-                  <span class="news-tag">#Arc</span>
+                  <span class="news-tag">#PublicTesting</span>
                   <span class="news-tag">#EdgeAddons</span>
                   <span class="news-tag">#Opera</span>
+                  <span class="news-tag">#LocalApp</span>
+                  <span class="news-tag">#CustomAPI</span>
+                  <span class="news-tag">#LocalModels</span>
+                  <span class="news-tag">#Ollama</span>
                 </div>
                 <a href="https://chromewebstore.google.com/detail/babel/lhlnianlfdpaaklielfkbkkgikgbaibo" target="_blank" rel="noopener noreferrer" class="news-link-action">
-                  Chrome Web Store Listing &nearr;
+                  Test on Chrome Web Store &nearr;
                 </a>
               </div>
             </article>
@@ -2683,8 +2687,8 @@
           tab.classList.add("active");
 
           items.forEach((item) => {
-            const cat = item.getAttribute("data-category");
-            if (filter === "all" || cat === filter) {
+            const cats = (item.getAttribute("data-category") || "").trim().split(/\s+/);
+            if (filter === "all" || cats.includes(filter)) {
               item.style.display = "";
             } else {
               item.style.display = "none";
