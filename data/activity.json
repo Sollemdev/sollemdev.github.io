@@ -1,5 +1,13 @@
 [
   {
+    "project": "Humanagi",
+    "badge": "Update",
+    "title": "rebrand: AgentChat -> Humanagi across entire codebase",
+    "description": "- Package names: @agentchat/* -> @humanagi/* (all 12 packages) - SDK exports: AgentChatClient -> HumanagiClient, AgentChatError -> HumanagiError - MCP protocol URIs: agentchat:// -> humanagi:// - Binary: agentchat-mcp -> humanagi-mcp - Docker: postgres db/user agentchat -> humanagi - Web: metadata title, sidebar brand, login heading - Docs, scripts, README, env files all updated - pnpm-lock.yaml regenerated - Wiki file renamed: benchmark-vs-agentchat -> benchmark-vs-humanagi - Functional variable names (agentChats) kept as-is",
+    "date": "2026-09-12T22:35:55+03:00",
+    "hash": "0917af0"
+  },
+  {
     "project": "A2X",
     "badge": "Update",
     "title": "Merge pull request #1 from Sollemdev/code-analysis-without-fluff-14489",
@@ -38,13 +46,5 @@
     "description": "Continuous codebase optimization, features, and refinements.",
     "date": "2026-09-09T20:46:39+03:00",
     "hash": "d0bc5f3"
-  },
-  {
-    "project": "Humanagi",
-    "badge": "Update",
-    "title": "ci: update broadcast activity workflow (clean utf8 without bom)",
-    "description": "Continuous codebase optimization, features, and refinements.",
-    "date": "2026-09-09T20:46:33+03:00",
-    "hash": "54d5add"
   }
 ]
