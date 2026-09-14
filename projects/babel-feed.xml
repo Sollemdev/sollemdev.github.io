@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Babel — Project News &amp; Release Notes</title>
+    <link>https://sollemdev.github.io/projects/babel.html#news</link>
+    <description>Official releases, browser store milestones, newly integrated generative studios, security bulletins, and technical evolutions of the Babel project.</description>
+    <language>en-US</language>
+    <lastBuildDate>Mon, 14 Sep 2026 18:00:00 GMT</lastBuildDate>
+    <atom:link href="https://sollemdev.github.io/projects/babel-feed.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>Main Release Open for Testing on Chrome Web Store — Edge &amp; Opera Reviews Underway, Local Version in Development</title>
+      <link>https://sollemdev.github.io/projects/babel.html#news</link>
+      <guid isPermaLink="false">babel-dispatch-2026-09-cws-testing-local</guid>
+      <pubDate>Mon, 14 Sep 2026 10:00:00 GMT</pubDate>
+      <category>Releases</category>
+      <category>Roadmap</category>
+      <description><![CDATA[The main production release of Babel is now open for public testing directly on the Chrome Web Store, while multi-browser store certifications proceed for Microsoft Edge Add-ons and Opera Addons, and engineering on a local standalone desktop application (supporting custom API keys via BYOK and offline local models via Ollama and LM Studio) actively begins.]]></description>
+    </item>
+
+    <item>
+      <title>Babel v1.10.8: Chameleon Radial HUD, In-Place Proofreading &amp; Selection Translation</title>
+      <link>https://sollemdev.github.io/projects/babel.html#news</link>
+      <guid isPermaLink="false">babel-release-v1-10-8</guid>
+      <pubDate>Tue, 08 Sep 2026 12:00:00 GMT</pubDate>
+      <category>Releases</category>
+      <description><![CDATA[Babel delivers instant in-place text translation, grammar proofreading, and AI prompt refinement directly inside any web input field with simple keyboard shortcuts. Featuring the Chameleon Radial HUD, 23 target languages, in-place proofreading (Alt + P), in-place selection translation (Alt + U), and smart mention preservation.]]></description>
+    </item>
+
+    <item>
+      <title>AI Prompt Engineering Engine: Cinematic Image &amp; Video Presets</title>
+      <link>https://sollemdev.github.io/projects/babel.html#news</link>
+      <guid isPermaLink="false">babel-feature-prompt-engine</guid>
+      <pubDate>Sun, 06 Sep 2026 12:00:00 GMT</pubDate>
+      <category>Features</category>
+      <description><![CDATA[Elevate raw ideas into structured, high-detail cinematic prompts tailored specifically for creative generative studios directly inside generator prompt boxes: Midjourney, Higgsfield AI, Google FLOW (Veo / Gemini Omni), Flux LoRAs, and Civitai diffusion models.]]></description>
+    </item>
+
+    <item>
+      <title>Offline Keyboard Layout Fixer (1ms) &amp; 8 Adaptive Speech Tones</title>
+      <link>https://sollemdev.github.io/projects/babel.html#news</link>
+      <guid isPermaLink="false">babel-feature-offline-fixer-tones</guid>
+      <pubDate>Wed, 02 Sep 2026 12:00:00 GMT</pubDate>
+      <category>Features</category>
+      <description><![CDATA[Two high-frequency productivity superpowers: offline keyboard layout fixer (Ctrl + Shift + F in 1ms without quota) and 8 adaptive speech tones: Natural, Friendly, Internet Slang, Professional Business, Brief, Vivid, Prompt Mode, and offline Base64.]]></description>
+    </item>
+
+    <item>
+      <title>Strict Zero-Log Privacy, Built-In DLP &amp; Domain Whitelist</title>
+      <link>https://sollemdev.github.io/projects/babel.html#news</link>
+      <guid isPermaLink="false">babel-security-dlp-whitelist</guid>
+      <pubDate>Tue, 01 Sep 2026 12:00:00 GMT</pubDate>
+      <category>Security</category>
+      <description><![CDATA[Client-side Data Loss Prevention automatically masks API tokens, passwords, and sensitive keys before transmission. Zero data retention over TLS 1.3, domain whitelisting, and transparent capacity tiers.]]></description>
+    </item>
+  </channel>
+</rss>
