@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="ru" data-theme="light">
 <head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-894W8CYHGQ"></script>
@@ -14,8 +14,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Babel - Privacy Policy | @SolLem_Dev</title>
-  <meta name="description" content="Privacy Policy for the Babel Chrome extension." />
+  <title>Политика конфиденциальности и обработки персональных данных | Privacy Policy — Sollemdev</title>
+  <meta name="description" content="Политика конфиденциальности и обработки персональных данных пользователей сайта Sollemdev, сервиса пожертвований Lava.top и программных решений (Babel)." />
   <meta name="author" content="Sollemdev" />
 
   <!-- Favicon -->
@@ -27,7 +27,7 @@
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="../css/style.css?v=1.10.8" />
+  <link rel="stylesheet" href="../css/style.css?v=1.10.9" />
 </head>
 <body>
 
@@ -42,6 +42,7 @@
         <ul class="nav-menu">
           <li><a href="../index.html#work" class="nav-link">Projects</a></li>
           <li><a href="../index.html#skills" class="nav-link">Skills</a></li>
+          <li><a href="../index.html#donate" class="nav-link">Donate</a></li>
           <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
         </ul>
       </nav>
@@ -61,79 +62,135 @@
       <div class="container">
         <!-- Breadcrumb Navigation -->
         <nav class="breadcrumb-nav" aria-label="Breadcrumb">
-          <a href="../index.html" class="breadcrumb-link">Home</a>
+          <a href="../index.html" class="breadcrumb-link">Главная (Home)</a>
           <span class="breadcrumb-separator">/</span>
-          <a href="babel.html" class="breadcrumb-link">Babel</a>
-          <span class="breadcrumb-separator">/</span>
-          <span class="breadcrumb-current">Privacy Policy</span>
+          <span class="breadcrumb-current">Политика конфиденциальности</span>
         </nav>
 
-        <h1 class="project-title" style="margin-top: 16px;">Babel - Privacy Policy</h1>
+        <h1 class="project-title" style="margin-top: 16px;">
+          Политика конфиденциальности и обработки персональных данных
+          <span style="font-size: 0.55em; color: var(--text-secondary); display: block; font-weight: 400; margin-top: 6px;">Privacy Policy &amp; Personal Data Processing</span>
+        </h1>
         
         <!-- Policy Navigation Pills -->
         <div class="policy-nav-pills">
-          <a href="terms.html" class="policy-pill">Terms &amp; Conditions</a>
-          <a href="privacy.html" class="policy-pill active">Privacy Policy</a>
-          <a href="refund.html" class="policy-pill">Refund Policy</a>
-          <a href="babel.html" class="policy-pill" style="margin-left: auto;">&larr; Back to Babel</a>
+          <a href="terms.html" class="policy-pill">Оферта / Terms</a>
+          <a href="privacy.html" class="policy-pill active">Конфиденциальность / Privacy</a>
+          <a href="refund.html" class="policy-pill">Возвраты / Refund</a>
+          <a href="../index.html" class="policy-pill" style="margin-left: auto;">&larr; На главную / Home</a>
         </div>
 
         <div class="policy-document-card">
           <div class="policy-meta-bar">
-            Last updated: August 28, 2026 &middot; <a href="terms.html">Terms &amp; Conditions</a> &middot; <a href="refund.html">Refund Policy</a> &middot; <a href="babel.html">&larr; Back to Babel</a>
+            Дата обновления: 15 сентября 2026 г. &middot; <a href="terms.html">Пользовательское соглашение</a> &middot; <a href="refund.html">Политика возвратов</a> &middot; <a href="../index.html">&larr; Sollemdev Studio</a>
+          </div>
+
+          <!-- Language Selector -->
+          <div class="lang-switch-wrapper">
+            <span class="lang-switch-label">Язык документа / Language:</span>
+            <button type="button" class="policy-pill active" id="btn-lang-ru" onclick="switchLegalLang('ru')">🇷🇺 Русский (Политика)</button>
+            <button type="button" class="policy-pill" id="btn-lang-en" onclick="switchLegalLang('en')">🇬🇧 English (Privacy)</button>
           </div>
 
           <div class="policy-document-body">
-            <h2>1. What this policy covers</h2>
-            <p>This policy describes how the Babel Chrome extension and its backend handle your data. Babel is local-first where possible: your settings, device identifier, and usage counters stay on your device, and your text is processed only to produce a translation or an AI-prompt result.</p>
+            
+            <!-- RUSSIAN VERSION (DEFAULT) -->
+            <div id="legal-ru" class="legal-lang-section">
+              <h2>1. Общие положения и правовые основания</h2>
+              <p>Настоящая Политика конфиденциальности и обработки персональных данных (далее — «Политика») действует в отношении всей информации, которую независимая студия разработки <strong>Sollemdev</strong> (далее — «Оператор», «Администрация», адрес сайта: <a href="https://sollemdev.github.io/">https://sollemdev.github.io/</a>) может получить о Пользователе во время использования им сайта, программных продуктов (включая расширение <strong>Babel</strong>), совершения добровольных пожертвований через виджет <strong>Lava.top</strong> или отправки сообщений через формы связи.</p>
+              <p>Политика составлена в строгом соответствии с требованиями законодательства о защите персональных данных, включая Федеральный закон РФ от 27.07.2006 № 152-ФЗ «О персональных данных» и Регламент Европейского Парламента и Совета (ЕС) 2016/679 (GDPR).</p>
 
-            <h2>2. What we store on your device</h2>
-            <p>The extension keeps the following in <code>chrome.storage.local</code> on your device:</p>
-            <ul>
-              <li><strong>Settings</strong>: hotkey, default mode (translation or prompt), target language, translation style, the optional site whitelist, and the DLP (data-loss prevention) mode.</li>
-              <li><strong>An anonymous device identifier</strong> (a randomly generated ID) and a short-lived session token used to authenticate requests to the Babel backend.</li>
-              <li><strong>Local usage statistics</strong> (counts of translations and generated prompts), shown on the Settings page. You can clear them at any time with "Reset stats".</li>
-            </ul>
-            <p>We do not collect your name, email, or card details inside the extension. No API key is stored in the browser - the AI provider credentials live on the Babel backend.</p>
+              <h2>2. Принципы обработки персональных данных</h2>
+              <p>Оператор руководствуется принципом минимизации данных (Data Minimization) и концепцией локальной конфиденциальности (Local-First Architecture):</p>
+              <ul>
+                <li>Мы собираем только минимально необходимый объем данных, требуемый для ответа на обращения пользователей и обеспечения стабильной работы сервисов.</li>
+                <li>Мы никогда не продаем, не передаем рекламным сетям и не раскрываем личную информацию пользователей третьим лицам.</li>
+                <li>Пользовательские настройки и рабочие параметры хранятся локально на устройстве пользователя.</li>
+              </ul>
 
-            <h2>3. How translation works (data in transit)</h2>
-            <p>When you press the hotkey:</p>
-            <ol>
-              <li>The text in your focused input field is sent from your browser to the Babel backend (<code>babel-backend.fly.dev</code>) over an authenticated request.</li>
-              <li>The backend forwards it to the AI provider using server-side credentials and returns the result.</li>
-              <li>The translation or generated prompt is inserted back into your field on your device.</li>
-            </ol>
-            <p>Your text is used solely to produce the result. We do not log, sell, or share its content. The extension sends only minimal, anonymous usage statistics that never include your text.</p>
+              <h2>3. Категории обрабатываемых данных</h2>
+              <p>В зависимости от способа взаимодействия с сайтом и сервисами Оператор может обрабатывать следующие данные:</p>
+              <ul>
+                <li><strong>Данные при обращении через форму связи или email:</strong> имя (или никнейм), адрес электронной почты (email), тема и текст обращения. Данные предоставляются пользователем добровольно для получения ответа на свой запрос.</li>
+                <li><strong>Данные при совершении добровольных пожертвований и покупок (Lava.top / Gumroad):</strong> При совершении платежа или пожертвования все операции и реквизиты (номер карты, срок действия, CVC/CVV, банковский счет, СБП) обрабатываются непосредственно на защищенных серверах сертифицированных платежных систем (Lava.top, Gumroad) по стандартам PCI DSS Level 1. <strong>Оператор сайта Sollemdev не собирает, не видит и не сохраняет данные банковских карт и платежные реквизиты пользователей.</strong> Оператор получает исключительно подтверждение факта успешной транзакции (идентификатор заказа, сумму и дату).</li>
+                <li><strong>Технические данные и файлы Cookie:</strong> Сайт использует технические cookie-файлы для сохранения выбранной темы оформления (светлая/темная) и языка интерфейса. Для анализа обезличенной статистики посещаемости используется Google Analytics 4 (идентификатор потока <code>G-894W8CYHGQ</code>), собирающий анонимизированные данные (страна, тип устройства, источник перехода).</li>
+                <li><strong>Данные в браузерном расширении Babel:</strong>
+                  <ul>
+                    <li>Расширение хранит настройки (горячие клавиши, целевой язык, режим работы) локально в хранилище браузера <code>chrome.storage.local</code>.</li>
+                    <li>Текст для перевода или оптимизации промпта отправляется на бэкенд исключительно в момент нажатия горячей клавиши и передается ИИ-модели только для генерации результата. Текст пользователя <strong>не сохраняется в базах данных, не архивируется и не используется для обучения моделей</strong>.</li>
+                    <li>Встроена система Data Loss Prevention (DLP), которая локально на устройстве до отправки запроса блокирует или маскирует пароли, API-ключи и номера кредитных карт.</li>
+                  </ul>
+                </li>
+              </ul>
 
-            <h2>4. Prompt Mode</h2>
-            <p>Prompt Mode uses the same flow: your text is turned into an optimized English prompt for AI generation platforms. The prompt is sent to the AI provider and returned to you; it is not retained or shared beyond producing the result.</p>
+              <h2>4. Цели обработки персональных данных</h2>
+              <p>Персональные данные обрабатываются исключительно в следующих целях:</p>
+              <ul>
+                <li>Исполнение условий Пользовательского соглашения и Публичной оферты;</li>
+                <li>Обеспечение технической поддержки и коммуникация по запросам пользователей;</li>
+                <li>Учет добровольных пожертвований и выполнение процедур возврата в случае ошибочных транзакций;</li>
+                <li>Обеспечение безопасности инфраструктуры и предотвращение злоупотреблений.</li>
+              </ul>
 
-            <h2>5. Data Loss Prevention (DLP)</h2>
-            <p>Before a request leaves your device, Babel detects secrets locally (passwords, API keys, credit-card numbers, and passport-like personal data):</p>
-            <ul>
-              <li><strong>Block</strong> - the request is not sent at all;</li>
-              <li><strong>Mask</strong> - the detected secret is replaced with <code>[REDACTED]</code> before sending;</li>
-              <li><strong>Disabled</strong> - no check is performed (only use this if you understand the risk).</li>
-            </ul>
-            <p>All detection runs entirely on your device before anything is transmitted. Detection is best-effort pattern matching, not a guarantee. You are responsible for the text you send: make sure you do not transmit sensitive, confidential, or personal data, on any plan, in any mode, over any network.</p>
+              <h2>5. Передача данных третьим лицам</h2>
+              <p>Оператор не передает персональные данные сторонним организациям, за исключением следующих уполномоченных технологических партнеров:</p>
+              <ul>
+                <li><strong>Платежные системы:</strong> Lava.top (прием донатов и платежей) и Gumroad (лицензии Babel Pro) — для безопасного проведения транзакций;</li>
+                <li><strong>Провайдер хостинга:</strong> GitHub Inc. (GitHub Pages) — хостинг статических страниц сайта;</li>
+                <li><strong>Аналитический сервис:</strong> Google LLC (Google Analytics) — деперсонализированная статистика посещений.</li>
+              </ul>
 
-            <h2>6. Usage limits and accounts</h2>
-            <p>An anonymous device identifier enforces daily usage limits on the backend. Paid plans, subscriptions, and boosts are processed by our payment provider (Gumroad) through a separate hosted checkout. The extension itself never handles or stores your payment card details; Gumroad's privacy policy governs the payment data you provide during checkout.</p>
-            <p>Babel does not require or use your email for sign-in or recovery. Your paid plan is tied to your device and to the order (transaction) ID issued when you pay. That order ID is the key that lets you move your subscription to another device (up to three devices). Safekeeping that ID is your responsibility; if you lose it, we cannot restore your paid plan because we keep no password-based accounts.</p>
+              <h2>6. Хранение и защита персональных данных</h2>
+              <p>Оператор принимает необходимые правовые, организационные и технические меры для защиты персональных данных от неправомерного или случайного доступа, уничтожения, изменения, блокирования и распространения. Весь трафик сайта передается по зашифрованному протоколу HTTPS (SSL/TLS).</p>
 
-            <h2>7. Third parties</h2>
-            <p>Your text is shared only with the AI provider your request is routed to, and only to fulfill the request. Payment data is handled solely by Gumroad. We do not sell personal data or transfer it to advertisers.</p>
+              <h2>7. Права пользователя и отзыв согласия</h2>
+              <p>Пользователь имеет право в любой момент:</p>
+              <ul>
+                <li>Запросить подтверждение факта и условий обработки своих персональных данных;</li>
+                <li>Потребовать исправления неточных или устаревших данных;</li>
+                <li>Отозвать свое согласие на обработку данных и потребовать их полного удаления из базы сообщений;</li>
+                <li>Очистить локальные данные расширения Babel через кнопку «Reset stats» в настройках расширения либо путем удаления расширения.</li>
+              </ul>
+              <p>Для реализации любых из перечисленных прав направьте запрос на официальный адрес электронной почты Оператора: <a href="mailto:sollemdev@gmail.com">sollemdev@gmail.com</a>. Запрос рассматривается в срок до 10 рабочих дней.</p>
 
-            <h2>8. Usage statistics</h2>
-            <p>To keep the product healthy and reliable, we collect minimal, aggregated, anonymous usage statistics (for example, counts of translations and checkouts). These statistics never include your text, your device identifier, or any personally identifiable content.</p>
+              <h2>8. Изменение политики</h2>
+              <p>Оператор оставляет за собой право вносить изменения в настоящую Политику. Актуальная редакция всегда доступна по адресу: <a href="https://sollemdev.github.io/projects/privacy.html">https://sollemdev.github.io/projects/privacy.html</a>.</p>
 
-            <h2>9. AI training and data retention</h2>
-            <p>We do not use your text to train our own models, improve unrelated services, or build profiles of you. The AI provider that processes your requests is contractually prohibited from using your inputs or outputs to train or fine-tune its models, and by default it does not retain inference data beyond what is needed for reliability and abuse prevention.</p>
+              <h2>9. Контакты Оператора</h2>
+              <p>Ответственное лицо: <strong>Sollemdev</strong><br />
+              Email для связи по вопросам персональных данных: <a href="mailto:sollemdev@gmail.com">sollemdev@gmail.com</a><br />
+              Сайт: <a href="https://sollemdev.github.io/">https://sollemdev.github.io/</a></p>
+            </div>
 
-            <h2>10. Your control</h2>
-            <p>You can change or reset all settings and clear usage statistics from the Settings page. Uninstalling the extension removes locally stored data. You may also ask us to forget a device identifier on the backend by contacting us at <a href="mailto:sollemdev@gmail.com">sollemdev@gmail.com</a>.</p>
+            <!-- ENGLISH VERSION -->
+            <div id="legal-en" class="legal-lang-section" style="display: none;">
+              <h2>1. Overview &amp; Legal Basis</h2>
+              <p>This Privacy Policy applies to personal data collected by the independent development studio <strong>Sollemdev</strong> ("Operator", "We", website: <a href="https://sollemdev.github.io/">https://sollemdev.github.io/</a>) when you use our website, extensions (including <strong>Babel</strong>), contribute voluntary donations via <strong>Lava.top</strong>, or reach out to us.</p>
+              <p>We adhere to high privacy standards, in accordance with applicable data protection regulations including the EU General Data Protection Regulation (GDPR).</p>
 
-            <p><strong>Contact:</strong> Sollemdev &middot; <a href="mailto:sollemdev@gmail.com">sollemdev@gmail.com</a></p>
+              <h2>2. Data Minimization &amp; Local-First Architecture</h2>
+              <p>Our core philosophy is data minimization. We only collect the minimal information necessary to deliver services, respond to messages, and maintain platform security. We never sell, lease, or monetize personal data.</p>
+
+              <h2>3. Data We Process</h2>
+              <ul>
+                <li><strong>Contact Forms &amp; Direct Emails:</strong> Name, email address, message body. Used solely to respond to inquiries.</li>
+                <li><strong>Donations &amp; Purchases (Lava.top / Gumroad):</strong> Payment details (credit cards, billing details) are handled directly by PCI DSS-certified payment partners (Lava.top, Gumroad). <strong>Sollemdev does not capture, store, or view your payment card numbers.</strong> We only receive transaction confirmations (Order ID, amount, timestamp).</li>
+                <li><strong>Cookies &amp; Analytics:</strong> Functional cookies store theme and language preferences. Google Analytics 4 (measurement ID <code>G-894W8CYHGQ</code>) tracks anonymized visit metrics.</li>
+                <li><strong>Babel Browser Extension:</strong> Configuration is stored locally in <code>chrome.storage.local</code>. Translation text is processed in-memory solely to generate the result and is never logged, stored in databases, or used for model training. Client-side DLP inspects secrets locally prior to transmission.</li>
+              </ul>
+
+              <h2>4. Third-Party Service Providers</h2>
+              <p>We work with trusted partners under strict confidentiality: Lava.top &amp; Gumroad (payments), GitHub Pages (hosting), Google Analytics (anonymized telemetry), and backend AI inference engines (transient translation processing).</p>
+
+              <h2>5. Your Rights &amp; Data Deletion</h2>
+              <p>You have the right to access, rectify, or delete your personal data at any time. To request deletion or exercise any privacy rights, contact us at <a href="mailto:sollemdev@gmail.com">sollemdev@gmail.com</a>. Requests are processed within 10 business days.</p>
+
+              <h2>6. Contact Details</h2>
+              <p>Data Controller: <strong>Sollemdev</strong><br />
+              Email: <a href="mailto:sollemdev@gmail.com">sollemdev@gmail.com</a><br />
+              Website: <a href="https://sollemdev.github.io/">https://sollemdev.github.io/</a></p>
+            </div>
+
           </div>
         </div>
       </div>
@@ -144,12 +201,12 @@
   <footer class="site-footer">
     <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
       <div>
-        <span>Babel Chrome Extension - Sollemdev. Hosted on GitHub Pages.</span>
+        <span>Sollemdev Independent Studio &middot; Hosted on GitHub Pages.</span>
       </div>
       <div>
-        <a href="terms.html" style="text-decoration: underline;">Terms</a> &middot;
-        <a href="privacy.html" style="text-decoration: underline;">Privacy</a> &middot;
-        <a href="refund.html" style="text-decoration: underline;">Refund</a>
+        <a href="terms.html" style="text-decoration: underline;">Оферта / Terms</a> &middot;
+        <a href="privacy.html" style="text-decoration: underline;">Конфиденциальность / Privacy</a> &middot;
+        <a href="refund.html" style="text-decoration: underline;">Возвраты / Refund</a>
       </div>
     </div>
   </footer>
@@ -164,6 +221,10 @@
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
       <span>Babel</span>
     </a>
+    <a href="../index.html#donate" class="mobile-nav-item">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+      <span>Donate</span>
+    </a>
     <a href="../index.html#contact" class="mobile-nav-item">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
       <span>Contact</span>
@@ -175,6 +236,29 @@
   </nav>
 
   <script>
+    // Language Switcher
+    function switchLegalLang(lang) {
+      const ruSec = document.getElementById("legal-ru");
+      const enSec = document.getElementById("legal-en");
+      const btnRu = document.getElementById("btn-lang-ru");
+      const btnEn = document.getElementById("btn-lang-en");
+      if (lang === "ru") {
+        if (ruSec) ruSec.style.display = "block";
+        if (enSec) enSec.style.display = "none";
+        if (btnRu) btnRu.classList.add("active");
+        if (btnEn) btnEn.classList.remove("active");
+      } else {
+        if (ruSec) ruSec.style.display = "none";
+        if (enSec) enSec.style.display = "block";
+        if (btnRu) btnRu.classList.remove("active");
+        if (btnEn) btnEn.classList.add("active");
+      }
+    }
+
+    if (window.location.hash === "#en") {
+      switchLegalLang("en");
+    }
+
     // Theme Management
     const themeToggleBtn = document.getElementById("theme-toggle");
     const storedTheme = localStorage.getItem("theme");

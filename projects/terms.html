@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="ru" data-theme="light">
 <head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-894W8CYHGQ"></script>
@@ -14,8 +14,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Babel - Terms &amp; Conditions | @SolLem_Dev</title>
-  <meta name="description" content="Terms &amp; Conditions for the Babel Chrome extension." />
+  <title>Пользовательское соглашение и публичная оферта | Terms of Service — Sollemdev</title>
+  <meta name="description" content="Пользовательское соглашение, публичная оферта и условия использования сервисов, пожертвований и программных продуктов студии Sollemdev (включая Babel)." />
   <meta name="author" content="Sollemdev" />
 
   <!-- Favicon -->
@@ -27,7 +27,7 @@
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="../css/style.css?v=1.10.8" />
+  <link rel="stylesheet" href="../css/style.css?v=1.10.9" />
 </head>
 <body>
 
@@ -42,6 +42,7 @@
         <ul class="nav-menu">
           <li><a href="../index.html#work" class="nav-link">Projects</a></li>
           <li><a href="../index.html#skills" class="nav-link">Skills</a></li>
+          <li><a href="../index.html#donate" class="nav-link">Donate</a></li>
           <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
         </ul>
       </nav>
@@ -61,68 +62,143 @@
       <div class="container">
         <!-- Breadcrumb Navigation -->
         <nav class="breadcrumb-nav" aria-label="Breadcrumb">
-          <a href="../index.html" class="breadcrumb-link">Home</a>
+          <a href="../index.html" class="breadcrumb-link">Главная (Home)</a>
           <span class="breadcrumb-separator">/</span>
-          <a href="babel.html" class="breadcrumb-link">Babel</a>
-          <span class="breadcrumb-separator">/</span>
-          <span class="breadcrumb-current">Terms &amp; Conditions</span>
+          <span class="breadcrumb-current">Пользовательское соглашение и оферта</span>
         </nav>
 
-        <h1 class="project-title" style="margin-top: 16px;">Babel - Terms &amp; Conditions</h1>
+        <h1 class="project-title" style="margin-top: 16px;">
+          Пользовательское соглашение и публичная оферта
+          <span style="font-size: 0.55em; color: var(--text-secondary); display: block; font-weight: 400; margin-top: 6px;">Terms of Service &amp; Public Offer</span>
+        </h1>
         
         <!-- Policy Navigation Pills -->
         <div class="policy-nav-pills">
-          <a href="terms.html" class="policy-pill active">Terms &amp; Conditions</a>
-          <a href="privacy.html" class="policy-pill">Privacy Policy</a>
-          <a href="refund.html" class="policy-pill">Refund Policy</a>
-          <a href="babel.html" class="policy-pill" style="margin-left: auto;">&larr; Back to Babel</a>
+          <a href="terms.html" class="policy-pill active">Оферта / Terms</a>
+          <a href="privacy.html" class="policy-pill">Конфиденциальность / Privacy</a>
+          <a href="refund.html" class="policy-pill">Возвраты / Refund</a>
+          <a href="../index.html" class="policy-pill" style="margin-left: auto;">&larr; На главную / Home</a>
         </div>
 
         <div class="policy-document-card">
           <div class="policy-meta-bar">
-            Last updated: August 30, 2026 &middot; <a href="privacy.html">Privacy Policy</a> &middot; <a href="refund.html">Refund Policy</a> &middot; <a href="babel.html">&larr; Back to Babel</a>
+            Дата обновления: 15 сентября 2026 г. &middot; <a href="privacy.html">Политика конфиденциальности</a> &middot; <a href="refund.html">Политика возвратов</a> &middot; <a href="../index.html">&larr; Sollemdev Studio</a>
+          </div>
+
+          <!-- Language Selector -->
+          <div class="lang-switch-wrapper">
+            <span class="lang-switch-label">Язык документа / Language:</span>
+            <button type="button" class="policy-pill active" id="btn-lang-ru" onclick="switchLegalLang('ru')">🇷🇺 Русский (Оферта)</button>
+            <button type="button" class="policy-pill" id="btn-lang-en" onclick="switchLegalLang('en')">🇬🇧 English (Terms)</button>
           </div>
 
           <div class="policy-document-body">
-            <h2>1. Acceptance of terms</h2>
-            <p>By installing or using the Babel Chrome extension (the "Service"), you agree to these Terms &amp; Conditions. If you do not agree, please uninstall and discontinue use.</p>
+            
+            <!-- RUSSIAN VERSION (DEFAULT) -->
+            <div id="legal-ru" class="legal-lang-section">
+              <h2>1. Общие положения и оператор</h2>
+              <p>Настоящий документ представляет собой официальное предложение (публичную оферту в соответствии со ст. 437 Гражданского кодекса РФ и нормами международного коммерческого права) независимой студии разработки <strong>Sollemdev</strong> (далее — «Администрация», «Исполнитель»), адресованное неограниченному кругу физических и юридических лиц (далее — «Пользователь»).</p>
+              <p>Официальный веб-сайт студии: <a href="https://sollemdev.github.io/">https://sollemdev.github.io/</a>. Официальный контактный адрес электронной почты: <a href="mailto:sollemdev@gmail.com">sollemdev@gmail.com</a>.</p>
 
-            <h2>2. Description of the service</h2>
-            <p>Babel is a browser extension that translates text in-place and generates AI prompts using an external AI provider routed through the Babel backend. Access to the Service may be subject to daily usage limits and paid plans.</p>
+              <h2>2. Предмет соглашения</h2>
+              <p>Настоящее Соглашение регулирует:</p>
+              <ul>
+                <li>Порядок использования информационных материалов сайта <code>sollemdev.github.io</code>;</li>
+                <li>Использование программных продуктов студии, включая браузерное расширение <strong>Babel</strong>, утилиты, библиотеки и протоколы;</li>
+                <li>Порядок и условия внесения <strong>добровольных пожертвований (донатов)</strong> в поддержку независимых исследований и разработок через платежные виджеты (включая сервис Lava.top);</li>
+                <li>Порядок приобретения платных лицензий, пакетов запросов (бустов) и цифровых подписок на программное обеспечение.</li>
+              </ul>
 
-            <h2>3. Accounts and eligibility</h2>
-            <p>The Service does not use password-based accounts. It uses an anonymous device identifier to enforce usage limits. You must be at least 18 years old, or have permission from a parent or guardian, to purchase a paid plan.</p>
+              <h2>3. Акцепт оферты</h2>
+              <p>Использование любого функционала сайта, установка или запуск расширения Babel, направление сообщений через форму обратной связи, либо совершение добровольного пожертвования / оплаты является полным и безоговорочным принятием (акцептом) настоящей оферты (ст. 438 ГК РФ).</p>
+              <p>Если Пользователь не согласен с какими-либо положениями настоящего Соглашения, он обязан прекратить использование сайта и удалить программное обеспечение.</p>
 
-            <h2>4. Paid plans, subscriptions, and boosts</h2>
-            <p>Paid plans, subscriptions, and one-time boost packs are offered through our payment provider, Gumroad. Subscription payments recur automatically on the billing cycle shown at checkout until cancelled. Boost packs are one-time purchases and are not recurring.</p>
-            <p>Prices are shown at checkout and may change over time. Any changes apply to future charges only; your current billing cycle keeps the price you agreed to.</p>
+              <h2>4. Добровольные пожертвования (Донаты) через Lava.top</h2>
+              <p>Пользователи сайта имеют возможность поддержать независимую разработку, инфраструктурные расходы, серверные мощности и исследования студии Sollemdev путем перечисления добровольных пожертвований:</p>
+              <ul>
+                <li><strong>Характер платежа:</strong> Пожертвование является добровольным и безвозмездным взносом. Совершая пожертвование, Пользователь подтверждает, что делает это по собственному желанию, без встречных обязательств со стороны Исполнителя по поставке товаров или оказанию персональных платных услуг, если иное прямо не предусмотрено описанием конкретного тарифа.</li>
+                <li><strong>Платежный провайдер:</strong> Прием пожертвований обеспечивается уполномоченным платежным сервисом <strong>Lava.top</strong>. Все транзакции защищены протоколами безопасности банковских карт и СБП. Администрация сайта не получает и не хранит данные платежных карт Пользователя.</li>
+                <li><strong>Порядок возврата пожертвований:</strong> В случае ошибочного перевода (повторное списание, технический сбой) возврат регулируется специальным разделом <a href="refund.html">Политики возвратов</a>. Заявление может быть подано в течение 14 дней с момента оплаты на адрес <a href="mailto:sollemdev@gmail.com">sollemdev@gmail.com</a>.</li>
+              </ul>
 
-            <h2>5. Cancellation</h2>
-            <p>You may cancel a subscription at any time through your Gumroad customer portal. Cancellation stops future recurring charges; access continues until the end of the period you already paid for.</p>
+              <h2>5. Платные тарифы, цифровые лицензии и подписки</h2>
+              <p>Для отдельных программных продуктов (в частности, расширения Babel) могут предлагаться расширенные платные тарифы (Babel Pro), пакеты запросов и подписки:</p>
+              <ul>
+                <li>Оплата тарифов осуществляется через сертифицированных провайдеров (Gumroad, Lava.top).</li>
+                <li>Подписки продлеваются автоматически в соответствии с выбранным платежным периодом до момента их отмены Пользователем.</li>
+                <li>Пользователь может отменить подписку в любой момент через личный кабинет покупателя платежного сервиса. Отмена прекращает последующие списания; доступ к оплаченным функциям сохраняется до окончания текущего оплаченного периода.</li>
+                <li>Цены и состав тарифов публикуются на официальных страницах продуктов и в платежном интерфейсе.</li>
+              </ul>
 
-            <h2>6. Fair use and abuse</h2>
-            <p>You agree not to misuse the Service, including attempted abuse of usage limits, credential sharing beyond the intended limits, resale without permission, or any unlawful use. We reserve the right to suspend access and prevent abuse of the daily limits.</p>
+              <h2>6. Правила добросовестного использования</h2>
+              <p>Пользователь обязуется не использовать сервисы и ПО студии для противоправных целей, спама, попыток взлома инфраструктуры, обхода установленных лимитов запросов, распространения вредоносного ПО либо нарушения прав третьих лиц. В случае выявления злоупотреблений Администрация оставляет за собой право ограничить доступ к сервису.</p>
 
-            <h2>7. Data loss prevention is not a guarantee</h2>
-            <p>The built-in Data Loss Prevention (DLP) feature performs best-effort pattern matching and does not guarantee that no sensitive data will ever be transmitted. You are responsible for the content you send and must not transmit sensitive, confidential, or personal data that could identify you or a third party, on any plan, in any mode, over any network.</p>
+              <h2>7. Конфиденциальность и безопасность данных (DLP)</h2>
+              <p>Обработка персональных данных осуществляется строго в соответствии с <a href="privacy.html">Политикой конфиденциальности</a>. В расширении Babel реализована встроенная локальная система предотвращения утечки данных (DLP), проверяющая пароли и секретные ключи на стороне браузера до отправки запросов в сеть. Пользователь несет самостоятельную ответственность за содержание передаваемого им текста.</p>
 
-            <h2>8. Intellectual property</h2>
-            <p>The Babel software, extension code, and branding are owned by Sollemdev. You are granted a limited, personal, non-transferable license to use the Service in accordance with these Terms.</p>
+              <h2>8. Интеллектуальная собственность</h2>
+              <p>Все права на сайт <code>sollemdev.github.io</code>, товарные знаки, исходный код расширения Babel, архитектуру, интерфейс и сопутствующие материалы принадлежат Sollemdev. Пользователю предоставляется простая (неисключительная) лицензия на использование программных продуктов в пределах их функционального назначения.</p>
 
-            <h2>9. Disclaimer of warranties</h2>
-            <p>The Service is provided "as is" and "as available", without warranties of any kind, whether express or implied, including but not limited to implied warranties of merchantability, fitness for a particular purpose, and non-infringement. We make no guarantee that translations, prompts, or the Service will be uninterrupted, error-free, or meet your particular requirements.</p>
+              <h2>9. Отказ от гарантий и ограничение ответственности</h2>
+              <p>Программные продукты, сайт и сервисы предоставляются на условиях «как есть» (as is). Администрация не гарантирует абсолютную бесперебойность сторонних облачных провайдеров, моделей ИИ или каналов связи. В максимальной степени, допустимой действующим законодательством, Администрация не несет ответственности за косвенные убытки, упущенную выгоду или потерю данных.</p>
 
-            <h2>10. Limitation of liability</h2>
-            <p>To the maximum extent permitted by law, Sollemdev shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits, data, or business opportunities, arising out of or related to your use of the Service.</p>
+              <h2>10. Применимое право и разрешение споров</h2>
+              <p>Все споры и разногласия стороны стремятся урегулировать путем конструктивных переговоров. Срок рассмотрения претензии, направленной на <a href="mailto:sollemdev@gmail.com">sollemdev@gmail.com</a>, составляет 10 рабочих дней. При недостижении согласия спор передается на рассмотрение в суд по месту нахождения оператора.</p>
 
-            <h2>11. Changes to these terms</h2>
-            <p>We may update these Terms from time to time. Material changes will be reflected by updating the "Last updated" date above. Continued use of the Service after changes constitutes acceptance of the updated Terms.</p>
+              <h2>11. Контакты Администрации</h2>
+              <p>По всем вопросам, связанным с исполнением настоящего Соглашения, пожертвованиями и лицензиями:<br />
+              Студия: <strong>Sollemdev</strong><br />
+              Email поддержки: <a href="mailto:sollemdev@gmail.com">sollemdev@gmail.com</a><br />
+              Сайт: <a href="https://sollemdev.github.io/">https://sollemdev.github.io/</a></p>
+            </div>
 
-            <h2>12. Governing law</h2>
-            <p>These Terms are governed by applicable law of the operator's jurisdiction, without regard to conflict-of-law principles. Any disputes shall be resolved in the appropriate courts of that jurisdiction.</p>
+            <!-- ENGLISH VERSION -->
+            <div id="legal-en" class="legal-lang-section" style="display: none;">
+              <h2>1. Acceptance of Terms &amp; Operator</h2>
+              <p>These Terms of Service and Public Offer constitute a legally binding agreement between the independent development studio <strong>Sollemdev</strong> ("Operator", "We", "Us") and any visitor, donor, or customer ("User", "You").</p>
+              <p>Official Website: <a href="https://sollemdev.github.io/">https://sollemdev.github.io/</a>. Contact: <a href="mailto:sollemdev@gmail.com">sollemdev@gmail.com</a>.</p>
 
-            <h2>13. Contact</h2>
-            <p>Questions about these Terms: <a href="mailto:sollemdev@gmail.com">sollemdev@gmail.com</a>.</p>
+              <h2>2. Scope of Services</h2>
+              <p>These Terms govern:</p>
+              <ul>
+                <li>Access to and use of the <code>sollemdev.github.io</code> website;</li>
+                <li>Use of software builds, browser extensions (including <strong>Babel</strong>), libraries, and developer tools;</li>
+                <li>Voluntary <strong>donations and financial support</strong> contributed via widgets (including Lava.top) to fund independent R&amp;D and open-source software;</li>
+                <li>Purchases of digital licenses, subscriptions, and boost packs for studio software.</li>
+              </ul>
+
+              <h2>3. Acceptance</h2>
+              <p>By using the website, downloading or installing the Babel extension, submitting a message, or making a donation or subscription payment, you fully agree to these Terms. If you do not agree, discontinue use and uninstall the software.</p>
+
+              <h2>4. Voluntary Donations &amp; Support (Lava.top)</h2>
+              <p>Users may support Sollemdev's independent engineering, server costs, and research by making voluntary contributions:</p>
+              <ul>
+                <li><strong>Voluntary Nature:</strong> Contributions are voluntary gifts to foster independent software and R&amp;D. A donation does not establish a commercial purchase contract for goods, unless explicitly bundled with a digital tier.</li>
+                <li><strong>Payment Security:</strong> Donations are processed securely through certified payment providers, primarily <strong>Lava.top</strong>. We never store, handle, or process your credit card numbers.</li>
+                <li><strong>Refunds for Erroneous Payments:</strong> If an unintended or duplicate transaction occurs, you may request a refund within 14 days under our <a href="refund.html">Refund Policy</a> by emailing <a href="mailto:sollemdev@gmail.com">sollemdev@gmail.com</a>.</li>
+              </ul>
+
+              <h2>5. Paid Plans, Subscriptions, and Boosts</h2>
+              <p>Paid tiers (such as Babel Pro) are provided through Gumroad and Lava.top. Subscriptions renew automatically at the specified interval until cancelled. You may cancel at any time via your customer billing portal. Cancellation stops future recurring charges while granting access through the prepaid period.</p>
+
+              <h2>6. Fair Use &amp; Prohibited Conduct</h2>
+              <p>You agree not to abuse rate limits, scrape endpoints unlawfully, reverse engineer backend proprietary services, or use our software for unlawful activities. Abuse may result in suspension of access.</p>
+
+              <h2>7. Privacy &amp; Data Loss Prevention (DLP)</h2>
+              <p>Data handling complies with our <a href="privacy.html">Privacy Policy</a>. In Babel, client-side DLP scans for API keys, passwords, and sensitive credentials prior to transmission. You remain solely responsible for the data you process.</p>
+
+              <h2>8. Intellectual Property</h2>
+              <p>All trademarks, codebases, designs, and content across <code>sollemdev.github.io</code> and Babel are owned exclusively by Sollemdev. You receive a personal, non-exclusive license to use the products in accordance with these Terms.</p>
+
+              <h2>9. Disclaimer of Warranties &amp; Limitation of Liability</h2>
+              <p>The Service is provided on an "AS IS" and "AS AVAILABLE" basis. To the maximum extent permitted by applicable law, Sollemdev disclaims all warranties and shall not be liable for indirect, punitive, or consequential damages.</p>
+
+              <h2>10. Contact Information</h2>
+              <p>Studio: <strong>Sollemdev</strong><br />
+              Email: <a href="mailto:sollemdev@gmail.com">sollemdev@gmail.com</a><br />
+              Website: <a href="https://sollemdev.github.io/">https://sollemdev.github.io/</a></p>
+            </div>
+
           </div>
         </div>
       </div>
@@ -133,12 +209,12 @@
   <footer class="site-footer">
     <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
       <div>
-        <span>Babel Chrome Extension - Sollemdev. Hosted on GitHub Pages.</span>
+        <span>Sollemdev Independent Studio &middot; Hosted on GitHub Pages.</span>
       </div>
       <div>
-        <a href="terms.html" style="text-decoration: underline;">Terms</a> &middot;
-        <a href="privacy.html" style="text-decoration: underline;">Privacy</a> &middot;
-        <a href="refund.html" style="text-decoration: underline;">Refund</a>
+        <a href="terms.html" style="text-decoration: underline;">Оферта / Terms</a> &middot;
+        <a href="privacy.html" style="text-decoration: underline;">Конфиденциальность / Privacy</a> &middot;
+        <a href="refund.html" style="text-decoration: underline;">Возвраты / Refund</a>
       </div>
     </div>
   </footer>
@@ -153,6 +229,10 @@
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
       <span>Babel</span>
     </a>
+    <a href="../index.html#donate" class="mobile-nav-item">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+      <span>Donate</span>
+    </a>
     <a href="../index.html#contact" class="mobile-nav-item">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
       <span>Contact</span>
@@ -164,6 +244,29 @@
   </nav>
 
   <script>
+    // Language Switcher
+    function switchLegalLang(lang) {
+      const ruSec = document.getElementById("legal-ru");
+      const enSec = document.getElementById("legal-en");
+      const btnRu = document.getElementById("btn-lang-ru");
+      const btnEn = document.getElementById("btn-lang-en");
+      if (lang === "ru") {
+        if (ruSec) ruSec.style.display = "block";
+        if (enSec) enSec.style.display = "none";
+        if (btnRu) btnRu.classList.add("active");
+        if (btnEn) btnEn.classList.remove("active");
+      } else {
+        if (ruSec) ruSec.style.display = "none";
+        if (enSec) enSec.style.display = "block";
+        if (btnRu) btnRu.classList.remove("active");
+        if (btnEn) btnEn.classList.add("active");
+      }
+    }
+
+    if (window.location.hash === "#en") {
+      switchLegalLang("en");
+    }
+
     // Theme Management
     const themeToggleBtn = document.getElementById("theme-toggle");
     const storedTheme = localStorage.getItem("theme");
