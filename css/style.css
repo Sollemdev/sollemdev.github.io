@@ -2076,7 +2076,7 @@ input, textarea {
   }
 
   .partner-badge-card img {
-    height: 38px;
+    height: auto;
     max-height: 38px;
     max-width: 100%;
     width: auto;
@@ -2096,7 +2096,7 @@ input, textarea {
   }
 
   .partner-badge-card img {
-    height: 34px;
+    height: auto;
     max-height: 34px;
   }
 }
