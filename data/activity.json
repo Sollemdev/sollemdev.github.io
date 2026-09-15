@@ -1,5 +1,13 @@
 [
   {
+    "project": "Babel",
+    "badge": "Release",
+    "title": "chore(release): bump v1.10.8 for store compliance, sync wiki and add babel-call specs",
+    "description": "Continuous codebase optimization, features, and refinements.",
+    "date": "2026-09-15T09:31:22+03:00",
+    "hash": "2dfcc44"
+  },
+  {
     "project": "Humanagi",
     "badge": "Update",
     "title": "rebrand: AgentChat -> Humanagi across entire codebase",
@@ -38,13 +46,5 @@
     "description": "Continuous codebase optimization, features, and refinements.",
     "date": "2026-09-09T20:46:40+03:00",
     "hash": "10e728d"
-  },
-  {
-    "project": "Together Safe",
-    "badge": "Update",
-    "title": "ci: update broadcast activity workflow (clean utf8 without bom)",
-    "description": "Continuous codebase optimization, features, and refinements.",
-    "date": "2026-09-09T20:46:39+03:00",
-    "hash": "d0bc5f3"
   }
 ]
