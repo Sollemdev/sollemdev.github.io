@@ -1836,7 +1836,56 @@
               </div>
             </article>
 
-            <!-- NEWS 2: AI PROMPT ENGINEERING ENGINE -->
+            <!-- NEWS 2: BABEL CALL — UPCOMING UPDATE (ROADMAP ANNOUNCEMENT) -->
+            <article class="news-item-card featured" data-category="roadmap features">
+              <div class="news-card-meta">
+                <div class="news-meta-left">
+                  <span class="news-badge roadmap">🗺️ In Development</span>
+                  <span class="news-badge beta">📹 Babel Call</span>
+                  <span class="news-version">Coming Soon</span>
+                </div>
+                <time class="news-date" datetime="2026-09">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  September 2026
+                </time>
+              </div>
+
+              <h3 class="news-title">
+                Coming Soon &mdash; Babel Call: Peer-to-Peer Video Calls with Live Speech Translation
+              </h3>
+
+              <div class="news-body">
+                <p>
+                  The next major update turns Babel into a communication tool: direct <strong>P2P video calls</strong> with optional real-time speech translation, live subtitles and a walkie-talkie translation mode. <strong>Plain calls stay free and unlimited</strong> &mdash; translation minutes are only spent while the interpreter is actually running.
+                </p>
+                <ul>
+                  <li><strong>📹 Three call modes:</strong> <strong>A. Plain</strong> (pure P2P, no AI, zero cost), <strong>B. Live Translate</strong> (synchronous voice translation, subtitles, automatic ducking of the original voice to 15%) and <strong>C. Subtitles Only</strong> (live captions, original voice untouched).</li>
+                  <li><strong>📻 Push-to-Translate:</strong> translation runs only while you hold the on-screen button or your own bindable hotkey (<kbd class="sim-hotkey-badge">Space</kbd>, <kbd class="sim-hotkey-badge">Alt + Shift + T</kbd>) &mdash; minutes are counted for those seconds only, not for the whole call.</li>
+                  <li><strong>🔗 Guest link &amp; floating PiP:</strong> your partner joins the same P2P session from one link in any browser, no extension needed, while the call collapses into an always-on-top system window (Chrome/Edge 116+) with a <code style="font-family: var(--font-mono); font-size: 11px;">&lt;video&gt;</code> PiP fallback.</li>
+                  <li><strong>🗂️ Local contacts &amp; history:</strong> contacts, call journal and device settings stay in browser IndexedDB under an anonymous <code style="font-family: var(--font-mono); font-size: 11px;">bbl-xxxxxxxx</code> ID &mdash; no account, no email, zero retention. Launch from the mascot's <em>Babel Call</em> sector or <kbd class="sim-hotkey-badge">Alt + C</kbd>; speech translation covers Babel's 23 languages.</li>
+                </ul>
+                <p>
+                  <strong>Status:</strong> in active development &mdash; the P2P core, audio pipeline, translation orchestrator, guest client and PiP mode are already built and covered by automated unit and end-to-end test suites, while global signalling and TURN relays, call-interface localization and store review of the new permissions are still ahead. Nothing in this dispatch is installable yet.
+                </p>
+              </div>
+
+              <div class="news-tags-row">
+                <div class="news-tags">
+                  <span class="news-tag">#BabelCall</span>
+                  <span class="news-tag">#WebRTC</span>
+                  <span class="news-tag">#LiveTranslate</span>
+                  <span class="news-tag">#PushToTranslate</span>
+                  <span class="news-tag">#PictureInPicture</span>
+                  <span class="news-tag">#GuestLink</span>
+                  <span class="news-tag">#ZeroRetention</span>
+                </div>
+                <a href="#news-subscribe" class="news-link-action">
+                  Get Release Alerts &darr;
+                </a>
+              </div>
+            </article>
+
+            <!-- NEWS 3: AI PROMPT ENGINEERING ENGINE -->
             <article class="news-item-card" data-category="features">
               <div class="news-card-meta">
                 <div class="news-meta-left">
@@ -1878,7 +1927,7 @@
               </div>
             </article>
 
-            <!-- NEWS 3: OFFLINE TYPO FIXER & TONES -->
+            <!-- NEWS 4: OFFLINE TYPO FIXER & TONES -->
             <article class="news-item-card" data-category="features">
               <div class="news-card-meta">
                 <div class="news-meta-left">
@@ -1918,7 +1967,7 @@
               </div>
             </article>
 
-            <!-- NEWS 4: STRICT ZERO-LOG PRIVACY & DLP -->
+            <!-- NEWS 5: STRICT ZERO-LOG PRIVACY & DLP -->
             <article class="news-item-card" data-category="security">
               <div class="news-card-meta">
                 <div class="news-meta-left">
@@ -1959,7 +2008,7 @@
               </div>
             </article>
 
-            <!-- NEWS 5: PUBLIC STORE TESTING & LOCAL APP IN DEVELOPMENT -->
+            <!-- NEWS 6: PUBLIC STORE TESTING & LOCAL APP IN DEVELOPMENT -->
             <article class="news-item-card" data-category="releases roadmap">
               <div class="news-card-meta">
                 <div class="news-meta-left">
@@ -2008,7 +2057,7 @@
           </div>
 
           <!-- News Subscription & Dispatch Strip -->
-          <div class="news-subscribe-card">
+          <div class="news-subscribe-card" id="news-subscribe">
             <div class="news-subscribe-inner">
               <div class="news-subscribe-header-col">
                 <div class="news-subscribe-badge">
