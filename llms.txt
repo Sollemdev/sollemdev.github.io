@@ -11,7 +11,7 @@
 - **Category**: AI Productivity & Browser Extension (Manifest V3)
 - **Stack**: JavaScript, Chrome Extensions API, MutationObserver, DOM Replacement Engines
 - **Architecture**: Sub-300ms in-place text replacement via Alt+T hotkey across React, Vue, Slate.js, and ProseMirror. Features 6 dynamic style tones, prompt engineering mode (Midjourney, Higgsfield), client-side DLP secret protection, and 23 localized language dictionaries.
-- **Privacy & Licensing**: Zero server data retention; secure digital licensing via Gumroad.
+- **Privacy & Licensing**: Zero server data retention; secure digital licensing via Lava.top (subscriptions and boost packs, sold by Sollemdev) and Gumroad (boost packs, sold by Gumroad as merchant of record).
 
 ### 2. Humanagi (bubble chat) - Floating Multimodal Messenger
 - **Status**: In Active R&D (45% Readiness)
